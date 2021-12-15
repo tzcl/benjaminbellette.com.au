@@ -1267,10 +1267,6 @@
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/UHJb4lt.png",
-          title: "Stills",
-        },
-        {
           src: "https://i.imgur.com/f1PrNHf.png",
           title: "Stills",
         },
