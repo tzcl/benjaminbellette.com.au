@@ -929,8 +929,8 @@
     $(".dating-violet").magnificPopup({
       items: [
         {
-          src: '<div class="white-popup"><h3>Hi!</h3><p>If you would like to watch this, please feel free to contact me directly for a private link.</p><a href="mailto:ben.bellette@gmail.com">Ben.Bellette@gmail.com</a></div>',
-          type: "inline", // this overrides default type
+          src: "https://vimeo.com/658390978",
+          type: "iframe",
         },
         {
           src: "https://i.imgur.com/47C42gy.png",
