@@ -453,23 +453,51 @@
     $(".yer-gurl").magnificPopup({
       items: [
         {
-          src: "https://vimeo.com/340086207",
+          src: "https://vimeo.com/709304147",
           type: "iframe", // this overrides default type
         },
         {
-          src: "https://i.imgur.com/7EhU7kB.jpg",
+          src: "https://i.imgur.com/kMK93Wh.jpg",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/yTbxTQw.jpg",
+          src: "https://i.imgur.com/YkDdtEy.jpg",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/YIndGWU.jpg",
+          src: "https://i.imgur.com/mhHXB44.jpg",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/eEpbee7.jpg",
+          src: "https://i.imgur.com/9OiDfGI.jpg",
+          title: "Stills",
+        },
+        {
+          src: "https://i.imgur.com/HtihOW3.jpg",
+          title: "Stills",
+        },
+        {
+          src: "https://i.imgur.com/Lfri6za.jpg",
+          title: "Stills",
+        },
+        {
+          src: "https://i.imgur.com/4YcBOzh.jpg",
+          title: "Stills",
+        },
+        {
+          src: "https://i.imgur.com/VTvpcuY.jpg",
+          title: "Stills",
+        },
+        {
+          src: "https://i.imgur.com/5HBBgia.jpg",
+          title: "Stills",
+        },
+        {
+          src: "https://i.imgur.com/wl4jPRc.jpg",
+          title: "Stills",
+        },
+        {
+          src: "https://i.imgur.com/QQ9rPGP.jpg",
           title: "Stills",
         },
       ],
