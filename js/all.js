@@ -450,7 +450,7 @@
       type: "image", // this is a default type
     });
 
-    $(".yer-gurl").magnificPopup({
+    $(".music-video-2").magnificPopup({
       items: [
         {
           src: "https://vimeo.com/709304147",
@@ -1617,58 +1617,54 @@
       },
       type: "image", // this is a default type
     });
-    $(".just-strong").magnificPopup({
+    $(".documentary-3").magnificPopup({
       items: [
         {
-          src: "https://vimeo.com/278086344",
+          src: "https://vimeo.com/707425516",
           type: "iframe", // this overrides default type
         },
         {
-          src: "https://i.imgur.com/C7SCxu4.png",
+          src: "https://i.imgur.com/vIVEoAQ.jpg",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/USSag2i.png",
+          src: "https://i.imgur.com/lrjXt3U.jpg",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/OqDgHlK.png",
+          src: "https://i.imgur.com/AjesSfN.jpg",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/r32oG7C.png",
+          src: "https://i.imgur.com/ZiDCwdg.jpg",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/eTPN86r.png",
+          src: "https://i.imgur.com/anx2D23.jpg",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/Pi52Y4z.png",
+          src: "https://i.imgur.com/EyuCX0d.jpg",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/EU1YpLZ.png",
+          src: "https://i.imgur.com/C3MOaRd.jpg",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/1BaNpk3.png",
+          src: "https://i.imgur.com/WhSH8uz.jpg",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/zXekjiX.png",
+          src: "https://i.imgur.com/YFGUvsE.jpg",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/AaoqFfj.png",
+          src: "https://i.imgur.com/rZn9hUQ.jpg",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/fJPAm0l.png",
-          title: "Stills",
-        },
-        {
-          src: "https://i.imgur.com/5XYa8hQ.png",
+          src: "https://i.imgur.com/1ewjdoI.jpg",
           title: "Stills",
         },
       ],
