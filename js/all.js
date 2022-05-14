@@ -346,6 +346,65 @@
       type: "image", // this is a default type
     });
 
+    $(".mumlife-popup").magnificPopup({
+      items: [
+        {
+          src: "https://vimeo.com/707425833",
+          type: "iframe",
+        },
+        {
+          src: "https://i.imgur.com/vByh3Ds.jpg",
+          title: "Stills",
+        },
+        {
+          src: "https://i.imgur.com/m9pUpLU.jpg",
+          title: "Stills",
+        },
+        {
+          src: "https://i.imgur.com/0o06GPO.jpg",
+          title: "Stills",
+        },
+        {
+          src: "https://i.imgur.com/du1xzlu.jpg",
+          title: "Stills",
+        },
+        {
+          src: "https://i.imgur.com/VO43cLW.jpg",
+          title: "Stills",
+        },
+        {
+          src: "https://i.imgur.com/IIM63Df.jpg",
+          title: "Stills",
+        },
+        {
+          src: "https://i.imgur.com/SZH4pKh.jpg",
+          title: "Stills",
+        },
+        {
+          src: "https://i.imgur.com/WpzfttP.jpg",
+          title: "Stills",
+        },
+        {
+          src: "https://i.imgur.com/NirDIiW.jpg",
+          title: "Stills",
+        },
+        {
+          src: "https://i.imgur.com/v72J2Jg.jpg",
+          title: "Stills",
+        },
+        {
+          src: "https://i.imgur.com/6p4g0yO.jpg",
+          title: "Stills",
+        },
+        {
+          src: "https://i.imgur.com/Y9AYfO7.jpg",
+          title: "Stills",
+        },
+      ],
+      gallery: { enabled: true },
+      type: "image",
+    });
+
     // Maddy Jane - Thank you and sorry
     $(".mjane-thankyou").magnificPopup({
       items: [
