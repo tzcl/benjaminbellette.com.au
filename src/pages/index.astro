@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro'
+import LogoSpinner from '../components/LogoSpinner.astro';
+---
+
+<Layout title="Benjamin Bellette" description="Melbourne and Sydney based cinematographer">
+	<!-- TODO: implement background video component -->
+	<!-- <BackgroundVideo></BackgroundVideo> -->
+	<div class="center">
+		<LogoSpinner link="/motion" />
+		<h1 class="child">Benjamin Bellette</h1>
+		<h4 class="child">Director of Photography</h4>
+	</div>
+</Layout>
+
+<style>
+	body {
+		background: #111;
+	}
+
+	.center {
+		display: grid;
+		place-content: center;
+		height: 100%;
+	}
+
+	h1,
+	h4 {
+		text-transform: uppercase;
+		color: white;
+		margin: auto;
+	}
+</style>

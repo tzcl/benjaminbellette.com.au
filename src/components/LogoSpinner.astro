@@ -1,0 +1,24 @@
+---
+export interface Props {
+    link: string
+}
+
+const { link } = Astro.props
+const logo = "/images/logo.png"
+---
+
+<a href={link}>
+    <img draggable="false" src={logo} />
+</a>
+
+<style>
+    img {
+        margin: 50px;
+        border-radius: 50%;
+        transition: transform .6s ease-in-out;
+    }
+
+    img:hover {
+        transform: rotate(90deg);
+    }
+</style>
