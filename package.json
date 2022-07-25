@@ -6,9 +6,13 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "telemetry": "astro telemetry disable"
   },
   "devDependencies": {
-    "astro": "^1.0.0-beta.63"
+    "@astrojs/react": "^0.2.0",
+    "astro": "^0.26.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

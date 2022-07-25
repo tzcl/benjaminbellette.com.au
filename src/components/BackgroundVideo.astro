@@ -1,0 +1,30 @@
+---
+export interface Props {
+}
+---
+
+<div class="outer">
+    <div class="inner">
+        <iframe src="https://player.vimeo.com/video/316965018?background=1" frameborder="0" allow="autoplay" />
+    </div>
+</div>
+
+<style>
+    .outer {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .inner {
+        position: relative;
+        height: 100%;
+    }
+
+    iframe {
+        position: absolute;
+        aspect-ratio: 16 / 9;
+        width: 100%;
+        height: 100%;
+    }
+</style>
