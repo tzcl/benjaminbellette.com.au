@@ -5,7 +5,8 @@ export interface Props {
 
 <div class="outer">
     <div class="inner">
-        <iframe src="https://player.vimeo.com/video/316965018?background=1" frameborder="0" allow="autoplay" />
+        <iframe src="https://player.vimeo.com/video/316965018?background=1?transparent=1" frameborder="0"
+            allow="autoplay" />
     </div>
 </div>
 
@@ -21,13 +22,9 @@ export interface Props {
         overflow: hidden;
         width: 100vw;
         height: 100vh;
-
-        background-color: #111;
     }
 
     iframe {
-        background-color: transparent;
-        opacity: 0.4;
         position: absolute;
         top: 50%;
         left: 50%;
