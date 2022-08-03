@@ -1,14 +1,24 @@
 ---
+import React from "react";
+
 export interface Props {
+
 }
 ---
 
 <div class="outer">
     <div class="inner">
-        <iframe src="https://player.vimeo.com/video/316965018?background=1?transparent=1" frameborder="0"
+        <iframe id="video" src="https://player.vimeo.com/video/316965018?background=1?transparent=1" frameborder="0"
             allow="autoplay" />
     </div>
 </div>
+
+<script is:inline>
+    const iframe = document.getElementById("video");
+    iframe.addEventListener("load", () => {
+        iframe.style.opacity = 0.5;
+    })
+</script>
 
 <style>
     .outer {
@@ -31,6 +41,9 @@ export interface Props {
         width: 100vw;
         height: 100vh;
         transform: translate(-50%, -50%);
+
+        opacity: 0;
+        transition: opacity 1s linear 2s;
     }
 
     @media (min-aspect-ratio: 16/9) {
