@@ -6,7 +6,7 @@ export interface Props {
 
 const { title, description } = Astro.props as Props
 
-const canonicalURL = Astro.canonicalURL.href
+const canonicalURL = Astro.url.href
 const coverImg = "https://benjaminbellette.com.au/images/logo.png"
 ---
 
