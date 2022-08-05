@@ -1,23 +1,36 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import LogoSpinner from '../components/LogoSpinner.astro'
-import BackgroundVideo from '../components/BackgroundVideo.astro'
+import BackgroundVideo from '../components/BackgroundVideo'
 ---
 
 <Layout title="Benjamin Bellette" description="Melbourne and Sydney based cinematographer">
-	<BackgroundVideo />
+	<BackgroundVideo client:load />
 	<div class="center">
 		<LogoSpinner link="/motion" />
-		<h1 class="child">Benjamin Bellette</h1>
-		<h4 class="child">Director of Photography</h4>
+		<h1>Benjamin Bellette</h1>
+		<h4>Director of Photography</h4>
 	</div>
 </Layout>
 
 <style>
-	@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500);
+	@import url(https://fonts.googleapis.com/css?family=Open+Sans:700);
+
+	h1::selection {
+		text-shadow: 2px 2px rgb(210, 100, 125),
+			3px 3px rgb(210, 100, 125),
+			4px 4px rgb(210, 100, 125),
+			5px 5px rgb(210, 100, 125);
+	}
+
+	h4::selection {
+		/* Chrome forces this to be semi-transparent */
+		/* We can override this by setting the opacity */
+		background-color: rgba(210, 100, 125, 0.996);
+	}
 
 	body {
-		background: #111;
+		background-color: #111;
 	}
 
 	.center {
@@ -25,13 +38,17 @@ import BackgroundVideo from '../components/BackgroundVideo.astro'
 		display: grid;
 		place-content: center;
 		height: 100%;
+
+		/* dirty hack that works */
+		/* but why does it work? */
+		opacity: 0.99;
 	}
 
 	h1,
 	h4 {
 		/* TODO: move this to base styles */
 		font-family: "Open Sans", arial, sans-serif;
-		font-weight: 500;
+		font-weight: 700;
 		text-transform: uppercase;
 		text-align: center;
 
