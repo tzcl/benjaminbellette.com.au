@@ -4,11 +4,11 @@ export interface Props {
 }
 
 const { link } = Astro.props
-const logo = "/images/logo.png"
+const logo = "/images/logo.svg"
 ---
 
 <a href={link}>
-    <img draggable="false" src={logo} />
+    <img width="252" height="148" draggable="false" src={logo} />
 </a>
 
 <style>
