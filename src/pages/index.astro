@@ -6,31 +6,14 @@ import BackgroundVideo from '../components/BackgroundVideo'
 
 <Layout title="Benjamin Bellette" description="Melbourne and Sydney based cinematographer">
 	<BackgroundVideo client:load />
-	<div class="center">
+	<section class="center">
 		<LogoSpinner link="/motion" />
 		<h1>Benjamin Bellette</h1>
 		<h4>Director of Photography</h4>
-	</div>
+	</section>
 </Layout>
 
 <style>
-	@import url(https://fonts.googleapis.com/css?family=Open+Sans:700);
-
-	h1::selection {
-		text-shadow: 0.025em 0.025em rgb(210, 100, 125),
-			0.05em 0.05em rgb(210, 100, 125),
-			0.075em 0.075em rgb(210, 100, 125),
-			0.1em 0.1em rgb(210, 100, 125),
-			0.125em 0.125em rgb(210, 100, 125),
-			0.15em 0.15em rgb(210, 100, 125);
-	}
-
-	h4::selection {
-		/* Chrome forces this to be semi-transparent */
-		/* We can override this by setting the opacity */
-		background-color: rgba(210, 100, 125, 0.996);
-	}
-
 	body {
 		background-color: #111;
 	}
@@ -45,29 +28,7 @@ import BackgroundVideo from '../components/BackgroundVideo'
 		opacity: 0.99;
 	}
 
-	h1,
-	h4 {
-		/* TODO: move this to base styles */
-		font-family: "Open Sans", arial, sans-serif;
-		font-weight: 700;
-		text-transform: uppercase;
-		text-align: center;
-
-		margin: 0 auto;
-		color: white;
-	}
-
-	h1 {
-		font-size: 1.5em;
-		line-height: 1.8;
-		letter-spacing: 0.5em;
-	}
-
 	h4 {
 		padding: 10px 14px;
-
-		font-size: 0.75em;
-		line-height: 1.4;
-		letter-spacing: 0.125em;
 	}
 </style>

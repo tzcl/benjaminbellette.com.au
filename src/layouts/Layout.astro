@@ -10,7 +10,6 @@ const canonicalURL = Astro.url.href
 const coverImg = "https://benjaminbellette.com.au/images/logo.png"
 ---
 
-<!-- TODO: convert into Head component (more reuseable) -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,6 +48,7 @@ const coverImg = "https://benjaminbellette.com.au/images/logo.png"
   <meta property="og:description" content={description}> }
 
   <!-- TODO: run this in a worker thread -->
+  <!-- See partytown -->
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Q0VNLGQTF"></script>
   <script is:inline>
@@ -67,6 +67,10 @@ const coverImg = "https://benjaminbellette.com.au/images/logo.png"
 </html>
 
 <style is:global>
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+  /* Start reset */
+
   /* 1. Use a more-intuitive box-sizing model.  */
   *,
   *::before,
@@ -120,5 +124,60 @@ const coverImg = "https://benjaminbellette.com.au/images/logo.png"
   h5,
   h6 {
     overflow-wrap: break-word;
+  }
+
+  /* End reset */
+
+  ::selection {
+    /* Chrome forces this to be semi-transparent */
+    /* We can override this by setting the opacity */
+    background-color: rgb(210, 100, 125, 0.996);
+  }
+
+  h1::selection {
+    background-color: transparent;
+    text-shadow: 0.025em 0.025em rgb(210, 100, 125),
+      0.05em 0.05em rgb(210, 100, 125),
+      0.075em 0.075em rgb(210, 100, 125),
+      0.1em 0.1em rgb(210, 100, 125),
+      0.125em 0.125em rgb(210, 100, 125),
+      0.15em 0.15em rgb(210, 100, 125);
+  }
+
+  img::selection {
+    background-color: rgb(210, 100, 125);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Open Sans", arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+
+    margin: 0 auto;
+    color: white;
+  }
+
+  a,
+  p {
+    font-family: "Open Sans", arial, sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    line-height: 1.8;
+    letter-spacing: 0.5em;
+  }
+
+  h4 {
+    font-size: 0.75em;
+    line-height: 1.4;
+    letter-spacing: 0.125em;
   }
 </style>

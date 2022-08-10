@@ -1,0 +1,184 @@
+---
+import { Image } from "@astrojs/image/components"
+import logo from "../assets/logo-dark.png"
+
+// take the active page as a prop?
+function active(item: string): string {
+    return "";
+}
+---
+
+<header>
+    <div class="row">
+        <a href="/">
+            <div id="logo">
+                <Image src={logo} format="avif" />
+            </div>
+        </a>
+
+        <input type="checkbox" id="checkbox" class="checkbox hidden">
+        <label for="checkbox">
+            <div class="hamburger">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar3"></span>
+                <span class="bar bar4"></span>
+            </div>
+        </label>
+    </div>
+
+    <!-- TODO: replace these with Swup's link elements -->
+    <nav>
+        <ul>
+            <li>
+                <a href="/motion">Motion</a>
+            </li>
+            <li>
+                <a href="/stills">Stills</a>
+            </li>
+            <li>
+                <a href="/contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<style>
+    .row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #logo {
+        margin: 1rem;
+    }
+
+    nav {
+        padding-bottom: 3rem;
+        display: none;
+    }
+
+    .active {
+        display: block;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        padding-left: 1rem;
+        padding-top: 1rem;
+    }
+
+    a {
+        text-decoration: none;
+        text-transform: none;
+    }
+
+    a:hover {
+        color: gray;
+    }
+
+    .hidden {
+        position: absolute;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+    }
+
+    .hamburger {
+        margin: 1rem;
+        margin-top: 30px;
+        width: 30px;
+        aspect-ratio: 1;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .bar {
+        padding: 0;
+        width: 30px;
+        height: 3px;
+        background-color: rgb(255, 255, 255);
+        display: block;
+        position: absolute;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        .bar {
+            transition: all 0.4s ease-in-out;
+        }
+    }
+
+    .bar1 {
+        top: 0;
+    }
+
+    .bar2,
+    .bar3 {
+        top: 13px;
+    }
+
+    .bar3 {
+        right: 0;
+    }
+
+    .bar4 {
+        bottom: 0;
+    }
+
+    .bar1,
+    .bar4 {
+        transform-origin: 5%;
+    }
+
+    .checkbox:checked+label>.hamburger>.bar1 {
+        transform: rotate(45deg);
+        height: 3px;
+        width: 42px;
+    }
+
+    .checkbox:checked+label>.hamburger>.bar3 {
+        transform: rotate(45deg);
+        height: 3px;
+        background-color: transparent;
+    }
+
+    .checkbox:checked+label>.hamburger>.bar2 {
+        transform: rotate(-45deg);
+        height: 3px;
+        background-color: transparent;
+    }
+
+    .checkbox:checked+label>.hamburger>.bar4 {
+        transform: rotate(-45deg);
+        height: 3px;
+        width: 42px;
+    }
+</style>
+
+<script>
+    const hamburger = document.querySelector(".hamburger") as HTMLInputElement;
+    const nav = document.querySelector("nav");
+
+    hamburger.checked = false;
+    console.log(hamburger.checked)
+
+    hamburger.addEventListener("click", () => {
+        if (hamburger.checked === true) {
+            nav.classList.remove('active')
+            hamburger.checked = false
+        } else {
+            nav.classList.add('active')
+            hamburger.checked = true
+        }
+        console.log(hamburger.checked)
+    })
+</script>
