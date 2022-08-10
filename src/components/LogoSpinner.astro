@@ -20,10 +20,27 @@ const { link } = Astro.props
     img {
         border-radius: 50%;
         user-select: none;
+        transform: rotate(0);
         transition: transform .6s ease-in-out;
     }
 
     img:hover {
         transform: rotate(90deg);
+    }
+
+    @media (hover: none) {
+        @keyframes rotate {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(90deg);
+            }
+        }
+
+        img {
+            animation: rotate 0.75s ease-out 2s forwards;
+        }
     }
 </style>
