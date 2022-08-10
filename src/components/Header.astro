@@ -16,21 +16,18 @@ function active(item: string): string {
             </div>
         </a>
 
-        <input type="checkbox" id="checkbox" class="checkbox hidden">
-        <label for="checkbox">
-            <div class="hamburger">
-                <span class="bar bar1"></span>
-                <span class="bar bar2"></span>
-                <span class="bar bar3"></span>
-                <span class="bar bar4"></span>
-            </div>
-        </label>
+        <div class="hamburger">
+            <span class="bar bar1"></span>
+            <span class="bar bar2"></span>
+            <span class="bar bar3"></span>
+            <span class="bar bar4"></span>
+        </div>
     </div>
 
     <!-- TODO: replace these with Swup's link elements -->
     <nav>
-        <ul>
-            <li>
+        <ul data-visible="false">
+            <li class="active">
                 <a href="/motion">Motion</a>
             </li>
             <li>
@@ -54,50 +51,73 @@ function active(item: string): string {
     }
 
     nav {
-        padding-bottom: 3rem;
-        display: none;
-    }
-
-    .active {
-        display: block;
+        margin: 0 1em;
     }
 
     ul {
         list-style: none;
-        padding: 0;
         margin: 0;
+        padding: 0 0 1em 0;
+
+        display: none;
+    }
+
+    ul[data-visible="true"],
+    ul[data-visible="hiding"] {
+        display: block;
     }
 
     li {
-        padding-left: 1rem;
-        padding-top: 1rem;
+        padding: 0.5em 0;
+        border-top: 1px solid grey;
     }
 
     a {
         text-decoration: none;
-        text-transform: none;
+        text-transform: uppercase;
+
+        font-size: 0.75em;
+        font-weight: 400;
+        letter-spacing: 2px;
     }
 
     a:hover {
         color: gray;
     }
 
-    .hidden {
-        position: absolute;
-        overflow: hidden;
-        clip: rect(0 0 0 0);
-        height: 1px;
-        width: 1px;
-        margin: -1px;
-        padding: 0;
-        border: 0;
+    @media (min-width: 35em) {
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            gap: 2em;
+            padding: 0;
+        }
+
+        li {
+            padding: 0;
+            border: none;
+            opacity: 0.4;
+        }
+
+        .active {
+            opacity: 1;
+        }
     }
 
     .hamburger {
         margin: 1rem;
         margin-top: 30px;
         width: 30px;
-        aspect-ratio: 1;
+        height: 30px;
         position: relative;
         cursor: pointer;
     }
@@ -112,8 +132,40 @@ function active(item: string): string {
     }
 
     @media (prefers-reduced-motion: no-preference) {
+        @keyframes slide-down {
+            from {
+                opacity: 0;
+                transform: translateY(-5%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slide-up {
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            to {
+                opacity: 0;
+                transform: translateY(-5%);
+            }
+        }
+
         .bar {
             transition: all 0.4s ease-in-out;
+        }
+
+        ul[data-visible="true"] {
+            animation: slide-down 0.5s ease-out;
+        }
+
+        ul[data-visible="hiding"] {
+            animation: slide-up 0.5s ease-out;
         }
     }
 
@@ -139,25 +191,25 @@ function active(item: string): string {
         transform-origin: 5%;
     }
 
-    .checkbox:checked+label>.hamburger>.bar1 {
+    .open>.bar1 {
         transform: rotate(45deg);
         height: 3px;
         width: 42px;
     }
 
-    .checkbox:checked+label>.hamburger>.bar3 {
+    .open>.bar3 {
         transform: rotate(45deg);
         height: 3px;
         background-color: transparent;
     }
 
-    .checkbox:checked+label>.hamburger>.bar2 {
+    .open>.bar2 {
         transform: rotate(-45deg);
         height: 3px;
         background-color: transparent;
     }
 
-    .checkbox:checked+label>.hamburger>.bar4 {
+    .open>.bar4 {
         transform: rotate(-45deg);
         height: 3px;
         width: 42px;
@@ -165,20 +217,18 @@ function active(item: string): string {
 </style>
 
 <script>
-    const hamburger = document.querySelector(".hamburger") as HTMLInputElement;
-    const nav = document.querySelector("nav");
-
-    hamburger.checked = false;
-    console.log(hamburger.checked)
+    const hamburger = document.querySelector(".hamburger") as HTMLButtonElement;
+    const nav = document.querySelector("ul");
 
     hamburger.addEventListener("click", () => {
-        if (hamburger.checked === true) {
-            nav.classList.remove('active')
-            hamburger.checked = false
+        const visible = nav.getAttribute('data-visible')
+        if (visible === "false") {
+            nav.setAttribute('data-visible', "true")
+            hamburger.classList.add("open")
         } else {
-            nav.classList.add('active')
-            hamburger.checked = true
+            nav.setAttribute('data-visible', "hiding")
+            setTimeout(() => nav.setAttribute('data-visible', "false"), 450)
+            hamburger.classList.remove("open")
         }
-        console.log(hamburger.checked)
     })
 </script>
