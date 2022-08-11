@@ -1,3 +1,56 @@
-<hr />
-<h1>Footer</h1>
-<p>Should put contact info and social media links in here</p>
+---
+---
+
+<footer>
+    <div class="text">
+        <p>© Benjamin Bellette.</p>
+        <p>All rights reserved</p>
+    </div>
+
+    <div class="social">
+        <a href="https://www.facebook.com/ben.bellette.DOP/"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.instagram.com/ben.bellette/"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/benjamin-bellette-7b9263181"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.vimeo.com/benbellette"><i class="fa fa-vimeo"></i></a>
+        <a href="mailto:ben.bellette.gmail.com"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+</footer>
+
+<style>
+    footer {
+        padding: 2rem;
+    }
+
+    .text p {
+        text-align: center;
+    }
+
+    .social {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+
+        padding: 1rem;
+    }
+
+    @media (min-width: 35rem) {
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .text p {
+            text-align: none;
+        }
+    }
+
+    @media (hover: hover) {
+        a:hover {
+            opacity: 0.75;
+        }
+    }
+</style>
+
+
+<script src="https://kit.fontawesome.com/06391e44db.js" crossorigin="anonymous"></script>
