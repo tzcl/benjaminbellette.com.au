@@ -1,0 +1,46 @@
+---
+export interface Props {
+    img: string
+}
+
+const { img } = Astro.props
+
+const background = `background: url(${img}) center center / cover #111;`
+---
+
+<div class="slice">
+    <div class="slice-bg" style={background}></div>
+    <div class="slice-overlay">
+        <slot />
+    </div>
+</div>
+
+<style>
+    .slice {
+        position: relative;
+    }
+
+    .slice-bg {
+        aspect-ratio: 1920 / 360;
+    }
+
+    .slice-overlay {
+        position: absolute;
+        inset: 0px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        text-align: center;
+
+        background-color: hsl(0 0% 0% / 0.8);
+    }
+
+    .slice-overlay p {
+        margin-top: 0.5em;
+    }
+
+
+    /* hovering is tricky! */
+</style>

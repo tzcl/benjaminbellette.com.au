@@ -129,9 +129,7 @@ const coverImg = "https://benjaminbellette.com.au/images/logo.png"
   /* End reset */
 
   ::selection {
-    /* Chrome forces this to be semi-transparent */
-    /* We can override this by setting the opacity */
-    background-color: rgb(210, 100, 125, 0.996);
+    background-color: #d2647d;
   }
 
   h1::selection {
@@ -141,6 +139,21 @@ const coverImg = "https://benjaminbellette.com.au/images/logo.png"
       3px 2px 1px #d2647d, 2px 3px 1px #d2647d,
       4px 3px 1px #d2647d;
   }
+
+  h2::selection {
+    background-color: transparent;
+    text-shadow: 1px 0px 1px #d2647d, 0px 1px 1px #d2647d,
+      2px 1px 1px #d2647d, 1px 2px 1px #d2647d,
+      3px 2px 1px #d2647d, 2px 3px 1px #d2647d;
+  }
+
+  h3::selection,
+  h4::selection {
+    /* Chrome forces this to be semi-transparent */
+    /* We can override this by setting the opacity */
+    background-color: rgb(210, 100, 125, 0.996);
+  }
+
 
   .title::selection {
     background-color: transparent;
@@ -153,8 +166,13 @@ const coverImg = "https://benjaminbellette.com.au/images/logo.png"
       7px 6px 1px #d2647d;
   }
 
-  img::selection {
-    background-color: rgb(210, 100, 125);
+  .subtitle::selection {
+    background-color: transparent;
+    text-shadow: 1px 0px 1px #d2647d, 0px 1px 1px #d2647d,
+      2px 1px 1px #d2647d, 1px 2px 1px #d2647d,
+      3px 2px 1px #d2647d, 2px 3px 1px #d2647d,
+      4px 3px 1px #d2647d, 3px 4px 1px #d2647d,
+      5px 4px 1px #d2647d;
   }
 
   body {
@@ -178,7 +196,6 @@ const coverImg = "https://benjaminbellette.com.au/images/logo.png"
   a,
   p {
     font-family: "Open Sans", arial, sans-serif;
-    font-weight: 300;
     font-size: 0.75em;
     font-weight: 400;
     letter-spacing: 2px;
@@ -201,6 +218,19 @@ const coverImg = "https://benjaminbellette.com.au/images/logo.png"
     font-size: 1.25em;
     line-height: 1.6;
     letter-spacing: 0.4em;
+  }
+
+  .subtitle {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    padding: 2rem;
+    background-color: #fff;
+    color: #000;
+  }
+
+  h3 {
+    font-size: 1.1em;
+    line-height: 1.5;
+    letter-spacing: 0.15em;
   }
 
   h4 {

@@ -1,17 +1,26 @@
 ---
 import Page from "../layouts/Page.astro"
+import Slice from "../components/Slice.astro"
 ---
 
 <!-- TODO: fix up description... -->
 <Page title="Benjamin Bellette | Motion" description="What to put here?">
-    <h1>Motion</h1>
-    <p>This is the main content of the page</p>
+    <h1 class="title">Motion</h1>
+    <section>
+        <Slice img="assets/reel.png">
+            <h3>Reel</h3>
+            <p>Video highlights</p>
+        </Slice>
+        <Slice img="assets/mumlife.png">
+            <h3>Mumlife</h3>
+            <p>Oscar-nominated film</p>
+        </Slice>
+    </section>
+    <section>
+        <h2 class="subtitle">Documentaries</h2>
+    </section>
 </Page>
 
 <style>
-    body h1 {
-        background-color: white;
-        color: hsl(0 0% 0% / 1);
-        padding: 1rem;
-    }
+
 </style>
