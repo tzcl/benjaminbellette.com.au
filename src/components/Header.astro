@@ -161,11 +161,11 @@ function active(item: string): string {
         }
 
         ul[data-visible="true"] {
-            animation: slide-down 0.5s ease-out;
+            animation: slide-down 0.5s ease-out forwards;
         }
 
         ul[data-visible="hiding"] {
-            animation: slide-up 0.5s ease-out;
+            animation: slide-up 0.5s ease-out forwards;
         }
     }
 
@@ -220,15 +220,19 @@ function active(item: string): string {
     const hamburger = document.querySelector(".hamburger") as HTMLButtonElement;
     const nav = document.querySelector("ul");
 
+
     hamburger.addEventListener("click", () => {
         const visible = nav.getAttribute('data-visible')
+        const animation = window.matchMedia('(prefers-reduced-motion: no-preference').matches;
         if (visible === "false") {
             nav.setAttribute('data-visible', "true")
             hamburger.classList.add("open")
         } else {
             nav.setAttribute('data-visible', "hiding")
-            setTimeout(() => nav.setAttribute('data-visible', "false"), 450)
             hamburger.classList.remove("open")
+
+            if (animation === true) setTimeout(() => nav.setAttribute('data-visible', "false"), 500)
+            else nav.setAttribute('data-visible', "false")
         }
     })
 </script>
