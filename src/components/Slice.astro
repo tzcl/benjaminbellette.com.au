@@ -1,17 +1,24 @@
 ---
+import play from "../assets/play.svg"
+
 export interface Props {
+    title: string
+    text: string
     img: string
 }
 
-const { img } = Astro.props
+const { title, text, img } = Astro.props
 
 const background = `background: url(${img}) center center / cover #111;`
 ---
 
 <div class="slice">
-    <div class="slice-bg" style={background}></div>
-    <div class="slice-overlay">
-        <slot />
+    <div class="slice-bg" style={background}>
+        <a href="/" class="slice-overlay">
+            <img width="20" height="20" src={play} />
+            <h3>{title}</h3>
+            <p>{text}</p>
+        </a>
     </div>
 </div>
 
@@ -37,10 +44,47 @@ const background = `background: url(${img}) center center / cover #111;`
         background-color: hsl(0 0% 0% / 0.8);
     }
 
-    .slice-overlay p {
-        margin-top: 0.5em;
+    a.slice-overlay {
+        text-decoration: none;
+        font-size: 1rem;
     }
 
+    .slice-overlay img {
+        display: none;
+    }
 
-    /* hovering is tricky! */
+    @media (min-width: 40rem) {
+        .slice-overlay p {
+            margin-top: 1em;
+        }
+    }
+
+    @media (min-width: 50rem) {
+        .slice-overlay img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .slice-overlay h3 {
+            margin-top: 1rem;
+        }
+    }
+
+    @media (hover: hover) {
+        .slice-bg .slice-overlay {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .slice-bg:hover .slice-overlay {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        .slice-overlay {
+            transition: opacity 0.3s ease-in-out, visibility 0.3s;
+        }
+    }
 </style>

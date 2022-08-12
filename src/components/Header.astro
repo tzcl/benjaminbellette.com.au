@@ -152,15 +152,15 @@ function active(item: string): string {
         }
 
         .bar {
-            transition: all 0.4s ease-in-out;
+            transition: all 0.25s ease-in-out;
         }
 
         ul[data-visible="true"] {
-            animation: slide-down 0.5s ease-out forwards;
+            animation: slide-down 0.25s ease-out forwards;
         }
 
         ul[data-visible="hiding"] {
-            animation: slide-up 0.5s ease-out forwards;
+            animation: slide-up 0.25s ease-out forwards;
         }
     }
 
@@ -226,7 +226,7 @@ function active(item: string): string {
             nav.setAttribute('data-visible', "hiding")
             hamburger.classList.remove("open")
 
-            if (animation === true) setTimeout(() => nav.setAttribute('data-visible', "false"), 500)
+            if (animation === true) setTimeout(() => nav.setAttribute('data-visible', "false"), 250)
             else nav.setAttribute('data-visible', "false")
         }
     })
