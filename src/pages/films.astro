@@ -1,6 +1,6 @@
 ---
 import Page from "../layouts/Page.astro"
-import Slice from "../components/Slice.astro"
+import Slice from "../components/Slice"
 
 // TODO: declare slice data here and map through
 ---
@@ -9,8 +9,8 @@ import Slice from "../components/Slice.astro"
 <Page title="Benjamin Bellette | Films" description="Melbourne and Sydney-based cinematographer.">
     <h1 class="title">Films</h1>
     <section>
-        <Slice title='Reel' text='Cinematography highlights' img="assets/reel.png" />
-        <Slice title='Mumlife' text='Oscar-nominated film' img="assets/mumlife.png" />
+        <Slice client:visible />
+        <!-- <Slice client:only="react" /> -->
     </section>
     <section>
         <h2 class="subtitle">Short films</h2>
