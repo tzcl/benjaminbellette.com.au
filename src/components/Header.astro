@@ -2,10 +2,19 @@
 import { Image } from "@astrojs/image/components"
 import logo from "../assets/logo-dark.png"
 
-// take the active page as a prop?
+const path = Astro.url.pathname;
 function active(item: string): string {
+    if (item === path) return "active";
     return "";
 }
+
+const pages = [
+    { link: "/films", text: "Films" },
+    { link: "/music-videos", text: "Music Videos" },
+    { link: "/events", text: "Events" },
+    { link: "/commercials", text: "Commercials" },
+    { link: "/contact", text: "Contact" },
+]
 ---
 
 <header>
@@ -27,15 +36,10 @@ function active(item: string): string {
     <!-- TODO: replace these with Swup's link elements -->
     <nav>
         <ul data-visible="false">
-            <li class="active">
-                <a href="/motion">Motion</a>
-            </li>
-            <li>
-                <a href="/stills">Stills</a>
-            </li>
-            <li>
-                <a href="/contact">Contact</a>
-            </li>
+            {pages.map((item, i) =>
+            <li key={i} class={active(item.link)}>
+                <a href={item.link}>{item.text}</a>
+            </li>)}
         </ul>
     </nav>
 </header>
@@ -77,10 +81,18 @@ function active(item: string): string {
     }
 
     a:hover {
-        color: gray;
+        color: #b1b1b1;
     }
 
-    @media (min-width: 35em) {
+    li a {
+        opacity: 0.6;
+    }
+
+    .active a {
+        opacity: 1;
+    }
+
+    @media (min-width: 55rem) {
         header {
             display: flex;
             align-items: center;
@@ -100,11 +112,6 @@ function active(item: string): string {
         li {
             padding: 0;
             border: none;
-            opacity: 0.4;
-        }
-
-        .active {
-            opacity: 1;
         }
     }
 
