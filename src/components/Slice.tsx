@@ -4,7 +4,7 @@ import styles from "./Slice.module.css";
 const Slice = () => {
   const title = "Mumlife";
   const text = "Oscar-nominated film";
-  const img = "./assets/mumlife.png";
+  const img = "/assets/mumlife.png";
   const background = { background: `url(${img}) center center / cover #111;` };
 
   const modalRef = useRef<HTMLDialogElement>();
