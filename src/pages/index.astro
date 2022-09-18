@@ -1,13 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import LogoSpinner from '../components/LogoSpinner.astro'
-import BackgroundVideo from '../components/BackgroundVideo'
+import Layout from "../layouts/Layout.astro";
+import LogoSpinner from "../components/LogoSpinner.astro";
+import BackgroundVideo from "../components/BackgroundVideo";
 ---
 
-<Layout title="Benjamin Bellette" description="Melbourne and Sydney-based cinematographer.">
+<Layout
+	title="Benjamin Bellette"
+	description="Melbourne and Sydney-based cinematographer."
+>
 	<BackgroundVideo client:load />
 	<section class="center">
-		<LogoSpinner link="/films" />
+		<LogoSpinner link="/motion" />
 		<h1>Benjamin Bellette</h1>
 		<h4>Director of Photography</h4>
 	</section>
