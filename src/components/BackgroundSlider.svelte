@@ -50,6 +50,8 @@
     --swiper-theme-color: #fff;
   }
 
+  /* TODO: refactor this */
+  /* Add to Tailwind theme? */
   @media (min-width: 40rem) {
     .text-title {
       font-size: clamp(3rem, 7vw, 5rem);
