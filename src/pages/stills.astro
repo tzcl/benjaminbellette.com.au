@@ -1,0 +1,25 @@
+---
+import Page from "../layouts/Page.astro";
+import BackgroundSlider from "../components/BackgroundSlider.svelte";
+
+const pics = [
+  "https://i.imgur.com/VmNhVhL.jpg",
+  "https://i.imgur.com/0bVicqt.jpg",
+  "https://i.imgur.com/vFJOq8s.jpg",
+];
+---
+
+<Page
+  title="Benjamin Bellette | Stills"
+  description="Melbourne and Sydney-based cinematographer."
+>
+  <BackgroundSlider client:load title="Stills" pics={pics} />
+  <h2 id="bts" class="subtitle">Behind the scenes</h2>
+  <h2 id="photography" class="subtitle">Photography</h2>
+</Page>
+
+<style>
+  p {
+    text-align: center;
+  }
+</style>

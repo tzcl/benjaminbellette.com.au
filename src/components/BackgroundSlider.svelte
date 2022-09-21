@@ -10,7 +10,8 @@
   import "swiper/css/pagination";
 
   export let title: string;
-  export let tw: string;
+  export let pics: string[];
+  export let tw: string = "";
 </script>
 
 <div class="relative">
@@ -27,21 +28,14 @@
     speed={500}
     class={tw}
   >
-    <SwiperSlide
-      ><div
-        class="h-[250px] bg-[url('https://i.imgur.com/sUPf0wN.jpg')] bg-cover bg-center opacity-50"
-      /></SwiperSlide
-    >
-    <SwiperSlide
-      ><div
-        class="h-[250px] bg-[url('https://i.imgur.com/2K3s35g.jpg')] bg-cover bg-center opacity-50"
-      /></SwiperSlide
-    >
-    <SwiperSlide
-      ><div
-        class="h-[250px] bg-[url('https://i.imgur.com/wtjYwZ8.jpg')] bg-cover bg-center opacity-50"
-      /></SwiperSlide
-    >
+    {#each pics as pic}
+      <SwiperSlide
+        ><div
+          class={`h-[250px] bg-cover bg-center opacity-50`}
+          style="background-image: url('{pic}')"
+        /></SwiperSlide
+      >
+    {/each}
   </Swiper>
 </div>
 

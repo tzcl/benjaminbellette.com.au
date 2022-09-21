@@ -1,6 +1,12 @@
 ---
 import Page from "../layouts/Page.astro";
 import Slider from "../components/BackgroundSlider.svelte";
+
+const pics = [
+  "https://i.imgur.com/sUPf0wN.jpg",
+  "https://i.imgur.com/2K3s35g.jpg",
+  "https://i.imgur.com/wtjYwZ8.jpg",
+];
 ---
 
 <Page
@@ -8,7 +14,7 @@ import Slider from "../components/BackgroundSlider.svelte";
   description="Melbourne and Sydney-based cinematographer."
 >
   <section>
-    <Slider client:load title="Contact" tw="mb-8" />
+    <Slider client:load title="Contact" tw="mb-8" pics={pics} />
     <h2>Want to get in touch?</h2>
     <div class="contact-items">
       <div class="contact-item">
