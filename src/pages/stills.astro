@@ -1,6 +1,7 @@
 ---
 import Page from "../layouts/Page.astro";
-import BackgroundSlider from "../components/BackgroundSlider.svelte";
+import Slider from "../components/Slider.svelte";
+import Tile from "../components/Tile.svelte";
 
 const pics = [
   "https://i.imgur.com/VmNhVhL.jpg",
@@ -13,9 +14,14 @@ const pics = [
   title="Benjamin Bellette | Stills"
   description="Melbourne and Sydney-based cinematographer."
 >
-  <BackgroundSlider client:load title="Stills" pics={pics} />
-  <h2 id="bts" class="subtitle">Behind the scenes</h2>
-  <h2 id="photography" class="subtitle">Photography</h2>
+  <Slider client:load title="Stills" pics={pics} />
+  <section id="bts">
+    <h2 class="subtitle">Behind the scenes</h2>
+    <Tile />
+  </section>
+  <section id="photography">
+    <h2 class="subtitle">Photography</h2>
+  </section>
 </Page>
 
 <style>

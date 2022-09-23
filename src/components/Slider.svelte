@@ -18,14 +18,14 @@
   <div
     class="absolute z-10 grid w-full h-full place-content-center pointer-events-none"
   >
-    <h1 class="text-title">{title}</h1>
+    <h1 class="text-title pointer-events-auto">{title}</h1>
   </div>
   <Swiper
     modules={[Navigation, Pagination, A11y]}
     navigation
     pagination={{ clickable: true }}
-    grabCursor={true}
     speed={500}
+    grabCursor={true}
     class={tw}
   >
     {#each pics as pic}
