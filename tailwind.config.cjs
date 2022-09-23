@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   presets: [],
   darkMode: "media", // or 'class'
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   theme: {
     screens: {
       sm: "640px",
@@ -10,6 +13,7 @@ module.exports = {
       lg: "1024px",
       xl: "1280px",
       "2xl": "1536px",
+      "can-hover": { raw: "(hover: hover) and (pointer: fine)" },
     },
     colors: ({ colors }) => ({
       inherit: colors.inherit,
@@ -962,5 +966,4 @@ module.exports = {
     "active",
     "disabled",
   ],
-  plugins: [],
 };
