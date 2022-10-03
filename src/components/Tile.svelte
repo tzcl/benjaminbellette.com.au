@@ -11,15 +11,29 @@
   let modal: HTMLDialogElement;
 
   function showModal() {
+    console.log("showing modal");
     const padding = window.innerWidth - document.documentElement.clientWidth;
     document.body.style.overflow = "hidden";
     document.body.style.paddingRight = `${padding}px`;
     modal.showModal();
   }
 
-  function cleanupModal() {
+  function exitModal() {
+    console.log("exiting modal");
+    modal.addEventListener("animationend", closeModal);
+    // setTimeout(closeModal, 1000);
+    modal.setAttribute("data-exiting", "");
+    // modal.classList.add("exiting");
+  }
+
+  function closeModal() {
+    console.log("closing modal");
     document.body.style.overflow = "";
     document.body.style.paddingRight = "";
+    modal.removeAttribute("data-exiting");
+    // modal.classList.remove("exiting");
+    modal.removeEventListener("animationend", closeModal);
+    modal.close();
   }
 
   export let items: Item[];
@@ -47,22 +61,20 @@
   </div>
 
   <dialog
-    class="max-h-full w-full max-w-full overscroll-contain border-0 bg-transparent p-0 backdrop:bg-black/75"
+    class="max-h-full w-full max-w-full overscroll-contain border-0 bg-transparent p-0 backdrop:bg-black/75 open:animate-slide-down open:backdrop:animate-fade-in [&[data-exiting]]:animate-slide-up [&[data-exiting]]:backdrop:animate-fade-out"
     bind:this={modal}
     on:click={(e) => {
       // @ts-ignore
-      console.log(e.target.tagName);
-      if (e.target.tagName == "DIALOG") modal.close();
+      if (e.target.tagName == "DIALOG") exitModal();
     }}
-    on:close={() => cleanupModal()}
   >
     <div class="w-dialog pointer-events-auto mx-auto mt-20">
-      <section
+      <div
         class="ml-auto h-16 w-16 text-white hover:cursor-pointer"
-        on:click={() => modal.close()}
+        on:click={() => exitModal()}
       >
         <IoIosClose />
-      </section>
+      </div>
       {#each items as item}
         {#if item.type === "iframe"}
           <iframe
