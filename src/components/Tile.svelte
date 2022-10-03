@@ -7,12 +7,19 @@
 </script>
 
 <script lang="ts">
-  import { fade } from "svelte/transition";
-  let modal;
+  import IoIosClose from "svelte-icons/io/IoIosClose.svelte";
+  let modal: HTMLDialogElement;
 
   function showModal() {
+    const padding = window.innerWidth - document.documentElement.clientWidth;
     document.body.style.overflow = "hidden";
+    document.body.style.paddingRight = `${padding}px`;
     modal.showModal();
+  }
+
+  function cleanupModal() {
+    document.body.style.overflow = "";
+    document.body.style.paddingRight = "";
   }
 
   export let items: Item[];
@@ -43,12 +50,19 @@
     class="max-h-full w-full max-w-full overscroll-contain border-0 bg-transparent p-0 backdrop:bg-black/75"
     bind:this={modal}
     on:click={(e) => {
+      // @ts-ignore
+      console.log(e.target.tagName);
       if (e.target.tagName == "DIALOG") modal.close();
     }}
-    on:close={() => document.body.style.removeProperty("overflow")}
+    on:close={() => cleanupModal()}
   >
     <div class="w-dialog pointer-events-auto mx-auto mt-20">
-      <!-- TODO: add X to close modal -->
+      <section
+        class="ml-auto h-16 w-16 text-white hover:cursor-pointer"
+        on:click={() => modal.close()}
+      >
+        <IoIosClose />
+      </section>
       {#each items as item}
         {#if item.type === "iframe"}
           <iframe
@@ -65,7 +79,7 @@
             alt={item.label}
             width="100%"
             height="100%"
-            class="h-item mb-8 object-cover"
+            class="h-item mb-8 select-none object-cover"
           />
         {/if}
       {/each}
