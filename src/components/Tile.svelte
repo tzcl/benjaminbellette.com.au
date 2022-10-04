@@ -1,4 +1,7 @@
 <script lang="ts" context="module">
+  import { onMount } from "svelte";
+  import Icon from "../components/Icon.svelte";
+
   export interface Item {
     type: string;
     content: string;
@@ -7,33 +10,38 @@
 </script>
 
 <script lang="ts">
-  import IoIosClose from "svelte-icons/io/IoIosClose.svelte";
+  let iframe: HTMLIFrameElement; // assume there is at most one video per tile
+  let player;
+
+  onMount(async () => {
+    const Player = (await import("@vimeo/player")).default;
+    if (iframe) player = new Player(iframe);
+  });
+
   let modal: HTMLDialogElement;
 
   function showModal() {
-    console.log("showing modal");
     const padding = window.innerWidth - document.documentElement.clientWidth;
     document.body.style.overflow = "hidden";
     document.body.style.paddingRight = `${padding}px`;
+
     modal.showModal();
   }
 
   function exitModal() {
-    console.log("exiting modal");
     modal.addEventListener("animationend", closeModal);
-    // setTimeout(closeModal, 1000);
     modal.setAttribute("data-exiting", "");
-    // modal.classList.add("exiting");
   }
 
   function closeModal() {
-    console.log("closing modal");
     document.body.style.overflow = "";
     document.body.style.paddingRight = "";
+
     modal.removeAttribute("data-exiting");
-    // modal.classList.remove("exiting");
     modal.removeEventListener("animationend", closeModal);
     modal.close();
+
+    if (player) player.pause();
   }
 
   export let items: Item[];
@@ -68,13 +76,16 @@
       if (e.target.tagName == "DIALOG") exitModal();
     }}
   >
-    <div class="w-dialog pointer-events-auto mx-auto mt-20">
-      <div
-        class="ml-auto h-16 w-16 text-white hover:cursor-pointer"
+    <div class="w-dialog mx-auto mt-20">
+      <Icon
+        name="x"
+        stroke="white"
+        strokeWidth="4"
+        width="2.5em"
+        height="2.5em"
+        class="ml-auto pb-2 hover:cursor-pointer"
         on:click={() => exitModal()}
-      >
-        <IoIosClose />
-      </div>
+      />
       {#each items as item}
         {#if item.type === "iframe"}
           <iframe
@@ -83,7 +94,10 @@
             frameborder="0"
             width="100%"
             height="100%"
+            allow="autoplay fullscreen picture-in-picture"
+            allowfullscreen
             class="h-item mb-8 object-cover"
+            bind:this={iframe}
           />
         {:else if item.type === "img"}
           <img
