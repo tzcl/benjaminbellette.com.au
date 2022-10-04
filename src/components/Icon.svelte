@@ -2,10 +2,11 @@
   import feather from "feather-icons";
   export const directions = ["n", "ne", "e", "se", "s", "sw", "w", "nw"];
 
-  let classes;
+  let classes = "";
   export { classes as class };
 
   export let name;
+  export let id = "";
   export let direction = "n";
   export let strokeWidth = "2";
   export let stroke = "currentColor";
@@ -24,6 +25,7 @@
   <svg
     {...icon.attrs}
     class={classes}
+    {id}
     style="width: {width}; height: {height}; transform: rotate({rotation}deg);"
     on:click
   >

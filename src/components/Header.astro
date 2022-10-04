@@ -1,5 +1,6 @@
 ---
 import { Image } from "@astrojs/image/components";
+import Icon from "../components/Icon.svelte";
 import logo from "../assets/logo-dark.png";
 
 const path = Astro.url.pathname;
@@ -34,24 +35,25 @@ const pages = [
 ---
 
 <header>
-  <div class="row">
+  <div class="flex justify-between items-center">
     <a href="/">
-      <div id="logo">
+      <div class="m-4">
         <!-- TODO: this doesn't work on mobile/Edge -->
         <Image src={logo} format="avif" />
       </div>
     </a>
 
-    <div class="hamburger">
-      <span class="bar bar1"></span>
-      <span class="bar bar2"></span>
-      <span class="bar bar3"></span>
-      <span class="bar bar4"></span>
-    </div>
+    <Icon
+      name="menu"
+      width="2.5em"
+      height="2.5em"
+      stroke="white"
+      strokeWidth="2"
+      class="m-4 hover:cursor-pointer"
+      id="hamburger"
+    />
   </div>
 
-  <!-- TODO: replace these with Swup's link elements -->
-  <!-- Yeah, I could do that... but links themselves are fine -->
   <nav>
     <ul data-visible="false">
       {
@@ -62,7 +64,7 @@ const pages = [
             </li>
             {page.children &&
               page.children.map((section, i) => (
-                <li key={i} class={active(page.link)}>
+                <li key={i} class:list={[active(page.link), "pl-4"]}>
                   <a href={section.link}>{section.text}</a>
                 </li>
               ))}
@@ -73,182 +75,8 @@ const pages = [
   </nav>
 </header>
 
-<style>
-  .row {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  #logo {
-    margin: 1rem;
-  }
-
-  nav {
-    margin: 0 1em;
-  }
-
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0 0 1em 0;
-
-    display: none;
-  }
-
-  ul[data-visible="true"],
-  ul[data-visible="hiding"] {
-    display: block;
-  }
-
-  li {
-    padding: 0.5em 0;
-    border-top: 1px solid grey;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: #b1b1b1;
-  }
-
-  li a {
-    opacity: 0.6;
-  }
-
-  .active a {
-    opacity: 1;
-  }
-
-  @media (min-width: 55rem) {
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .hamburger {
-      display: none;
-    }
-
-    ul {
-      display: flex;
-      gap: 2em;
-      padding: 0;
-    }
-
-    li {
-      padding: 0;
-      border: none;
-    }
-  }
-
-  .hamburger {
-    margin: 1rem;
-    margin-top: 30px;
-    width: 30px;
-    height: 30px;
-    position: relative;
-    cursor: pointer;
-  }
-
-  .bar {
-    padding: 0;
-    width: 30px;
-    height: 3px;
-    background-color: rgb(255, 255, 255);
-    display: block;
-    position: absolute;
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    @keyframes slide-down {
-      from {
-        opacity: 0;
-        transform: translateY(-5%);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes slide-up {
-      from {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      to {
-        opacity: 0;
-        transform: translateY(-5%);
-      }
-    }
-
-    .bar {
-      transition: all 0.25s ease-in-out;
-    }
-
-    ul[data-visible="true"] {
-      animation: slide-down 0.25s ease-out forwards;
-    }
-
-    ul[data-visible="hiding"] {
-      animation: slide-up 0.25s ease-out forwards;
-    }
-  }
-
-  .bar1 {
-    top: 0;
-  }
-
-  .bar2,
-  .bar3 {
-    top: 13px;
-  }
-
-  .bar3 {
-    right: 0;
-  }
-
-  .bar4 {
-    bottom: 0;
-  }
-
-  .bar1,
-  .bar4 {
-    transform-origin: 5%;
-  }
-
-  .open > .bar1 {
-    transform: rotate(45deg);
-    height: 3px;
-    width: 42px;
-  }
-
-  .open > .bar3 {
-    transform: rotate(45deg);
-    height: 3px;
-    background-color: transparent;
-  }
-
-  .open > .bar2 {
-    transform: rotate(-45deg);
-    height: 3px;
-    background-color: transparent;
-  }
-
-  .open > .bar4 {
-    transform: rotate(-45deg);
-    height: 3px;
-    width: 42px;
-  }
-</style>
-
 <script>
-  const hamburger = document.querySelector(".hamburger") as HTMLButtonElement;
+  const hamburger = document.getElementById("hamburger") as HTMLButtonElement;
   const nav = document.querySelector("ul");
 
   hamburger.addEventListener("click", () => {
@@ -256,6 +84,7 @@ const pages = [
     const animation = window.matchMedia(
       "(prefers-reduced-motion: no-preference"
     ).matches;
+    console.log(animation);
     if (visible === "false") {
       nav.setAttribute("data-visible", "true");
       hamburger.classList.add("open");

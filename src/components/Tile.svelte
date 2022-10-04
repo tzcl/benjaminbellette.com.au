@@ -80,7 +80,7 @@
       <Icon
         name="x"
         stroke="white"
-        strokeWidth="4"
+        strokeWidth="3"
         width="2.5em"
         height="2.5em"
         class="ml-auto pb-2 hover:cursor-pointer"
@@ -94,7 +94,7 @@
             frameborder="0"
             width="100%"
             height="100%"
-            allow="autoplay fullscreen picture-in-picture"
+            allow="autoplay; fullscreen; picture-in-picture;"
             allowfullscreen
             class="h-item mb-8 object-cover"
             bind:this={iframe}
