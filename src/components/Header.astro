@@ -1,6 +1,5 @@
 ---
 import { Image } from "@astrojs/image/components";
-import Icon from "../components/Icon.svelte";
 import logo from "../assets/logo-dark.png";
 
 const path = Astro.url.pathname;
@@ -41,16 +40,14 @@ let icon = "menu";
     <a href="/">
       <div class="m-4">
         <!-- TODO: this doesn't work on mobile/Edge -->
-        <Image src={logo} format="avif" />
+        <Image src={logo} format="avif" width={236} height={54} />
       </div>
     </a>
 
-    <Icon
-      name={icon}
-      width="2.5em"
-      height="2.5em"
-      stroke="white"
-      strokeWidth="3"
+    <img
+      src="./assets/menu.svg"
+      width="32px"
+      height="32px"
       class="m-4 hover:cursor-pointer"
       id="hamburger"
     />
@@ -99,7 +96,7 @@ let icon = "menu";
 </header>
 
 <script>
-  const hamburger = document.getElementById("hamburger") as HTMLButtonElement;
+  const hamburger = document.getElementById("hamburger") as HTMLImageElement;
   const nav = document.querySelector("ul");
 
   hamburger.addEventListener("click", () => {
@@ -110,13 +107,23 @@ let icon = "menu";
     if (visible === "false") {
       nav.setAttribute("data-visible", "true");
       hamburger.classList.add("open");
+      hamburger.src = "./assets/x.svg";
     } else {
       nav.setAttribute("data-visible", "hiding");
       hamburger.classList.remove("open");
+      hamburger.src = "./assets/menu.svg";
 
       if (animation === true)
         setTimeout(() => nav.setAttribute("data-visible", "false"), 250);
       else nav.setAttribute("data-visible", "false");
     }
   });
+
+  const activeItems = document.querySelectorAll(".active > a");
+  for (const item of activeItems) {
+    console.log(item);
+    item.addEventListener("click", () => {
+      hamburger.click();
+    });
+  }
 </script>

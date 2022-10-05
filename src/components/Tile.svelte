@@ -1,6 +1,5 @@
 <script lang="ts" context="module">
   import { onMount } from "svelte";
-  import Icon from "../components/Icon.svelte";
 
   export interface Item {
     type: string;
@@ -77,12 +76,11 @@
     }}
   >
     <div class="w-dialog mx-auto mt-20">
-      <Icon
-        name="x"
-        stroke="white"
-        strokeWidth="3"
-        width="2.5em"
-        height="2.5em"
+      <img
+        src="./assets/x.svg"
+        alt=""
+        width="32px"
+        height="32px"
         class="ml-auto pb-2 hover:cursor-pointer"
         on:click={() => exitModal()}
       />
