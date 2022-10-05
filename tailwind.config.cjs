@@ -14,7 +14,10 @@ module.exports = {
         "slide-up": "slide-up 0.25s ease-in-out forwards",
         "fade-in": "fade-in 0.25s ease-in-out forwards",
         "fade-out": "fade-out 0.25s ease-in-out forwards",
-        wiggle: "wiggle 1s ease-in-out infinite",
+        "slide-fade-in":
+          "slide-down 0.25s ease-in-out forwards, fade-in 0.25s ease-in-out forwards",
+        "slide-fade-out":
+          "slide-up 0.25s ease-in-out forwards, fade-out 0.25s ease-in-out forwards",
       },
       keyframes: {
         "slide-down": {
