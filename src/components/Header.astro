@@ -98,21 +98,27 @@ let icon = "menu";
       {
         pages.map((page, i) => (
           <div class="relative">
-            <li key={i} class={`${active(page.link)} peer`}>
-              <a href={page.link}>{page.text}</a>
+            <li key={i} class={`${active(page.link)}`}>
+              <a
+                href={page.link}
+                class="peer no-underline opacity-60 hover:text-[#b1b1b1] [.active_&]:opacity-100"
+              >
+                {page.text}
+              </a>
+              {page.children && (
+                <div class="pointer-events-none absolute top-8 left-0 z-10 bg-[#1e1e1e] p-4 opacity-0 peer-hover:opacity-100">
+                  <ul>
+                    {page.children.map((section, i) => (
+                      <li key={i} class="">
+                        <a href={section.link} class="">
+                          {section.text}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </li>
-            <div class="left-0 top-full hidden bg-[#b6b6b6] p-4 opacity-100 peer-hover:absolute">
-              <ul>
-                {page.children &&
-                  page.children.map((section, i) => (
-                    <li key={i} class="">
-                      <a href={section.link} class="">
-                        {section.text}
-                      </a>
-                    </li>
-                  ))}
-              </ul>
-            </div>
           </div>
         ))
       }
