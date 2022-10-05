@@ -10,31 +10,17 @@ module.exports = {
         "can-hover": { raw: "(hover: hover) and (pointer: fine)" },
       },
       animation: {
-        "slide-down": "slide-down 0.25s ease-in-out forwards",
-        "slide-up": "slide-up 0.25s ease-in-out forwards",
-        "fade-in": "fade-in 0.25s ease-in-out forwards",
-        "fade-out": "fade-out 0.25s ease-in-out forwards",
-        "slide-fade-in":
-          "slide-down 0.25s ease-in-out forwards, fade-in 0.25s ease-in-out forwards",
-        "slide-fade-out":
-          "slide-up 0.25s ease-in-out forwards, fade-out 0.25s ease-in-out forwards",
+        "slide-in": "slide-in 0.25s ease-in-out forwards",
+        "slide-out": "slide-out 0.25s ease-in-out forwards",
       },
       keyframes: {
-        "slide-down": {
-          "0%": { transform: "translateY(-5%)" },
-          "100%": { transform: "translateY(0 )" },
+        "slide-in": {
+          "0%": { transform: "translateY(-5%)", opacity: "0" },
+          "100%": { transform: "translateY(0 )", opacity: "100%" },
         },
-        "slide-up": {
-          "0%": { transform: "translateY(0 )" },
-          "100%": { transform: "translateY(-5%)" },
-        },
-        "fade-in": {
-          "0%": { opacity: "0" },
-          "100%": { opacity: "100%" },
-        },
-        "fade-out": {
-          "0%": { opacity: "100%" },
-          "100%": { opacity: "0" },
+        "slide-out": {
+          "0%": { transform: "translateY(0)", opacity: "100%" },
+          "100%": { transform: "translateY(-5%)", opacity: "0" },
         },
       },
     },

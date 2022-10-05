@@ -1,5 +1,7 @@
 ---
 import { Image } from "@astrojs/image/components";
+import { list } from "postcss";
+import { check_outros, children } from "svelte/internal";
 import logo from "../assets/logo-dark.png";
 
 const path = Astro.url.pathname;
@@ -35,7 +37,7 @@ const pages = [
 let icon = "menu";
 ---
 
-<header>
+<header class="md:flex md:justify-between md:items-center">
   <div class="flex justify-between items-center">
     <a href="/">
       <div class="m-4">
@@ -48,7 +50,7 @@ let icon = "menu";
       src="./assets/menu.svg"
       width="32px"
       height="32px"
-      class="m-4 hover:cursor-pointer"
+      class="m-4 hover:cursor-pointer md:hidden"
       id="hamburger"
     />
   </div>
@@ -56,7 +58,7 @@ let icon = "menu";
   <nav class="mx-4">
     <ul
       data-visible="false"
-      class="py-4 hidden [&[data-visible='true']]:block [&[data-visible='true']]:animate-slide-fade-in [&[data-visible='hiding']]:block [&[data-visible='hiding']]:animate-slide-fade-out"
+      class="hidden [&[data-visible='true']]:block [&[data-visible='true']]:animate-slide-in [&[data-visible='hiding']]:block [&[data-visible='hiding']]:animate-slide-out py-4"
     >
       {
         pages.map((page, i) => (
@@ -89,6 +91,29 @@ let icon = "menu";
                 </li>
               ))}
           </>
+        ))
+      }
+    </ul>
+    <ul class="hidden md:flex md:gap-8 md:p-0">
+      {
+        pages.map((page, i) => (
+          <div class="relative">
+            <li key={i} class={`${active(page.link)} peer`}>
+              <a href={page.link}>{page.text}</a>
+            </li>
+            <div class="left-0 top-full hidden bg-[#b6b6b6] p-4 opacity-100 peer-hover:absolute">
+              <ul>
+                {page.children &&
+                  page.children.map((section, i) => (
+                    <li key={i} class="">
+                      <a href={section.link} class="">
+                        {section.text}
+                      </a>
+                    </li>
+                  ))}
+              </ul>
+            </div>
+          </div>
         ))
       }
     </ul>
