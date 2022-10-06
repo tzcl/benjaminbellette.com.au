@@ -68,7 +68,7 @@
   </div>
 
   <dialog
-    class="max-h-full w-full max-w-full overscroll-contain border-0 bg-transparent p-0 backdrop:bg-black/75 open:animate-slide-in [&[data-exiting]]:animate-slide-out"
+    class="max-h-full w-full max-w-full overscroll-contain border-0 bg-transparent p-0 backdrop:bg-black/75 open:animate-slide-in open:backdrop:animate-fade-in [&[data-exiting]]:animate-slide-out [&[data-exiting]]:backdrop:animate-fade-out"
     bind:this={modal}
     on:click={(e) => {
       // @ts-ignore
