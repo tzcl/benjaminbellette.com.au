@@ -1,33 +1,183 @@
 ---
+import type { Item } from "../components/Tile.svelte";
+import Tile from "../components/Tile.svelte";
 import Page from "../layouts/Page.astro";
-import Slice from "../components/Slice";
 
-// TODO: declare slice data here and map through
+const mumlife: Item[] = [
+  {
+    type: "iframe",
+    content: "https://player.vimeo.com/video/707425833",
+    label: "",
+  },
+  {
+    type: "img",
+    content: "https://i.imgur.com/vByh3Ds.jpg",
+    label: "arst",
+  },
+  {
+    type: "img",
+    content: "https://i.imgur.com/m9pUpLU.jpg",
+    label: "arst",
+  },
+  {
+    type: "img",
+    content: "https://i.imgur.com/0o06GPO.jpg",
+    label: "arst",
+  },
+  {
+    type: "img",
+    content: "https://i.imgur.com/du1xzlu.jpg",
+    label: "arst",
+  },
+  {
+    type: "img",
+    content: "https://i.imgur.com/VO43cLW.jpg",
+    label: "arst",
+  },
+  {
+    type: "img",
+    content: "https://i.imgur.com/IIM63Df.jpg",
+    label: "arst",
+  },
+  {
+    type: "img",
+    content: "https://i.imgur.com/SZH4pKh.jpg",
+    label: "arst",
+  },
+  {
+    type: "img",
+    content: "https://i.imgur.com/WpzfttP.jpg",
+    label: "arst",
+  },
+  {
+    type: "img",
+    content: "https://i.imgur.com/NirDIiW.jpg",
+    label: "arst",
+  },
+  {
+    type: "img",
+    content: "https://i.imgur.com/v72J2Jg.jpg",
+    label: "arst",
+  },
+  {
+    type: "img",
+    content: "https://i.imgur.com/6p4g0yO.jpg",
+    label: "arst",
+  },
+  {
+    type: "img",
+    content: "https://i.imgur.com/Y9AYfO7.jpg",
+    label: "arst",
+  },
+];
 ---
 
 <!-- TODO: fix up description... -->
 <Page
-    title="Benjamin Bellette | Motion"
-    description="Melbourne and Sydney-based cinematographer."
+  title="Benjamin Bellette | Motion"
+  description="Melbourne and Sydney-based cinematographer."
 >
-    <h1 class="title">Films</h1>
-    <section>
-        <Slice client:visible />
-        <!-- <Slice client:only="react" /> -->
-    </section>
-    <section>
-        <h2 class="subtitle">Short films</h2>
-        <p>Films section here</p>
-    </section>
-    <section>
-        <h2 class="subtitle">Docu&shy;mentaries</h2>
-        <p>Documentaries here</p>
-        <p>Call this section docos instead?</p>
-    </section>
+  <h1 class="title">Motion</h1>
+  <section id="reel">
+    <h2 class="subtitle">Reel</h2>
+    <iframe
+      src="https://player.vimeo.com/video/316965018?title=0&byline=0&portrait=0"
+      title="2019 Reel Benjamin Bellette"
+      frameborder="0"
+      width="100%"
+      height="100%"
+      allow="autoplay; fullscreen; picture-in-picture;"
+      allowfullscreen
+      class="w-main mx-auto my-12 aspect-video"
+    >
+    </iframe>
+  </section>
+  <section id="mumlife">
+    <h2 class="subtitle">MumLife Trailer</h2>
+    <div class="w-main mx-auto my-16 aspect-video">
+      <Tile
+        client:idle
+        title="MumLife"
+        subtitle="2022 Short Film"
+        img="https://i.imgur.com/m9pUpLU.jpg"
+        items={mumlife}
+      />
+    </div>
+  </section>
+  <section id="music">
+    <h2 class="subtitle">Music Videos</h2>
+    <div
+      class="grid justify-center gap-8 m-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+    >
+      <div class="aspect-video">
+        <Tile
+          client:idle
+          title="MumLife"
+          subtitle="2022 Short Film"
+          img="https://i.imgur.com/m9pUpLU.jpg"
+          items={mumlife}
+        />
+      </div>
+      <div class="aspect-video">
+        <Tile
+          client:idle
+          title="MumLife"
+          subtitle="2022 Short Film"
+          img="https://i.imgur.com/m9pUpLU.jpg"
+          items={mumlife}
+        />
+      </div>
+      <div class="aspect-video">
+        <Tile
+          client:idle
+          title="MumLife"
+          subtitle="2022 Short Film"
+          img="https://i.imgur.com/m9pUpLU.jpg"
+          items={mumlife}
+        />
+      </div>
+      <div class="aspect-video">
+        <Tile
+          client:idle
+          title="MumLife"
+          subtitle="2022 Short Film"
+          img="https://i.imgur.com/m9pUpLU.jpg"
+          items={mumlife}
+        />
+      </div>
+      <div class="aspect-video">
+        <Tile
+          client:idle
+          title="MumLife"
+          subtitle="2022 Short Film"
+          img="https://i.imgur.com/m9pUpLU.jpg"
+          items={mumlife}
+        />
+      </div>
+      <div class="aspect-video">
+        <Tile
+          client:idle
+          title="MumLife"
+          subtitle="2022 Short Film"
+          img="https://i.imgur.com/m9pUpLU.jpg"
+          items={mumlife}
+        />
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2 class="subtitle">Docu&shy;mentaries</h2>
+    <p>Documentaries here</p>
+    <p>Call this section docos instead?</p>
+  </section>
 </Page>
 
 <style>
-    p {
-        text-align: center;
-    }
+  .w-main {
+    width: min(60rem, 90%);
+  }
+
+  .w-item {
+    width: max(20ch, 100%);
+  }
 </style>

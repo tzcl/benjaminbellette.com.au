@@ -10,75 +10,6 @@ const pics = [
   "https://i.imgur.com/vFJOq8s.jpg",
 ];
 
-// TODO: move this data somewhere else
-const mumlife: Item[] = [
-  {
-    type: "iframe",
-    content: "https://player.vimeo.com/video/707425833",
-    label: "",
-  },
-  {
-    type: "img",
-    content: "https://i.imgur.com/vByh3Ds.jpg",
-    label: "arst",
-  },
-  {
-    type: "img",
-    content: "https://i.imgur.com/m9pUpLU.jpg",
-    label: "arst",
-  },
-  {
-    type: "img",
-    content: "https://i.imgur.com/0o06GPO.jpg",
-    label: "arst",
-  },
-  {
-    type: "img",
-    content: "https://i.imgur.com/du1xzlu.jpg",
-    label: "arst",
-  },
-  {
-    type: "img",
-    content: "https://i.imgur.com/VO43cLW.jpg",
-    label: "arst",
-  },
-  {
-    type: "img",
-    content: "https://i.imgur.com/IIM63Df.jpg",
-    label: "arst",
-  },
-  {
-    type: "img",
-    content: "https://i.imgur.com/SZH4pKh.jpg",
-    label: "arst",
-  },
-  {
-    type: "img",
-    content: "https://i.imgur.com/WpzfttP.jpg",
-    label: "arst",
-  },
-  {
-    type: "img",
-    content: "https://i.imgur.com/NirDIiW.jpg",
-    label: "arst",
-  },
-  {
-    type: "img",
-    content: "https://i.imgur.com/v72J2Jg.jpg",
-    label: "arst",
-  },
-  {
-    type: "img",
-    content: "https://i.imgur.com/6p4g0yO.jpg",
-    label: "arst",
-  },
-  {
-    type: "img",
-    content: "https://i.imgur.com/Y9AYfO7.jpg",
-    label: "arst",
-  },
-];
-
 const bts: Item[] = [
   {
     type: "img",
@@ -306,7 +237,7 @@ const photography: Item[] = [
     <div class="w-main mx-auto my-16">
       <div class="aspect-video">
         <Tile
-          client:idle
+          client:load
           title="Behind the scenes"
           subtitle="Stills"
           img="https://i.imgur.com/22bOxRj.jpg"
@@ -325,16 +256,14 @@ const photography: Item[] = [
   </section>
   <section id="photography">
     <h2 class="subtitle">Photography</h2>
-    <div class="w-main mx-auto my-12">
-      <div class="aspect-video">
-        <Tile
-          client:idle
-          title="Photography"
-          subtitle="Stills"
-          img="https://i.imgur.com/bYNd8Q7.jpg"
-          items={photography}
-        />
-      </div>
+    <div class="w-main mx-auto my-12 aspect-video">
+      <Tile
+        client:load
+        title="Photography"
+        subtitle="Stills"
+        img="https://i.imgur.com/bYNd8Q7.jpg"
+        items={photography}
+      />
       <p class="text-center my-12 hover:opacity-60 group transition-opacity">
         <a href="https://photos.app.goo.gl/8Bnz5w4rWyK3dRNe8">
           View portfolio <span
@@ -350,9 +279,5 @@ const photography: Item[] = [
 <style>
   .w-main {
     width: min(75rem, 90%);
-  }
-
-  .h-tile {
-    height: min(40vw, 640px);
   }
 </style>

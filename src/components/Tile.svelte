@@ -99,7 +99,7 @@
             height="100%"
             allow="autoplay; fullscreen; picture-in-picture;"
             allowfullscreen
-            class="mb-12 object-cover"
+            class="mb-12 aspect-video object-cover"
             bind:this={iframe}
           />
         {:else if item.type === "img"}
