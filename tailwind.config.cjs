@@ -10,8 +10,10 @@ module.exports = {
         "can-hover": { raw: "(hover: hover) and (pointer: fine)" },
       },
       animation: {
-        "slide-in": "slide-in 0.25s ease-in-out forwards, fade-in 0.25s ease-in-out forwards",
-        "slide-out": "slide-out 0.25s ease-in-out forwards, fade-out 0.25s ease-in-out forwards",
+        "slide-in":
+          "slide-in 0.25s ease-in-out forwards, fade-in 0.25s ease-in-out forwards",
+        "slide-out":
+          "slide-out 0.25s ease-in-out forwards, fade-out 0.25s ease-in-out forwards",
         "fade-in": "fade-in 0.25s ease-in-out forwards",
         "fade-out": "fade-out 0.25s ease-in-out forwards",
       },

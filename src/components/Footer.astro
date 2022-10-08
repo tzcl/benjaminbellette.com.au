@@ -1,53 +1,61 @@
 ---
 ---
 
-<footer>
-    <div class="text">
-        <p>© Benjamin Bellette.</p>
-        <p>All rights reserved</p>
-    </div>
+<footer class="bg-black">
+  <div class="text">
+    <p>© Benjamin Bellette.</p>
+    <p>All rights reserved</p>
+  </div>
 
-    <div class="social">
-        <a href="https://www.facebook.com/ben.bellette.DOP/"><i class="fa fa-facebook"></i></a>
-        <a href="https://www.instagram.com/ben.bellette/"><i class="fa fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/benjamin-bellette-7b9263181"><i class="fa fa-linkedin"></i></a>
-        <a href="https://www.vimeo.com/benbellette"><i class="fa fa-vimeo"></i></a>
-        <a href="mailto:ben.bellette.gmail.com"><i class="fa-solid fa-envelope"></i></a>
-    </div>
+  <div class="social">
+    <a href="https://www.facebook.com/ben.bellette.DOP/"
+      ><i class="fa fa-facebook"></i>
+    </a>
+    <a href="https://www.instagram.com/ben.bellette/"
+      ><i class="fa fa-instagram"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/benjamin-bellette-7b9263181"
+      ><i class="fa fa-linkedin"></i>
+    </a>
+    <a href="https://www.vimeo.com/benbellette"><i class="fa fa-vimeo"></i></a>
+    <a href="mailto:ben.bellette.gmail.com"
+      ><i class="fa-solid fa-envelope"></i>
+    </a>
+  </div>
 </footer>
 
 <style>
+  footer {
+    padding: 2rem;
+  }
+
+  .text p {
+    text-align: center;
+  }
+
+  .social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    padding: 1rem;
+  }
+
+  @media (min-width: 35rem) {
     footer {
-        padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     .text p {
-        text-align: center;
+      text-align: start;
     }
+  }
 
-    .social {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-
-        padding: 1rem;
+  @media (hover: hover) {
+    a:hover {
+      color: #b1b1b1;
     }
-
-    @media (min-width: 35rem) {
-        footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .text p {
-            text-align: start;
-        }
-    }
-
-    @media (hover: hover) {
-        a:hover {
-            color: #b1b1b1;
-        }
-    }
+  }
 </style>

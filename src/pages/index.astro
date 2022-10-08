@@ -1,41 +1,41 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import LogoSpinner from "../components/LogoSpinner.astro";
-import BackgroundVideo from "../components/BackgroundVideo";
+import BackgroundVideo from "../components/BackgroundVideo.svelte";
 ---
 
 <Layout
-	title="Benjamin Bellette"
-	description="Melbourne and Sydney-based cinematographer."
+  title="Benjamin Bellette"
+  description="Melbourne and Sydney-based cinematographer."
 >
-	<BackgroundVideo client:load />
-	<section class="center">
-		<LogoSpinner link="/motion" />
-		<h1>Benjamin Bellette</h1>
-		<h4>Director of Photography</h4>
-	</section>
+  <BackgroundVideo client:load />
+  <section class="center">
+    <LogoSpinner link="/motion" />
+    <h1>Benjamin Bellette</h1>
+    <h4>Director of Photography</h4>
+  </section>
 </Layout>
 
 <style>
-	body {
-		background-color: #111;
-	}
+  body {
+    background-color: #111;
+  }
 
-	.center {
-		position: relative;
-		display: grid;
-		place-content: center;
-		height: 100%;
+  .center {
+    position: relative;
+    display: grid;
+    place-content: center;
+    height: 100%;
 
-		/* hack to prevent flickering on Chrome/Mac */
-		opacity: 0.99;
-	}
+    /* hack to prevent flickering on Chrome/Mac */
+    opacity: 0.99;
+  }
 
-	.center h1 {
-		text-indent: 0;
-	}
+  .center h1 {
+    text-indent: 0;
+  }
 
-	.center h4 {
-		padding: 10px 14px;
-	}
+  .center h4 {
+    padding: 10px 14px;
+  }
 </style>

@@ -1,5 +1,6 @@
 <script lang="ts" context="module">
   import { onMount } from "svelte";
+  import Icon from "../components/Icon.svelte";
 
   export interface Item {
     type: string;
@@ -9,6 +10,11 @@
 </script>
 
 <script lang="ts">
+  export let title: String;
+  export let subtitle: String;
+  export let img: String;
+  export let items: Item[];
+
   let iframe: HTMLIFrameElement; // assume there is at most one video per tile
   let player;
 
@@ -42,28 +48,27 @@
 
     if (player) player.pause();
   }
-
-  export let items: Item[];
 </script>
 
-<div class="relative">
+<div class="relative h-full w-full">
   <div
-    class="height group"
-    style="background: url('{'/assets/mumlife.png'}') center center / cover #111"
+    class="group h-full w-full"
+    style={`background: url('${img}') center center / cover #111`}
   >
     <div
       class="absolute inset-0 flex cursor-pointer select-none flex-col justify-center bg-black/50 text-center transition-all duration-300 ease-in-out group-hover:visible group-hover:opacity-100 can-hover:invisible can-hover:opacity-0"
       on:click={showModal}
     >
-      <img
-        width="16.5"
-        height="21"
-        src="./assets/play.svg"
-        class="pointer-events-none mx-auto"
-        alt=""
-      />
-      <h3>Mumlife</h3>
-      <p>text</p>
+      {#if player}
+        <Icon
+          name="play"
+          width="24px"
+          height="24px"
+          class="pointer-events-none mx-auto"
+        />
+      {/if}
+      <h3>{title}</h3>
+      <p>{subtitle}</p>
     </div>
   </div>
 
@@ -75,7 +80,7 @@
       if (e.target.tagName == "DIALOG") exitModal();
     }}
   >
-    <div class="w-dialog mx-auto mt-20">
+    <div class="w-dialog mx-auto mt-12">
       <img
         src="./assets/x.svg"
         alt=""
@@ -94,7 +99,7 @@
             height="100%"
             allow="autoplay; fullscreen; picture-in-picture;"
             allowfullscreen
-            class="h-item mb-8 object-cover"
+            class="mb-12 object-cover"
             bind:this={iframe}
           />
         {:else if item.type === "img"}
@@ -103,7 +108,7 @@
             alt={item.label}
             width="100%"
             height="100%"
-            class="h-item mb-8 select-none object-cover"
+            class="mb-12 select-none object-cover"
           />
         {/if}
       {/each}
@@ -112,15 +117,7 @@
 </div>
 
 <style>
-  .height {
-    height: max(25em, 18.75vw);
-  }
-
   .w-dialog {
     width: min(53rem, 80%);
-  }
-
-  .h-item {
-    height: min(480px, 45vw);
   }
 </style>
