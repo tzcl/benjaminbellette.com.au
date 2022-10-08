@@ -1,16 +1,3 @@
-.outer {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.inner {
-  position: relative;
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-}
-
 iframe {
   position: absolute;
   top: 50%;
@@ -20,11 +7,7 @@ iframe {
   transform: translate(-50%, -50%);
 
   opacity: 0;
-  transition: opacity 1s linear;
-}
-
-.loaded {
-  opacity: 0.5;
+  transition: opacity 1.5s ease-in;
 }
 
 @media (min-aspect-ratio: 16/9) {

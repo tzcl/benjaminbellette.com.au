@@ -11,11 +11,11 @@ const BackgroundVideo = () => {
     setLoaded(true);
   }
 
-  const videoClassName = cx("iframe", { loaded: loaded });
+  const videoClassName = cx("iframe", { "opacity-50": loaded });
 
   return (
-    <div className={styles.outer}>
-      <div className={styles.inner}>
+    <div className="absolute h-full w-full">
+      <div className="relative h-screen w-screen overflow-hidden">
         <iframe
           id="video"
           src="https://player.vimeo.com/video/316965018?background=1?transparent=1"
