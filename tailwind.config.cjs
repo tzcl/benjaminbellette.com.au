@@ -6,9 +6,6 @@ module.exports = {
   },
   theme: {
     extend: {
-      screens: {
-        "can-hover": { raw: "(hover: hover) and (pointer: fine)" },
-      },
       animation: {
         "slide-in":
           "slide-in 0.25s ease-in-out forwards, fade-in 0.25s ease-in-out forwards",
@@ -34,6 +31,12 @@ module.exports = {
           "0%": { opacity: "100%" },
           "100%": { opacity: "0" },
         },
+      },
+      screens: {
+        "can-hover": { raw: "(hover: hover) and (pointer: fine)" },
+      },
+      transitionDuration: {
+        2000: "2000ms",
       },
     },
   },
