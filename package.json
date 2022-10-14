@@ -10,7 +10,6 @@
     "telemetry": "astro telemetry disable"
   },
   "devDependencies": {
-    "@astrojs/image": "^0.3.3",
     "@astrojs/react": "^1.0.0",
     "@astrojs/svelte": "^1.0.0",
     "@astrojs/tailwind": "^2.0.1",
