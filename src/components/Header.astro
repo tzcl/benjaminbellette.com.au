@@ -39,12 +39,12 @@ let icon = "menu";
 ---
 
 <header
-  class="md:flex md:justify-between bg-black [[data-scroll='true']_&]:fixed [[data-scroll='true']_&]:top-0 [[data-scroll='true']_&]:w-full [[data-scroll='true']_&]:z-10"
+  class="md:flex md:justify-between bg-black scrolled:fixed scrolled:top-0 scrolled:w-full scrolled:z-10"
 >
   <!-- Logo and hamburger menu -->
   <div class="flex justify-between items-center">
     <a href="/">
-      <div id="logo" class="m-4 transition-all [[data-scroll='true']_&]:my-0">
+      <div id="logo" class="m-4 transition-all scrolled:my-0">
         <!-- TODO: this doesn't work on mobile/Edge -->
         <!-- TODO: this doesn't resize :/ -->
         <Image
@@ -52,7 +52,7 @@ let icon = "menu";
           format="webp"
           width={236}
           height={54}
-          class="transition-all [[data-scroll='true']_&]:w-[177] [[data-scroll='true']_&]:h-[40.5]"
+          class="transition-all scrolled:w-[177] scrolled:h-[40.5]"
         />
       </div>
     </a>
@@ -67,10 +67,9 @@ let icon = "menu";
   </div>
 
   <!-- Mobile navbar -->
-  <nav class="mx-4 md:mx-8">
+  <nav id="nav" data-visible="false" class="mx-4 md:mx-8">
     <ul
-      data-visible="false"
-      class="hidden [&[data-visible='true']]:block [&[data-visible='true']]:animate-slide-in [&[data-visible='hiding']]:block [&[data-visible='hiding']]:animate-slide-out py-4"
+      class="hidden shown:block shown:animate-slide-in hiding:block hiding:animate-slide-out py-4"
     >
       {
         pages.map((page, i) => (
@@ -143,30 +142,29 @@ let icon = "menu";
 </header>
 
 <!-- Fill in the gap left by the sticky header -->
-<div class="[[data-scroll='true']_&]:h-[54px] w-full"></div>
+<div class="scrolled:h-[54px] w-full"></div>
 
 <script>
   // Implement hamburger menu
   const hamburger = document.getElementById("hamburger") as HTMLImageElement;
-  const nav = document.querySelector("ul");
+  const nav = document.getElementById("nav");
 
   hamburger.addEventListener("click", () => {
     const visible = nav.getAttribute("data-visible");
-    const animation = window.matchMedia(
-      "(prefers-reduced-motion: no-preference"
-    ).matches;
+
     if (visible === "false") {
+      // open menu
       nav.setAttribute("data-visible", "true");
       hamburger.classList.add("open");
       hamburger.src = "./assets/x.svg";
     } else {
+      // start hiding menu
       nav.setAttribute("data-visible", "hiding");
       hamburger.classList.remove("open");
       hamburger.src = "./assets/menu.svg";
 
-      if (animation === true)
-        setTimeout(() => nav.setAttribute("data-visible", "false"), 250);
-      else nav.setAttribute("data-visible", "false");
+      // close the menu after 250ms
+      setTimeout(() => nav.setAttribute("data-visible", "false"), 250);
     }
   });
 
