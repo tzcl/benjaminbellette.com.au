@@ -30,7 +30,7 @@
 
     visibility: hidden;
     opacity: 0;
-    transition: opacity 1500ms ease-in 500ms;
+    transition: opacity 1000ms ease-in 150ms;
   }
 
   #video.loaded {
