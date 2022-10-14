@@ -9,6 +9,7 @@ function active(item: string): string {
   return "";
 }
 
+// TODO: move this into data
 const pages = [
   {
     link: "/motion",
@@ -40,7 +41,7 @@ let icon = "menu";
 <header class="md:flex md:justify-between bg-black">
   <div class="flex justify-between items-center">
     <a href="/">
-      <div class="m-4">
+      <div id="logo" class="m-4 transition-all">
         <!-- TODO: this doesn't work on mobile/Edge -->
         <Image src={logo} format="avif" width={236} height={54} />
       </div>
@@ -127,36 +128,94 @@ let icon = "menu";
       }
     </div>
   </nav>
-
-  <script>
-    const hamburger = document.getElementById("hamburger") as HTMLImageElement;
-    const nav = document.querySelector("ul");
-
-    hamburger.addEventListener("click", () => {
-      const visible = nav.getAttribute("data-visible");
-      const animation = window.matchMedia(
-        "(prefers-reduced-motion: no-preference"
-      ).matches;
-      if (visible === "false") {
-        nav.setAttribute("data-visible", "true");
-        hamburger.classList.add("open");
-        hamburger.src = "./assets/x.svg";
-      } else {
-        nav.setAttribute("data-visible", "hiding");
-        hamburger.classList.remove("open");
-        hamburger.src = "./assets/menu.svg";
-
-        if (animation === true)
-          setTimeout(() => nav.setAttribute("data-visible", "false"), 250);
-        else nav.setAttribute("data-visible", "false");
-      }
-    });
-
-    const activeItems = document.querySelectorAll(".active > a");
-    for (const item of activeItems) {
-      item.addEventListener("click", () => {
-        hamburger.click();
-      });
-    }
-  </script>
 </header>
+
+<style>
+  html[data-scroll="true"] body {
+    padding-top: 54px;
+  }
+
+  html[data-scroll="true"] header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+  }
+
+  html[data-scroll="true"] nav {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  #logo > img {
+    @apply transition-all;
+  }
+
+  html[data-scroll="true"] #logo {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  html[data-scroll="true"] #logo > img {
+    width: 177px;
+    height: 40.5px;
+  }
+</style>
+
+<script>
+  // Implement hamburger menu
+  const hamburger = document.getElementById("hamburger") as HTMLImageElement;
+  const nav = document.querySelector("ul");
+
+  hamburger.addEventListener("click", () => {
+    const visible = nav.getAttribute("data-visible");
+    const animation = window.matchMedia(
+      "(prefers-reduced-motion: no-preference"
+    ).matches;
+    if (visible === "false") {
+      nav.setAttribute("data-visible", "true");
+      hamburger.classList.add("open");
+      hamburger.src = "./assets/x.svg";
+    } else {
+      nav.setAttribute("data-visible", "hiding");
+      hamburger.classList.remove("open");
+      hamburger.src = "./assets/menu.svg";
+
+      if (animation === true)
+        setTimeout(() => nav.setAttribute("data-visible", "false"), 250);
+      else nav.setAttribute("data-visible", "false");
+    }
+  });
+
+  const activeItems = document.querySelectorAll(".active > a");
+  for (const item of activeItems) {
+    item.addEventListener("click", () => {
+      hamburger.click();
+    });
+  }
+
+  // Implement scroll listener
+  const storeScroll = () => {
+    document.documentElement.dataset.scroll = String(window.scrollY > 0);
+  };
+
+  const debounce = (fn) => {
+    let frame;
+    return (...params) => {
+      // If the frame var has been defined, clear it and queue for the next frame
+      if (frame) cancelAnimationFrame(frame);
+
+      // Queue our function call for the next frame
+      frame = requestAnimationFrame(() => {
+        fn(...params);
+      });
+    };
+  };
+
+  document.addEventListener("scroll", debounce(storeScroll), {
+    passive: true,
+  });
+
+  storeScroll();
+</script>
