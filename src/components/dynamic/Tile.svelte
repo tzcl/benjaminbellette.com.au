@@ -1,6 +1,6 @@
 <script lang="ts" context="module">
   import { onMount } from "svelte";
-  import Icon from "../components/Icon.svelte";
+  import Icon from "./Icon.svelte";
 
   export interface Item {
     type: string;

@@ -1,6 +1,6 @@
 ---
-import Icon from "../components/Icon.svelte";
-import logo from "../assets/logo-dark.png";
+import Icon from "../dynamic/Icon.svelte";
+import logo from "../../assets/logo-dark.png";
 
 const path = Astro.url.pathname;
 function active(item: string): string {
@@ -33,12 +33,10 @@ const pages = [
   },
   { link: "/contact", text: "Contact" },
 ];
-
-let icon = "menu";
 ---
 
-<!-- Might need this extra div for shrinking header -->
-<div class="sticky top-0 h-[56.5px] z-20">
+<!-- Need this div to reserve space for the header to shrink -->
+<div class="sticky top-0 h-[86px] z-20">
   <header class="md:flex md:justify-between bg-black sticky top-0">
     <!-- Logo and hamburger menu -->
     <div class="flex justify-between items-center">
