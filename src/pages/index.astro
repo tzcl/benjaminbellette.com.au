@@ -9,33 +9,9 @@ import BackgroundVideo from "../components/BackgroundVideo.svelte";
   description="Melbourne and Sydney-based cinematographer."
 >
   <BackgroundVideo client:load />
-  <section class="center">
+  <section class="relative grid place-content-center h-screen">
     <LogoSpinner link="/motion" />
-    <h1>Benjamin Bellette</h1>
-    <h4>Director of Photography</h4>
+    <h1 class="indent-0">Benjamin Bellette</h1>
+    <h4 class="mt-3">Director of Photography</h4>
   </section>
 </Layout>
-
-<style>
-  body {
-    background-color: #111;
-  }
-
-  .center {
-    position: relative;
-    display: grid;
-    place-content: center;
-    height: 100%;
-
-    /* hack to prevent flickering on Chrome/Mac */
-    opacity: 0.99;
-  }
-
-  .center h1 {
-    text-indent: 0;
-  }
-
-  .center h4 {
-    padding: 10px 14px;
-  }
-</style>
