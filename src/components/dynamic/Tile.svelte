@@ -6,6 +6,7 @@
     type?: string;
     src?: string;
     title?: string;
+    aspectRatio?: string;
   }
 </script>
 
@@ -106,7 +107,9 @@
             height="100%"
             allow="autoplay; fullscreen; picture-in-picture;"
             allowfullscreen
-            class="mb-12 aspect-video object-cover"
+            class={`mb-12 object-cover ${
+              item.aspectRatio ? item.aspectRatio : "aspect-video"
+            }`}
             bind:this={iframe}
           />
         {:else if item.type === "popup"}
@@ -117,6 +120,7 @@
                 If you would like to watch this, please feel free to contact me
                 directly for a private link.
               </p>
+              <Icon name="mail" class="mr-2 inline" />
               <a
                 class="text-black hover:text-grey-400"
                 href="mailto:ben.bellette@gmail.com">ben.bellette@gmail.com</a

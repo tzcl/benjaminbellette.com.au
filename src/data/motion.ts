@@ -284,6 +284,7 @@ export const musicVideos: Section = {
         {
           src: "https://player.vimeo.com/video/308646260",
           type: "iframe", // this overrides default type
+          aspectRatio: "aspect-cinema",
         },
         {
           src: "https://i.imgur.com/q5w91Rp.jpg",
@@ -314,6 +315,7 @@ export const commercials: Section = {
         {
           src: "https://player.vimeo.com/video/366223461",
           type: "iframe",
+          aspectRatio: "aspect-cinema",
         },
         {
           src: "https://i.imgur.com/4Xh70ge.jpg",

@@ -21,6 +21,9 @@ module.exports = {
       screens: {
         "can-hover": { raw: "(hover: hover) and (pointer: fine)" },
       },
+      aspectRatio: {
+        cinema: "2.39/1",
+      },
       animation: {
         "slide-in":
           "slide-in 0.25s ease-in-out forwards, fade-in 0.25s ease-in-out forwards",
