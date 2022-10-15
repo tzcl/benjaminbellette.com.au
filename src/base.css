@@ -125,4 +125,8 @@
       font-size: clamp(1.5rem, 5vw, 2.5rem);
     }
   }
+
+  .w-contact {
+    width: clamp(40rem, 95%, 55rem);
+  }
 }
