@@ -126,11 +126,18 @@
     }
   }
 
-  .w-contact {
-    width: clamp(40rem, 95%, 55rem);
-  }
-
+  /* Width of tile dialogs */
   .w-dialog {
     width: min(55rem, 80%);
+  }
+
+  /* Width of tile popups */
+  .w-popup {
+    width: min(40ch, 80%);
+  }
+
+  /* Content width on the contact page */
+  .w-contact {
+    width: clamp(40rem, 95%, 55rem);
   }
 }

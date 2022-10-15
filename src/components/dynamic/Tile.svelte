@@ -110,13 +110,18 @@
             bind:this={iframe}
           />
         {:else if item.type === "popup"}
-          <div class="white-popup">
-            <h3>Hi!</h3>
-            <p>
-              If you would like to watch this, please feel free to contact me
-              directly for a private link.
-            </p>
-            <a href="mailto:ben.bellette@gmail.com">ben.bellette@gmail.com</a>
+          <div class="mb-12 h-fit bg-white pt-6 pb-16">
+            <div class="w-popup mx-auto text-center">
+              <h3 class="my-8 text-black">Hi!</h3>
+              <p class="text-wr my-4 text-black">
+                If you would like to watch this, please feel free to contact me
+                directly for a private link.
+              </p>
+              <a
+                class="text-black hover:text-grey-400"
+                href="mailto:ben.bellette@gmail.com">ben.bellette@gmail.com</a
+              >
+            </div>
           </div>
         {:else}
           <img
