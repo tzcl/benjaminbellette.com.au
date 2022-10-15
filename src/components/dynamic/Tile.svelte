@@ -4,8 +4,8 @@
 
   export interface Item {
     type: string;
-    content: string;
-    label: string;
+    src: string;
+    title: string;
   }
 
   export interface Tiles {
@@ -60,7 +60,7 @@
     style={`background: url('${img}') center center / cover #111`}
   >
     <div
-      class="absolute inset-0 flex cursor-pointer select-none flex-col justify-center bg-white/95 text-center text-black transition-all duration-300 ease-in-out group-hover:visible group-hover:opacity-100 can-hover:invisible can-hover:opacity-0"
+      class="absolute inset-0 flex cursor-pointer select-none flex-col justify-center bg-white/80 text-center text-black transition-all duration-300 ease-in-out group-hover:visible group-hover:opacity-100 can-hover:invisible can-hover:opacity-0"
       on:click={showModal}
     >
       {#if player}
@@ -103,8 +103,8 @@
       {#each items as item}
         {#if item.type === "iframe"}
           <iframe
-            src={item.content}
-            title={item.label}
+            src={item.src}
+            title={item.title}
             frameborder="0"
             width="100%"
             height="100%"
@@ -113,10 +113,10 @@
             class="mb-12 aspect-video object-cover"
             bind:this={iframe}
           />
-        {:else if item.type === "img"}
+        {:else}
           <img
-            src={item.content}
-            alt={item.label}
+            src={item.src}
+            alt={item.title}
             width="100%"
             height="100%"
             class="mb-12 select-none object-cover"

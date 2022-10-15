@@ -2,7 +2,7 @@
 import Slider from "../components/dynamic/Slider.svelte";
 import Tile from "../components/dynamic/Tile.svelte";
 import Page from "../layouts/Page.astro";
-import { hero, tiles } from "../data/motion";
+import { hero, mumlife, music_videos } from "../data/motion";
 ---
 
 <!-- TODO: fix up description... -->
@@ -33,7 +33,7 @@ import { hero, tiles } from "../data/motion";
         title="MumLife"
         subtitle="2022 Short Film"
         img="https://i.imgur.com/m9pUpLU.jpg"
-        items={tiles.mumlife}
+        items={mumlife}
       />
     </div>
   </section>
@@ -45,70 +45,302 @@ import { hero, tiles } from "../data/motion";
       <div class="aspect-video">
         <Tile
           client:visible
-          title="MumLife"
-          subtitle="2022 Short Film"
-          img="https://i.imgur.com/m9pUpLU.jpg"
-          items={tiles.mumlife}
+          title="Sydney Children's Choir"
+          subtitle="Deine Mami"
+          img="https://i.imgur.com/Giu7jh2.jpg"
+          items={music_videos.sydney_childrens_choir}
         />
       </div>
       <div class="aspect-video">
         <Tile
           client:visible
-          title="MumLife"
-          subtitle="2022 Short Film"
-          img="https://i.imgur.com/m9pUpLU.jpg"
-          items={tiles.mumlife}
+          title="Twin Filament"
+          subtitle="Visual Poem"
+          img="https://i.imgur.com/ySzi6a2.jpg"
+          items={music_videos.twin_filament}
         />
       </div>
       <div class="aspect-video">
         <Tile
           client:visible
-          title="MumLife"
-          subtitle="2022 Short Film"
-          img="https://i.imgur.com/m9pUpLU.jpg"
-          items={tiles.mumlife}
+          title="Maddy Jane"
+          subtitle="Thank You and Sorry"
+          img="https://i.imgur.com/BQ9hVDC.jpg"
+          items={music_videos.maddy_jane}
         />
       </div>
       <div class="aspect-video">
         <Tile
           client:visible
-          title="MumLife"
-          subtitle="2022 Short Film"
-          img="https://i.imgur.com/m9pUpLU.jpg"
-          items={tiles.mumlife}
+          title="Sahara Beck"
+          subtitle="Here We Go Again"
+          img="https://i.imgur.com/KEZb0ZO.jpg"
+          items={music_videos.sahara_beck}
         />
       </div>
       <div class="aspect-video">
         <Tile
           client:visible
-          title="MumLife"
-          subtitle="2022 Short Film"
-          img="https://i.imgur.com/m9pUpLU.jpg"
-          items={tiles.mumlife}
+          title="Samsaruh"
+          subtitle="Speaking Fire"
+          img="https://i.imgur.com/9f1oxw9.jpg"
+          items={music_videos.samsaruh}
         />
       </div>
       <div class="aspect-video">
         <Tile
           client:visible
-          title="MumLife"
-          subtitle="2022 Short Film"
-          img="https://i.imgur.com/m9pUpLU.jpg"
-          items={tiles.mumlife}
+          title="Wolf and Willow"
+          subtitle="Falling"
+          img="https://i.imgur.com/MhKXVAG.jpg"
+          items={music_videos.wolf_and_willow}
         />
       </div>
     </div>
   </section>
   <section>
     <h2 class="subtitle">Commercials</h2>
+    <div
+      class="grid justify-center gap-8 m-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+    >
+      <div class="aspect-video">
+        <Tile
+          client:visible
+          title="Sydney Children's Choir"
+          subtitle="Deine Mami"
+          img="https://i.imgur.com/Giu7jh2.jpg"
+          items={music_videos.sydney_childrens_choir}
+        />
+      </div>
+      <div class="aspect-video">
+        <Tile
+          client:visible
+          title="Twin Filament"
+          subtitle="Visual Poem"
+          img="https://i.imgur.com/ySzi6a2.jpg"
+          items={music_videos.twin_filament}
+        />
+      </div>
+      <div class="aspect-video">
+        <Tile
+          client:visible
+          title="Maddy Jane"
+          subtitle="Thank You and Sorry"
+          img="https://i.imgur.com/BQ9hVDC.jpg"
+          items={music_videos.maddy_jane}
+        />
+      </div>
+      <div class="aspect-video">
+        <Tile
+          client:visible
+          title="Sahara Beck"
+          subtitle="Here We Go Again"
+          img="https://i.imgur.com/KEZb0ZO.jpg"
+          items={music_videos.sahara_beck}
+        />
+      </div>
+      <div class="aspect-video">
+        <Tile
+          client:visible
+          title="Samsaruh"
+          subtitle="Speaking Fire"
+          img="https://i.imgur.com/9f1oxw9.jpg"
+          items={music_videos.samsaruh}
+        />
+      </div>
+      <div class="aspect-video">
+        <Tile
+          client:visible
+          title="Wolf and Willow"
+          subtitle="Falling"
+          img="https://i.imgur.com/MhKXVAG.jpg"
+          items={music_videos.wolf_and_willow}
+        />
+      </div>
+    </div>
   </section>
   <section>
     <h2 class="subtitle">Films</h2>
+    <div
+      class="grid justify-center gap-8 m-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+    >
+      <div class="aspect-video">
+        <Tile
+          client:visible
+          title="Sydney Children's Choir"
+          subtitle="Deine Mami"
+          img="https://i.imgur.com/Giu7jh2.jpg"
+          items={music_videos.sydney_childrens_choir}
+        />
+      </div>
+      <div class="aspect-video">
+        <Tile
+          client:visible
+          title="Twin Filament"
+          subtitle="Visual Poem"
+          img="https://i.imgur.com/ySzi6a2.jpg"
+          items={music_videos.twin_filament}
+        />
+      </div>
+      <div class="aspect-video">
+        <Tile
+          client:visible
+          title="Maddy Jane"
+          subtitle="Thank You and Sorry"
+          img="https://i.imgur.com/BQ9hVDC.jpg"
+          items={music_videos.maddy_jane}
+        />
+      </div>
+      <div class="aspect-video">
+        <Tile
+          client:visible
+          title="Sahara Beck"
+          subtitle="Here We Go Again"
+          img="https://i.imgur.com/KEZb0ZO.jpg"
+          items={music_videos.sahara_beck}
+        />
+      </div>
+      <div class="aspect-video">
+        <Tile
+          client:visible
+          title="Samsaruh"
+          subtitle="Speaking Fire"
+          img="https://i.imgur.com/9f1oxw9.jpg"
+          items={music_videos.samsaruh}
+        />
+      </div>
+      <div class="aspect-video">
+        <Tile
+          client:visible
+          title="Wolf and Willow"
+          subtitle="Falling"
+          img="https://i.imgur.com/MhKXVAG.jpg"
+          items={music_videos.wolf_and_willow}
+        />
+      </div>
+    </div>
   </section>
   <section>
     <h2 class="subtitle">Corporates</h2>
+    <div
+      class="grid justify-center gap-8 m-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+    >
+      <div class="aspect-video">
+        <Tile
+          client:visible
+          title="Sydney Children's Choir"
+          subtitle="Deine Mami"
+          img="https://i.imgur.com/Giu7jh2.jpg"
+          items={music_videos.sydney_childrens_choir}
+        />
+      </div>
+      <div class="aspect-video">
+        <Tile
+          client:visible
+          title="Twin Filament"
+          subtitle="Visual Poem"
+          img="https://i.imgur.com/ySzi6a2.jpg"
+          items={music_videos.twin_filament}
+        />
+      </div>
+      <div class="aspect-video">
+        <Tile
+          client:visible
+          title="Maddy Jane"
+          subtitle="Thank You and Sorry"
+          img="https://i.imgur.com/BQ9hVDC.jpg"
+          items={music_videos.maddy_jane}
+        />
+      </div>
+      <div class="aspect-video">
+        <Tile
+          client:visible
+          title="Sahara Beck"
+          subtitle="Here We Go Again"
+          img="https://i.imgur.com/KEZb0ZO.jpg"
+          items={music_videos.sahara_beck}
+        />
+      </div>
+      <div class="aspect-video">
+        <Tile
+          client:visible
+          title="Samsaruh"
+          subtitle="Speaking Fire"
+          img="https://i.imgur.com/9f1oxw9.jpg"
+          items={music_videos.samsaruh}
+        />
+      </div>
+      <div class="aspect-video">
+        <Tile
+          client:visible
+          title="Wolf and Willow"
+          subtitle="Falling"
+          img="https://i.imgur.com/MhKXVAG.jpg"
+          items={music_videos.wolf_and_willow}
+        />
+      </div>
+    </div>
   </section>
   <section>
     <h2 class="subtitle">Documentaries</h2>
+    <div
+      class="grid justify-center gap-8 m-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+    >
+      <div class="aspect-video">
+        <Tile
+          client:visible
+          title="Sydney Children's Choir"
+          subtitle="Deine Mami"
+          img="https://i.imgur.com/Giu7jh2.jpg"
+          items={music_videos.sydney_childrens_choir}
+        />
+      </div>
+      <div class="aspect-video">
+        <Tile
+          client:visible
+          title="Twin Filament"
+          subtitle="Visual Poem"
+          img="https://i.imgur.com/ySzi6a2.jpg"
+          items={music_videos.twin_filament}
+        />
+      </div>
+      <div class="aspect-video">
+        <Tile
+          client:visible
+          title="Maddy Jane"
+          subtitle="Thank You and Sorry"
+          img="https://i.imgur.com/BQ9hVDC.jpg"
+          items={music_videos.maddy_jane}
+        />
+      </div>
+      <div class="aspect-video">
+        <Tile
+          client:visible
+          title="Sahara Beck"
+          subtitle="Here We Go Again"
+          img="https://i.imgur.com/KEZb0ZO.jpg"
+          items={music_videos.sahara_beck}
+        />
+      </div>
+      <div class="aspect-video">
+        <Tile
+          client:visible
+          title="Samsaruh"
+          subtitle="Speaking Fire"
+          img="https://i.imgur.com/9f1oxw9.jpg"
+          items={music_videos.samsaruh}
+        />
+      </div>
+      <div class="aspect-video">
+        <Tile
+          client:visible
+          title="Wolf and Willow"
+          subtitle="Falling"
+          img="https://i.imgur.com/MhKXVAG.jpg"
+          items={music_videos.wolf_and_willow}
+        />
+      </div>
+    </div>
   </section>
   <section>
     <h2>Interested in seeing more?</h2>
