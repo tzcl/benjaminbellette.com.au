@@ -2,7 +2,10 @@
 import Slider from "../components/dynamic/Slider.svelte";
 import Tile from "../components/dynamic/Tile.svelte";
 import Page from "../layouts/Page.astro";
-import data, { commercials } from "../data/motion";
+import data, { mumlifeTrailer } from "../data/motion";
+
+console.log(data.sections);
+console.log(data.sections[0].tiles);
 ---
 
 <!-- TODO: fix up description... -->
@@ -25,323 +28,42 @@ import data, { commercials } from "../data/motion";
     >
     </iframe>
   </section>
-  <section id="mumlife">
-    <h2 class="subtitle">MumLife Trailer</h2>
+  <section id={data.mumlifeTrailer.id}>
+    <h2 class="subtitle">{data.mumlifeTrailer.title}</h2>
     <div class="w-main mx-auto my-16 aspect-video">
       <Tile
         client:visible
-        title="MumLife"
-        subtitle="2022 Short Film"
-        img="https://i.imgur.com/m9pUpLU.jpg"
-        items={data.mumlife}
+        title={data.mumlifeTrailer.tiles[0].title}
+        subtitle={data.mumlifeTrailer.tiles[0].subtitle}
+        img={data.mumlifeTrailer.tiles[0].img}
+        items={data.mumlifeTrailer.tiles[0].items}
       />
     </div>
   </section>
-  <section id="music">
-    <h2 class="subtitle">Music Videos</h2>
-    <div
-      class="grid justify-center gap-8 m-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-    >
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="Sydney Children's Choir"
-          subtitle="Deine Mami"
-          img="https://i.imgur.com/Giu7jh2.jpg"
-          items={data.music_videos.sydney_childrens_choir}
-        />
-      </div>
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="Twin Filament"
-          subtitle="Visual Poem"
-          img="https://i.imgur.com/ySzi6a2.jpg"
-          items={data.music_videos.twin_filament}
-        />
-      </div>
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="Maddy Jane"
-          subtitle="Thank You and Sorry"
-          img="https://i.imgur.com/BQ9hVDC.jpg"
-          items={data.music_videos.maddy_jane}
-        />
-      </div>
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="Sahara Beck"
-          subtitle="Here We Go Again"
-          img="https://i.imgur.com/KEZb0ZO.jpg"
-          items={data.music_videos.sahara_beck}
-        />
-      </div>
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="Samsaruh"
-          subtitle="Speaking Fire"
-          img="https://i.imgur.com/9f1oxw9.jpg"
-          items={data.music_videos.samsaruh}
-        />
-      </div>
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="Wolf and Willow"
-          subtitle="Falling"
-          img="https://i.imgur.com/MhKXVAG.jpg"
-          items={data.music_videos.wolf_and_willow}
-        />
-      </div>
-    </div>
-  </section>
-  <section>
-    <h2 class="subtitle">Commercials</h2>
-    <div
-      class="grid justify-center gap-8 m-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-    >
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="Bentley"
-          subtitle="Continental GT"
-          img="https://i.imgur.com/Xfu5Ukc.jpg"
-          items={data.commercials.bentley}
-        />
-      </div>
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="Merry People"
-          subtitle="2019"
-          img="https://i.imgur.com/7sOpGLI.jpg"
-          items={data.commercials.merry_people}
-        />
-      </div>
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="WAG"
-          subtitle="More Than a WAG"
-          img="https://i.imgur.com/CbYh9YN.png"
-          items={data.commercials.wag}
-        />
-      </div>
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="AMSA"
-          subtitle="Melbourne 2020"
-          img="https://i.imgur.com/8Dt3ylP.jpg"
-          items={data.commercials.amsa}
-        />
-      </div>
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="Leneeva Homes"
-          subtitle="The Monterey – TVC"
-          img="https://i.imgur.com/8TLw0iB.jpg"
-          items={data.commercials.leneeva_homes}
-        />
-      </div>
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="Home"
-          subtitle="with Deborah Hutton"
-          img="https://i.imgur.com/tbf3X5P.jpg"
-          items={data.commercials.home}
-        />
-      </div>
-    </div>
-  </section>
-  <section>
-    <h2 class="subtitle">Films</h2>
-    <div
-      class="grid justify-center gap-8 m-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-    >
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="Sydney Children's Choir"
-          subtitle="Deine Mami"
-          img="https://i.imgur.com/Giu7jh2.jpg"
-          items={data.music_videos.sydney_childrens_choir}
-        />
-      </div>
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="Twin Filament"
-          subtitle="Visual Poem"
-          img="https://i.imgur.com/ySzi6a2.jpg"
-          items={data.music_videos.twin_filament}
-        />
-      </div>
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="Maddy Jane"
-          subtitle="Thank You and Sorry"
-          img="https://i.imgur.com/BQ9hVDC.jpg"
-          items={data.music_videos.maddy_jane}
-        />
-      </div>
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="Sahara Beck"
-          subtitle="Here We Go Again"
-          img="https://i.imgur.com/KEZb0ZO.jpg"
-          items={data.music_videos.sahara_beck}
-        />
-      </div>
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="Samsaruh"
-          subtitle="Speaking Fire"
-          img="https://i.imgur.com/9f1oxw9.jpg"
-          items={data.music_videos.samsaruh}
-        />
-      </div>
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="Wolf and Willow"
-          subtitle="Falling"
-          img="https://i.imgur.com/MhKXVAG.jpg"
-          items={data.music_videos.wolf_and_willow}
-        />
-      </div>
-    </div>
-  </section>
-  <section>
-    <h2 class="subtitle">Corporates</h2>
-    <div
-      class="grid justify-center gap-8 m-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-    >
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="Sydney Children's Choir"
-          subtitle="Deine Mami"
-          img="https://i.imgur.com/Giu7jh2.jpg"
-          items={data.music_videos.sydney_childrens_choir}
-        />
-      </div>
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="Twin Filament"
-          subtitle="Visual Poem"
-          img="https://i.imgur.com/ySzi6a2.jpg"
-          items={data.music_videos.twin_filament}
-        />
-      </div>
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="Maddy Jane"
-          subtitle="Thank You and Sorry"
-          img="https://i.imgur.com/BQ9hVDC.jpg"
-          items={data.music_videos.maddy_jane}
-        />
-      </div>
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="Sahara Beck"
-          subtitle="Here We Go Again"
-          img="https://i.imgur.com/KEZb0ZO.jpg"
-          items={data.music_videos.sahara_beck}
-        />
-      </div>
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="Samsaruh"
-          subtitle="Speaking Fire"
-          img="https://i.imgur.com/9f1oxw9.jpg"
-          items={data.music_videos.samsaruh}
-        />
-      </div>
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="Wolf and Willow"
-          subtitle="Falling"
-          img="https://i.imgur.com/MhKXVAG.jpg"
-          items={data.music_videos.wolf_and_willow}
-        />
-      </div>
-    </div>
-  </section>
-  <section>
-    <h2 class="subtitle">Documentaries</h2>
-    <div
-      class="grid justify-center gap-8 m-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-    >
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="Sydney Children's Choir"
-          subtitle="Deine Mami"
-          img="https://i.imgur.com/Giu7jh2.jpg"
-          items={data.music_videos.sydney_childrens_choir}
-        />
-      </div>
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="Twin Filament"
-          subtitle="Visual Poem"
-          img="https://i.imgur.com/ySzi6a2.jpg"
-          items={data.music_videos.twin_filament}
-        />
-      </div>
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="Maddy Jane"
-          subtitle="Thank You and Sorry"
-          img="https://i.imgur.com/BQ9hVDC.jpg"
-          items={data.music_videos.maddy_jane}
-        />
-      </div>
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="Sahara Beck"
-          subtitle="Here We Go Again"
-          img="https://i.imgur.com/KEZb0ZO.jpg"
-          items={data.music_videos.sahara_beck}
-        />
-      </div>
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="Samsaruh"
-          subtitle="Speaking Fire"
-          img="https://i.imgur.com/9f1oxw9.jpg"
-          items={data.music_videos.samsaruh}
-        />
-      </div>
-      <div class="aspect-video">
-        <Tile
-          client:visible
-          title="Wolf and Willow"
-          subtitle="Falling"
-          img="https://i.imgur.com/MhKXVAG.jpg"
-          items={data.music_videos.wolf_and_willow}
-        />
-      </div>
-    </div>
-  </section>
+  {
+    data.sections.map((section, i) => {
+      return (
+        <section key={i} id={section.id}>
+          <h2 class="subtitle">{section.title}</h2>
+          <div class="m-8 grid grid-cols-1 justify-center gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {section.tiles.map((tile, i) => {
+              return (
+                <div key={i} class="aspect-video">
+                  <Tile
+                    client:visible
+                    title={tile.title}
+                    subtitle={tile.subtitle}
+                    img={tile.img}
+                    items={tile.items}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      );
+    })
+  }
   <section>
     <h2>Interested in seeing more?</h2>
     <p>View portfolio</p>

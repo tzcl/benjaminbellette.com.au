@@ -4,12 +4,8 @@
 
   export interface Item {
     type?: string;
-    src: string;
+    src?: string;
     title?: string;
-  }
-
-  export interface Tiles {
-    [key: string]: Item[];
   }
 </script>
 
@@ -104,7 +100,7 @@
         {#if item.type === "iframe"}
           <iframe
             src={item.src}
-            title={item.title}
+            title={item.title ? item.title : ""}
             frameborder="0"
             width="100%"
             height="100%"
@@ -113,10 +109,19 @@
             class="mb-12 aspect-video object-cover"
             bind:this={iframe}
           />
+        {:else if item.type === "popup"}
+          <div class="white-popup">
+            <h3>Hi!</h3>
+            <p>
+              If you would like to watch this, please feel free to contact me
+              directly for a private link.
+            </p>
+            <a href="mailto:ben.bellette@gmail.com">ben.bellette@gmail.com</a>
+          </div>
         {:else}
           <img
             src={item.src}
-            alt={item.title}
+            alt={item.title ? item.title : ""}
             width="100%"
             height="100%"
             class="mb-12 select-none object-cover"
