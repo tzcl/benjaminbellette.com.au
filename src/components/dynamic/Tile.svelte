@@ -60,19 +60,26 @@
     style={`background: url('${img}') center center / cover #111`}
   >
     <div
-      class="absolute inset-0 flex cursor-pointer select-none flex-col justify-center bg-black/50 text-center transition-all duration-300 ease-in-out group-hover:visible group-hover:opacity-100 can-hover:invisible can-hover:opacity-0"
+      class="absolute inset-0 flex cursor-pointer select-none flex-col justify-center bg-white/95 text-center text-black transition-all duration-300 ease-in-out group-hover:visible group-hover:opacity-100 can-hover:invisible can-hover:opacity-0"
       on:click={showModal}
     >
       {#if player}
         <Icon
-          name="play"
-          width="24px"
-          height="24px"
+          name="video"
+          width="20px"
+          height="20px"
+          class="pointer-events-none mx-auto"
+        />
+      {:else}
+        <Icon
+          name="camera"
+          width="20px"
+          height="20px"
           class="pointer-events-none mx-auto"
         />
       {/if}
-      <h3>{title}</h3>
-      <p>{subtitle}</p>
+      <h3 class="text-black">{title}</h3>
+      <p class="text-black">{subtitle}</p>
     </div>
   </div>
 
@@ -119,9 +126,3 @@
     </div>
   </dialog>
 </div>
-
-<style>
-  .w-dialog {
-    width: min(53rem, 80%);
-  }
-</style>

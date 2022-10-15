@@ -129,4 +129,8 @@
   .w-contact {
     width: clamp(40rem, 95%, 55rem);
   }
+
+  .w-dialog {
+    width: min(55rem, 80%);
+  }
 }
