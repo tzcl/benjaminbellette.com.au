@@ -6,5 +6,12 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), svelte(), tailwind()],
+  integrations: [
+    react(),
+    svelte(),
+    tailwind({
+      // Disable injecting a basic `base.css` on every page
+      config: { applyBaseStyles: false },
+    }),
+  ],
 });

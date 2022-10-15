@@ -16,9 +16,9 @@
 
 <div class="relative">
   <div
-    class="absolute z-10 grid w-full h-full place-content-center pointer-events-none"
+    class="pointer-events-none absolute z-10 grid h-full w-full place-content-center"
   >
-    <h1 class="text-title pointer-events-auto">{title}</h1>
+    <h1 class="title pointer-events-auto">{title}</h1>
   </div>
   <Swiper
     modules={[Navigation, Pagination, A11y]}
@@ -38,17 +38,3 @@
     {/each}
   </Swiper>
 </div>
-
-<style>
-  :root {
-    --swiper-theme-color: #fff;
-  }
-
-  /* TODO: refactor this */
-  /* Add to Tailwind theme? */
-  @media (min-width: 40rem) {
-    .text-title {
-      font-size: clamp(3rem, 7vw, 5rem);
-    }
-  }
-</style>

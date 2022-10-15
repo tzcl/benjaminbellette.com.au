@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --swiper-theme-color: theme("colors.white");
+  }
+
+  body {
+    background-color: theme("colors.black");
+    color: theme("colors.white");
+  }
+
+  ::selection {
+    background-color: theme("colors.pink");
+  }
+
+  h1::selection {
+    background-color: transparent;
+    text-shadow: 1px 0px 1px theme("colors.pink"),
+      0px 1px 1px theme("colors.pink"), 2px 1px 1px theme("colors.pink"),
+      1px 2px 1px theme("colors.pink"), 3px 2px 1px theme("colors.pink"),
+      2px 3px 1px theme("colors.pink"), 4px 3px 1px theme("colors.pink");
+  }
+
+  h2::selection {
+    background-color: transparent;
+    text-shadow: 1px 0px 1px theme("colors.pink"),
+      0px 1px 1px theme("colors.pink"), 2px 1px 1px theme("colors.pink"),
+      1px 2px 1px theme("colors.pink"), 3px 2px 1px theme("colors.pink"),
+      2px 3px 1px theme("colors.pink");
+  }
+
+  h3::selection,
+  h4::selection {
+    /* Chrome forces this to be semi-transparent */
+    /* We can override this by setting the opacity */
+    background-color: rgb(210, 100, 125, 0.996);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Open Sans", arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+
+    margin: 0 auto;
+    color: theme("colors.white");
+  }
+
+  a,
+  p {
+    font-family: "Open Sans", arial, sans-serif;
+    font-size: 0.75em;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: theme("colors.white");
+  }
+
+  h1 {
+    font-size: 1.5em;
+    line-height: 1.8;
+    letter-spacing: 0.5em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+    line-height: 1.6;
+    letter-spacing: 0.4em;
+  }
+
+  h3 {
+    font-size: 1.1em;
+    line-height: 1.5;
+    letter-spacing: 0.15em;
+  }
+
+  h4 {
+    font-size: 0.75em;
+    line-height: 1.4;
+    letter-spacing: 0.125em;
+  }
+}
+
+@layer components {
+  .subtitle {
+    padding: 2rem;
+    background-color: #fff;
+    color: #000;
+  }
+
+  @media (min-width: 40rem) {
+    .title::selection {
+      background-color: transparent;
+      text-shadow: 1px 0px 1px theme("colors.pink"),
+        0px 1px 1px theme("colors.pink"), 2px 1px 1px theme("colors.pink"),
+        1px 2px 1px theme("colors.pink"), 3px 2px 1px theme("colors.pink"),
+        2px 3px 1px theme("colors.pink"), 4px 3px 1px theme("colors.pink"),
+        3px 4px 1px theme("colors.pink"), 5px 4px 1px theme("colors.pink"),
+        4px 5px 1px theme("colors.pink"), 6px 5px 1px theme("colors.pink"),
+        5px 6px 1px theme("colors.pink"), 7px 6px 1px theme("colors.pink");
+    }
+
+    .subtitle::selection {
+      background-color: transparent;
+      text-shadow: 1px 0px 1px theme("colors.pink"),
+        0px 1px 1px theme("colors.pink"), 2px 1px 1px theme("colors.pink"),
+        1px 2px 1px theme("colors.pink"), 3px 2px 1px theme("colors.pink"),
+        2px 3px 1px theme("colors.pink"), 4px 3px 1px theme("colors.pink"),
+        3px 4px 1px theme("colors.pink"), 5px 4px 1px theme("colors.pink");
+    }
+
+    .title {
+      font-size: clamp(3rem, 7vw, 5rem);
+    }
+
+    .subtitle {
+      font-size: clamp(1.5rem, 5vw, 2.5rem);
+    }
+  }
+}

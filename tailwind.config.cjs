@@ -1,4 +1,5 @@
 const plugin = require("tailwindcss/plugin");
+const colors = require("tailwindcss/colors");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -7,7 +8,21 @@ module.exports = {
     hoverOnlyWhenSupported: true,
   },
   theme: {
+    colors: {
+      inherit: colors.inherit,
+      transparent: colors.transparent,
+      current: colors.current,
+      white: colors.white,
+      black: colors.black,
+      gray: {
+        dark: "#111",
+      },
+      pink: "#d2647d",
+    },
     extend: {
+      screens: {
+        "can-hover": { raw: "(hover: hover) and (pointer: fine)" },
+      },
       animation: {
         "slide-in":
           "slide-in 0.25s ease-in-out forwards, fade-in 0.25s ease-in-out forwards",
@@ -33,12 +48,6 @@ module.exports = {
           "0%": { opacity: "100%" },
           "100%": { opacity: "0" },
         },
-      },
-      screens: {
-        "can-hover": { raw: "(hover: hover) and (pointer: fine)" },
-      },
-      transitionDuration: {
-        2000: "2000ms",
       },
     },
   },
