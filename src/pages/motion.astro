@@ -2,7 +2,7 @@
 import Slider from "../components/dynamic/Slider.svelte";
 import Tile from "../components/dynamic/Tile.svelte";
 import Page from "../layouts/Page.astro";
-import { hero, mumlife, music_videos } from "../data/motion";
+import data, { commercials } from "../data/motion";
 ---
 
 <!-- TODO: fix up description... -->
@@ -10,7 +10,7 @@ import { hero, mumlife, music_videos } from "../data/motion";
   title="Benjamin Bellette | Motion"
   description="Melbourne and Sydney-based cinematographer."
 >
-  <Slider client:idle title="Motion" pics={hero} />
+  <Slider client:idle title="Motion" pics={data.hero} />
   <section id="reel">
     <h2 class="subtitle">Reel</h2>
     <iframe
@@ -33,7 +33,7 @@ import { hero, mumlife, music_videos } from "../data/motion";
         title="MumLife"
         subtitle="2022 Short Film"
         img="https://i.imgur.com/m9pUpLU.jpg"
-        items={mumlife}
+        items={data.mumlife}
       />
     </div>
   </section>
@@ -48,7 +48,7 @@ import { hero, mumlife, music_videos } from "../data/motion";
           title="Sydney Children's Choir"
           subtitle="Deine Mami"
           img="https://i.imgur.com/Giu7jh2.jpg"
-          items={music_videos.sydney_childrens_choir}
+          items={data.music_videos.sydney_childrens_choir}
         />
       </div>
       <div class="aspect-video">
@@ -57,7 +57,7 @@ import { hero, mumlife, music_videos } from "../data/motion";
           title="Twin Filament"
           subtitle="Visual Poem"
           img="https://i.imgur.com/ySzi6a2.jpg"
-          items={music_videos.twin_filament}
+          items={data.music_videos.twin_filament}
         />
       </div>
       <div class="aspect-video">
@@ -66,7 +66,7 @@ import { hero, mumlife, music_videos } from "../data/motion";
           title="Maddy Jane"
           subtitle="Thank You and Sorry"
           img="https://i.imgur.com/BQ9hVDC.jpg"
-          items={music_videos.maddy_jane}
+          items={data.music_videos.maddy_jane}
         />
       </div>
       <div class="aspect-video">
@@ -75,7 +75,7 @@ import { hero, mumlife, music_videos } from "../data/motion";
           title="Sahara Beck"
           subtitle="Here We Go Again"
           img="https://i.imgur.com/KEZb0ZO.jpg"
-          items={music_videos.sahara_beck}
+          items={data.music_videos.sahara_beck}
         />
       </div>
       <div class="aspect-video">
@@ -84,7 +84,7 @@ import { hero, mumlife, music_videos } from "../data/motion";
           title="Samsaruh"
           subtitle="Speaking Fire"
           img="https://i.imgur.com/9f1oxw9.jpg"
-          items={music_videos.samsaruh}
+          items={data.music_videos.samsaruh}
         />
       </div>
       <div class="aspect-video">
@@ -93,7 +93,7 @@ import { hero, mumlife, music_videos } from "../data/motion";
           title="Wolf and Willow"
           subtitle="Falling"
           img="https://i.imgur.com/MhKXVAG.jpg"
-          items={music_videos.wolf_and_willow}
+          items={data.music_videos.wolf_and_willow}
         />
       </div>
     </div>
@@ -106,55 +106,55 @@ import { hero, mumlife, music_videos } from "../data/motion";
       <div class="aspect-video">
         <Tile
           client:visible
-          title="Sydney Children's Choir"
-          subtitle="Deine Mami"
-          img="https://i.imgur.com/Giu7jh2.jpg"
-          items={music_videos.sydney_childrens_choir}
+          title="Bentley"
+          subtitle="Continental GT"
+          img="https://i.imgur.com/Xfu5Ukc.jpg"
+          items={data.commercials.bentley}
         />
       </div>
       <div class="aspect-video">
         <Tile
           client:visible
-          title="Twin Filament"
-          subtitle="Visual Poem"
-          img="https://i.imgur.com/ySzi6a2.jpg"
-          items={music_videos.twin_filament}
+          title="Merry People"
+          subtitle="2019"
+          img="https://i.imgur.com/7sOpGLI.jpg"
+          items={data.commercials.merry_people}
         />
       </div>
       <div class="aspect-video">
         <Tile
           client:visible
-          title="Maddy Jane"
-          subtitle="Thank You and Sorry"
-          img="https://i.imgur.com/BQ9hVDC.jpg"
-          items={music_videos.maddy_jane}
+          title="WAG"
+          subtitle="More Than a WAG"
+          img="https://i.imgur.com/CbYh9YN.png"
+          items={data.commercials.wag}
         />
       </div>
       <div class="aspect-video">
         <Tile
           client:visible
-          title="Sahara Beck"
-          subtitle="Here We Go Again"
-          img="https://i.imgur.com/KEZb0ZO.jpg"
-          items={music_videos.sahara_beck}
+          title="AMSA"
+          subtitle="Melbourne 2020"
+          img="https://i.imgur.com/8Dt3ylP.jpg"
+          items={data.commercials.amsa}
         />
       </div>
       <div class="aspect-video">
         <Tile
           client:visible
-          title="Samsaruh"
-          subtitle="Speaking Fire"
-          img="https://i.imgur.com/9f1oxw9.jpg"
-          items={music_videos.samsaruh}
+          title="Leneeva Homes"
+          subtitle="The Monterey – TVC"
+          img="https://i.imgur.com/8TLw0iB.jpg"
+          items={data.commercials.leneeva_homes}
         />
       </div>
       <div class="aspect-video">
         <Tile
           client:visible
-          title="Wolf and Willow"
-          subtitle="Falling"
-          img="https://i.imgur.com/MhKXVAG.jpg"
-          items={music_videos.wolf_and_willow}
+          title="Home"
+          subtitle="with Deborah Hutton"
+          img="https://i.imgur.com/tbf3X5P.jpg"
+          items={data.commercials.home}
         />
       </div>
     </div>
@@ -170,7 +170,7 @@ import { hero, mumlife, music_videos } from "../data/motion";
           title="Sydney Children's Choir"
           subtitle="Deine Mami"
           img="https://i.imgur.com/Giu7jh2.jpg"
-          items={music_videos.sydney_childrens_choir}
+          items={data.music_videos.sydney_childrens_choir}
         />
       </div>
       <div class="aspect-video">
@@ -179,7 +179,7 @@ import { hero, mumlife, music_videos } from "../data/motion";
           title="Twin Filament"
           subtitle="Visual Poem"
           img="https://i.imgur.com/ySzi6a2.jpg"
-          items={music_videos.twin_filament}
+          items={data.music_videos.twin_filament}
         />
       </div>
       <div class="aspect-video">
@@ -188,7 +188,7 @@ import { hero, mumlife, music_videos } from "../data/motion";
           title="Maddy Jane"
           subtitle="Thank You and Sorry"
           img="https://i.imgur.com/BQ9hVDC.jpg"
-          items={music_videos.maddy_jane}
+          items={data.music_videos.maddy_jane}
         />
       </div>
       <div class="aspect-video">
@@ -197,7 +197,7 @@ import { hero, mumlife, music_videos } from "../data/motion";
           title="Sahara Beck"
           subtitle="Here We Go Again"
           img="https://i.imgur.com/KEZb0ZO.jpg"
-          items={music_videos.sahara_beck}
+          items={data.music_videos.sahara_beck}
         />
       </div>
       <div class="aspect-video">
@@ -206,7 +206,7 @@ import { hero, mumlife, music_videos } from "../data/motion";
           title="Samsaruh"
           subtitle="Speaking Fire"
           img="https://i.imgur.com/9f1oxw9.jpg"
-          items={music_videos.samsaruh}
+          items={data.music_videos.samsaruh}
         />
       </div>
       <div class="aspect-video">
@@ -215,7 +215,7 @@ import { hero, mumlife, music_videos } from "../data/motion";
           title="Wolf and Willow"
           subtitle="Falling"
           img="https://i.imgur.com/MhKXVAG.jpg"
-          items={music_videos.wolf_and_willow}
+          items={data.music_videos.wolf_and_willow}
         />
       </div>
     </div>
@@ -231,7 +231,7 @@ import { hero, mumlife, music_videos } from "../data/motion";
           title="Sydney Children's Choir"
           subtitle="Deine Mami"
           img="https://i.imgur.com/Giu7jh2.jpg"
-          items={music_videos.sydney_childrens_choir}
+          items={data.music_videos.sydney_childrens_choir}
         />
       </div>
       <div class="aspect-video">
@@ -240,7 +240,7 @@ import { hero, mumlife, music_videos } from "../data/motion";
           title="Twin Filament"
           subtitle="Visual Poem"
           img="https://i.imgur.com/ySzi6a2.jpg"
-          items={music_videos.twin_filament}
+          items={data.music_videos.twin_filament}
         />
       </div>
       <div class="aspect-video">
@@ -249,7 +249,7 @@ import { hero, mumlife, music_videos } from "../data/motion";
           title="Maddy Jane"
           subtitle="Thank You and Sorry"
           img="https://i.imgur.com/BQ9hVDC.jpg"
-          items={music_videos.maddy_jane}
+          items={data.music_videos.maddy_jane}
         />
       </div>
       <div class="aspect-video">
@@ -258,7 +258,7 @@ import { hero, mumlife, music_videos } from "../data/motion";
           title="Sahara Beck"
           subtitle="Here We Go Again"
           img="https://i.imgur.com/KEZb0ZO.jpg"
-          items={music_videos.sahara_beck}
+          items={data.music_videos.sahara_beck}
         />
       </div>
       <div class="aspect-video">
@@ -267,7 +267,7 @@ import { hero, mumlife, music_videos } from "../data/motion";
           title="Samsaruh"
           subtitle="Speaking Fire"
           img="https://i.imgur.com/9f1oxw9.jpg"
-          items={music_videos.samsaruh}
+          items={data.music_videos.samsaruh}
         />
       </div>
       <div class="aspect-video">
@@ -276,7 +276,7 @@ import { hero, mumlife, music_videos } from "../data/motion";
           title="Wolf and Willow"
           subtitle="Falling"
           img="https://i.imgur.com/MhKXVAG.jpg"
-          items={music_videos.wolf_and_willow}
+          items={data.music_videos.wolf_and_willow}
         />
       </div>
     </div>
@@ -292,7 +292,7 @@ import { hero, mumlife, music_videos } from "../data/motion";
           title="Sydney Children's Choir"
           subtitle="Deine Mami"
           img="https://i.imgur.com/Giu7jh2.jpg"
-          items={music_videos.sydney_childrens_choir}
+          items={data.music_videos.sydney_childrens_choir}
         />
       </div>
       <div class="aspect-video">
@@ -301,7 +301,7 @@ import { hero, mumlife, music_videos } from "../data/motion";
           title="Twin Filament"
           subtitle="Visual Poem"
           img="https://i.imgur.com/ySzi6a2.jpg"
-          items={music_videos.twin_filament}
+          items={data.music_videos.twin_filament}
         />
       </div>
       <div class="aspect-video">
@@ -310,7 +310,7 @@ import { hero, mumlife, music_videos } from "../data/motion";
           title="Maddy Jane"
           subtitle="Thank You and Sorry"
           img="https://i.imgur.com/BQ9hVDC.jpg"
-          items={music_videos.maddy_jane}
+          items={data.music_videos.maddy_jane}
         />
       </div>
       <div class="aspect-video">
@@ -319,7 +319,7 @@ import { hero, mumlife, music_videos } from "../data/motion";
           title="Sahara Beck"
           subtitle="Here We Go Again"
           img="https://i.imgur.com/KEZb0ZO.jpg"
-          items={music_videos.sahara_beck}
+          items={data.music_videos.sahara_beck}
         />
       </div>
       <div class="aspect-video">
@@ -328,7 +328,7 @@ import { hero, mumlife, music_videos } from "../data/motion";
           title="Samsaruh"
           subtitle="Speaking Fire"
           img="https://i.imgur.com/9f1oxw9.jpg"
-          items={music_videos.samsaruh}
+          items={data.music_videos.samsaruh}
         />
       </div>
       <div class="aspect-video">
@@ -337,7 +337,7 @@ import { hero, mumlife, music_videos } from "../data/motion";
           title="Wolf and Willow"
           subtitle="Falling"
           img="https://i.imgur.com/MhKXVAG.jpg"
-          items={music_videos.wolf_and_willow}
+          items={data.music_videos.wolf_and_willow}
         />
       </div>
     </div>

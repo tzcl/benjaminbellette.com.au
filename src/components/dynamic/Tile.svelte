@@ -3,9 +3,9 @@
   import Icon from "./Icon.svelte";
 
   export interface Item {
-    type: string;
+    type?: string;
     src: string;
-    title: string;
+    title?: string;
   }
 
   export interface Tiles {
