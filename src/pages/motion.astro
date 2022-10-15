@@ -1,82 +1,8 @@
 ---
-import type { Item } from "../components/dynamic/Tile.svelte";
 import Slider from "../components/dynamic/Slider.svelte";
 import Tile from "../components/dynamic/Tile.svelte";
 import Page from "../layouts/Page.astro";
-
-const pics = [
-  "https://i.imgur.com/45UrFyT.png",
-  "https://i.imgur.com/wXeiH36.png",
-  "https://i.imgur.com/puavCGo.png",
-];
-
-const mumlife: Item[] = [
-  {
-    type: "iframe",
-    content: "https://player.vimeo.com/video/707425833",
-    label: "",
-  },
-  {
-    type: "img",
-    content: "https://i.imgur.com/vByh3Ds.jpg",
-    label: "arst",
-  },
-  {
-    type: "img",
-    content: "https://i.imgur.com/m9pUpLU.jpg",
-    label: "arst",
-  },
-  {
-    type: "img",
-    content: "https://i.imgur.com/0o06GPO.jpg",
-    label: "arst",
-  },
-  {
-    type: "img",
-    content: "https://i.imgur.com/du1xzlu.jpg",
-    label: "arst",
-  },
-  {
-    type: "img",
-    content: "https://i.imgur.com/VO43cLW.jpg",
-    label: "arst",
-  },
-  {
-    type: "img",
-    content: "https://i.imgur.com/IIM63Df.jpg",
-    label: "arst",
-  },
-  {
-    type: "img",
-    content: "https://i.imgur.com/SZH4pKh.jpg",
-    label: "arst",
-  },
-  {
-    type: "img",
-    content: "https://i.imgur.com/WpzfttP.jpg",
-    label: "arst",
-  },
-  {
-    type: "img",
-    content: "https://i.imgur.com/NirDIiW.jpg",
-    label: "arst",
-  },
-  {
-    type: "img",
-    content: "https://i.imgur.com/v72J2Jg.jpg",
-    label: "arst",
-  },
-  {
-    type: "img",
-    content: "https://i.imgur.com/6p4g0yO.jpg",
-    label: "arst",
-  },
-  {
-    type: "img",
-    content: "https://i.imgur.com/Y9AYfO7.jpg",
-    label: "arst",
-  },
-];
+import { hero, tiles } from "../data/motion";
 ---
 
 <!-- TODO: fix up description... -->
@@ -84,7 +10,7 @@ const mumlife: Item[] = [
   title="Benjamin Bellette | Motion"
   description="Melbourne and Sydney-based cinematographer."
 >
-  <Slider client:idle title="Motion" pics={pics} />
+  <Slider client:idle title="Motion" pics={hero} />
   <section id="reel">
     <h2 class="subtitle">Reel</h2>
     <iframe
@@ -107,7 +33,7 @@ const mumlife: Item[] = [
         title="MumLife"
         subtitle="2022 Short Film"
         img="https://i.imgur.com/m9pUpLU.jpg"
-        items={mumlife}
+        items={tiles.mumlife}
       />
     </div>
   </section>
@@ -122,7 +48,7 @@ const mumlife: Item[] = [
           title="MumLife"
           subtitle="2022 Short Film"
           img="https://i.imgur.com/m9pUpLU.jpg"
-          items={mumlife}
+          items={tiles.mumlife}
         />
       </div>
       <div class="aspect-video">
@@ -131,7 +57,7 @@ const mumlife: Item[] = [
           title="MumLife"
           subtitle="2022 Short Film"
           img="https://i.imgur.com/m9pUpLU.jpg"
-          items={mumlife}
+          items={tiles.mumlife}
         />
       </div>
       <div class="aspect-video">
@@ -140,7 +66,7 @@ const mumlife: Item[] = [
           title="MumLife"
           subtitle="2022 Short Film"
           img="https://i.imgur.com/m9pUpLU.jpg"
-          items={mumlife}
+          items={tiles.mumlife}
         />
       </div>
       <div class="aspect-video">
@@ -149,7 +75,7 @@ const mumlife: Item[] = [
           title="MumLife"
           subtitle="2022 Short Film"
           img="https://i.imgur.com/m9pUpLU.jpg"
-          items={mumlife}
+          items={tiles.mumlife}
         />
       </div>
       <div class="aspect-video">
@@ -158,7 +84,7 @@ const mumlife: Item[] = [
           title="MumLife"
           subtitle="2022 Short Film"
           img="https://i.imgur.com/m9pUpLU.jpg"
-          items={mumlife}
+          items={tiles.mumlife}
         />
       </div>
       <div class="aspect-video">
@@ -167,15 +93,26 @@ const mumlife: Item[] = [
           title="MumLife"
           subtitle="2022 Short Film"
           img="https://i.imgur.com/m9pUpLU.jpg"
-          items={mumlife}
+          items={tiles.mumlife}
         />
       </div>
     </div>
   </section>
   <section>
-    <h2 class="subtitle">Docu&shy;mentaries</h2>
-    <p>Documentaries here</p>
-    <p>Call this section docos instead?</p>
+    <h2 class="subtitle">Commercials</h2>
+  </section>
+  <section>
+    <h2 class="subtitle">Films</h2>
+  </section>
+  <section>
+    <h2 class="subtitle">Corporates</h2>
+  </section>
+  <section>
+    <h2 class="subtitle">Documentaries</h2>
+  </section>
+  <section>
+    <h2>Interested in seeing more?</h2>
+    <p>View portfolio</p>
   </section>
 </Page>
 

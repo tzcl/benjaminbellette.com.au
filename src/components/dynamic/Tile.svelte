@@ -7,6 +7,10 @@
     content: string;
     label: string;
   }
+
+  export interface Tiles {
+    [key: string]: Item[];
+  }
 </script>
 
 <script lang="ts">
