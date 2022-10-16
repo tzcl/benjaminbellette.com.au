@@ -19,6 +19,8 @@
   let iframe: HTMLIFrameElement; // assume there is at most one video per tile
   let player;
 
+  let video = items.some((item) => item.type !== null);
+
   onMount(async () => {
     const Player = (await import("@vimeo/player")).default;
     if (iframe) player = new Player(iframe);
@@ -60,21 +62,12 @@
       class="absolute inset-0 flex cursor-pointer select-none flex-col justify-center bg-white/80 text-center text-black transition-all duration-300 ease-in-out group-hover:visible group-hover:opacity-100 can-hover:invisible can-hover:opacity-0"
       on:click={showModal}
     >
-      {#if player}
-        <Icon
-          name="video"
-          width="20px"
-          height="20px"
-          class="pointer-events-none mx-auto"
-        />
-      {:else}
-        <Icon
-          name="camera"
-          width="20px"
-          height="20px"
-          class="pointer-events-none mx-auto"
-        />
-      {/if}
+      <Icon
+        name={video ? "video" : "camera"}
+        width="20px"
+        height="20px"
+        class="pointer-events-none mx-auto"
+      />
       <h3 class="whitespace-pre-line text-black">{title}</h3>
       <p class="text-black">{subtitle}</p>
     </div>
