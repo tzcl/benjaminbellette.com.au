@@ -625,7 +625,7 @@ export const films: Section = {
       ],
     },
     {
-      title: "The Sisterhood of Mika and Sophie",
+      title: "The Sisterhood of \n Mika and Sophie",
       subtitle: "Short Film",
       img: "https://i.imgur.com/TYF4Ofy.jpg",
       items: [

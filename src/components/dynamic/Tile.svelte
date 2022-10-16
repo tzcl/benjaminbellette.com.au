@@ -75,7 +75,7 @@
           class="pointer-events-none mx-auto"
         />
       {/if}
-      <h3 class="text-black">{title}</h3>
+      <h3 class="whitespace-pre-line text-black">{title}</h3>
       <p class="text-black">{subtitle}</p>
     </div>
   </div>
