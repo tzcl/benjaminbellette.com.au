@@ -18,6 +18,12 @@ module.exports = {
       pink: "#d2647d",
     },
     extend: {
+      colors: {
+        grey: {
+          750: "#333",
+          850: "#1e1e1e",
+        },
+      },
       screens: {
         "can-hover": { raw: "(hover: hover) and (pointer: fine)" },
       },

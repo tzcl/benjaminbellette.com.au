@@ -69,11 +69,11 @@ const pages = [
             <>
               <li
                 key={i}
-                class={`${active(page.link)} border-t border-gray-400 py-2`}
+                class={`${active(page.link)} border-gray-400 border-t py-2`}
               >
                 <a
                   href={page.link}
-                  class="no-underline opacity-60 hover:text-[#b1b1b1] [.active_&]:opacity-100"
+                  class="no-underline opacity-60 hover:text-grey-400 [.active_&]:opacity-100"
                 >
                   {page.text}
                 </a>
@@ -84,11 +84,11 @@ const pages = [
                     key={i}
                     class={`${active(
                       page.link
-                    )} border-t border-gray-400 py-2 pl-4`}
+                    )} border-gray-400 border-t py-2 pl-4`}
                   >
                     <a
                       href={section.link}
-                      class="opacity-60 hover:text-[#b1b1b1] [.active_&]:opacity-100"
+                      class="opacity-60 hover:text-grey-400 [.active_&]:opacity-100"
                     >
                       {section.text}
                     </a>
@@ -100,26 +100,28 @@ const pages = [
       </ul>
 
       <!-- Desktop navbar -->
-      <div class="hidden md:flex md:gap-8 md:items-stretch h-full w-full">
+      <div
+        class="hidden md:flex md:gap-8 md:items-stretch h-full w-full mr-[21px]"
+      >
         {
           pages.map((page, i) => (
             <button
               key={i}
               class={`${active(page.link)} group relative text-left`}
             >
-              <a href={page.link} class="group-hover:text-[#b1b1b1]">
+              <a href={page.link} class="group-hover:text-grey-400">
                 {page.text}
                 {page.children && (
                   <Icon name="chevron-down" class="-ml-1 inline" />
                 )}
               </a>
               {page.children && (
-                <div class="invisible absolute top-full left-0 z-20 translate-y-[-5%] bg-[#1e1e1e] p-4 opacity-0 transition-all duration-[250] group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                <div class="invisible absolute top-full left-0 z-20 translate-y-[-5%] bg-grey-850 p-4 opacity-0 transition-all duration-[250] group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
                   <ul>
                     {page.children.map((section, i) => (
                       <li
                         key={i}
-                        class="py-2 px-4 opacity-60 hover:bg-[#333] hover:opacity-100"
+                        class="whitespace-nowrap py-2 px-4 opacity-60 hover:bg-grey-750 hover:opacity-100"
                       >
                         <a href={section.link}>{section.text}</a>
                       </li>
