@@ -80,6 +80,10 @@
       // @ts-ignore
       if (e.target.tagName == "DIALOG") exitModal();
     }}
+    on:cancel={(e) => {
+      e.preventDefault();
+      exitModal();
+    }}
   >
     <div class="w-dialog mx-auto mt-12">
       <img
