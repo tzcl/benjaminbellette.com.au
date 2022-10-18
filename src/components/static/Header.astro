@@ -62,37 +62,27 @@ const pages = [
     <!-- Mobile navbar -->
     <nav id="nav" data-visible="false" class="mx-4 md:mx-8">
       <ul
-        class="hidden shown:block shown:animate-slide-in hiding:block hiding:animate-slide-out py-4"
+        class="hidden md:shown:hidden md:hiding:hidden shown:block shown:animate-slide-in hiding:block hiding:animate-slide-out py-4"
       >
         {
           pages.map((page, i) => (
             <>
-              <li
-                key={i}
-                class={`${active(page.link)} border-gray-400 border-t py-2`}
-              >
-                <a
-                  href={page.link}
-                  class="no-underline opacity-60 hover:text-grey-400 [.active_&]:opacity-100"
-                >
-                  {page.text}
-                </a>
-              </li>
+              <a href={page.link} key={i} class={active(page.link)}>
+                <li class="group border-t py-2">
+                  <span class="opacity-60 group-hover:text-grey-400 [.active_&]:opacity-100">
+                    {page.text}
+                  </span>
+                </li>
+              </a>
               {page.children &&
                 page.children.map((section, i) => (
-                  <li
-                    key={i}
-                    class={`${active(
-                      page.link
-                    )} border-gray-400 border-t py-2 pl-4`}
-                  >
-                    <a
-                      href={section.link}
-                      class="opacity-60 hover:text-grey-400 [.active_&]:opacity-100"
-                    >
-                      {section.text}
-                    </a>
-                  </li>
+                  <a href={section.link} key={i} class={active(page.link)}>
+                    <li class="group border-t py-2 pl-6">
+                      <span class="opacity-60 group-hover:text-grey-400 [.active_&]:opacity-100">
+                        {section.text}
+                      </span>
+                    </li>
+                  </a>
                 ))}
             </>
           ))
