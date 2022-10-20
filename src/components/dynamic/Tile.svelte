@@ -59,7 +59,7 @@
     style={`background: url('${img}') center center / cover #111`}
   >
     <div
-      class="absolute inset-0 flex cursor-pointer select-none flex-col justify-center bg-white/80 text-center text-black transition-all duration-300 ease-in-out group-hover:visible group-hover:opacity-100 can-hover:invisible can-hover:opacity-0"
+      class="absolute inset-0 flex cursor-pointer select-none flex-col justify-center bg-white/80 text-center text-black opacity-0 transition-all duration-300 ease-in-out group-hover:visible group-hover:opacity-100"
       on:click={showModal}
     >
       <Icon
