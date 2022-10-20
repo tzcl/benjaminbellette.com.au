@@ -9,6 +9,10 @@
     --swiper-theme-color: theme("colors.white");
   }
 
+  :target {
+    scroll-margin-top: 56.5px;
+  }
+
   body {
     background-color: theme("colors.black");
     color: theme("colors.white");
