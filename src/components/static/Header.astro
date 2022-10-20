@@ -37,7 +37,9 @@ const pages = [
 
 <!-- Need this div to reserve space for the header to shrink -->
 <div class="sticky top-0 h-[86px] bg-black scrolled:bg-transparent z-20">
-  <header class="md:flex md:justify-between bg-black sticky top-0">
+  <header
+    class="can-hover:md:flex can-hover:md:justify-between bg-black sticky top-0"
+  >
     <!-- Logo and hamburger menu -->
     <div class="flex justify-between items-center">
       <a href="/">
@@ -54,7 +56,7 @@ const pages = [
         src="./assets/menu.svg"
         width="32px"
         height="32px"
-        class="m-4 hover:cursor-pointer md:hidden"
+        class="m-4 hover:cursor-pointer can-hover:md:hidden"
         id="hamburger"
       />
     </div>
@@ -62,7 +64,7 @@ const pages = [
     <!-- Mobile navbar -->
     <nav id="nav" data-visible="false" class="mx-4 md:mx-8">
       <ul
-        class="hidden md:shown:hidden md:hiding:hidden shown:block shown:animate-slide-in hiding:block hiding:animate-slide-out py-4"
+        class="hidden can-hover:md:shown:hidden can-hover:md:hiding:hidden shown:block shown:animate-slide-in hiding:block hiding:animate-slide-out py-4"
       >
         {
           pages.map((page, i) => (
@@ -91,35 +93,38 @@ const pages = [
 
       <!-- Desktop navbar -->
       <div
-        class="hidden md:flex md:gap-8 md:items-stretch h-full w-full mr-[21px]"
+        class="hidden can-hover:md:flex can-hover:md:gap-8 can-hover:md:items-stretch h-full w-full mr-[21px]"
       >
         {
           pages.map((page, i) => (
-            <button
+            <div
               key={i}
-              class={`${active(page.link)} group relative text-left`}
+              class="group relative flex items-center"
+              onclick="console.log('click')"
             >
-              <a href={page.link} class="group-hover:text-grey-400">
+              <a
+                href={page.link}
+                class="opacity-60 after:absolute after:top-0 after:left-0 after:h-full after:w-full group-hover:opacity-100"
+              >
                 {page.text}
                 {page.children && (
                   <Icon name="chevron-down" class="-ml-1 inline" />
                 )}
               </a>
               {page.children && (
-                <div class="invisible absolute top-full left-0 z-20 translate-y-[-5%] bg-grey-850 p-4 opacity-0 transition-all duration-[250] group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                <div class="invisible absolute top-full left-0 z-20 bg-grey-850 p-4 group-hover:visible group-hover:animate-slide-in">
                   <ul>
                     {page.children.map((section, i) => (
-                      <li
-                        key={i}
-                        class="whitespace-nowrap py-2 px-4 opacity-60 hover:bg-grey-750 hover:opacity-100"
-                      >
-                        <a href={section.link}>{section.text}</a>
-                      </li>
+                      <a key={i} href={section.link} class="block">
+                        <li class="whitespace-nowrap py-2 px-4 opacity-60 hover:bg-grey-750 hover:opacity-100">
+                          {section.text}
+                        </li>
+                      </a>
                     ))}
                   </ul>
                 </div>
               )}
-            </button>
+            </div>
           ))
         }
       </div>
@@ -136,11 +141,18 @@ const pages = [
     const visible = nav.getAttribute("data-visible");
 
     if (visible === "false") {
+      // prevent scrolling
+      document.body.style.overflow = "hidden";
+
       // open menu
       nav.setAttribute("data-visible", "true");
       hamburger.classList.add("open");
       hamburger.src = "./assets/x.svg";
     } else {
+      // enable scrolling
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
+
       // start hiding menu
       nav.setAttribute("data-visible", "hiding");
       hamburger.classList.remove("open");
