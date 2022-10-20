@@ -97,14 +97,10 @@ const pages = [
       >
         {
           pages.map((page, i) => (
-            <div
-              key={i}
-              class="group relative flex items-center"
-              onclick="console.log('click')"
-            >
+            <div key={i} class="group relative flex items-center">
               <a
                 href={page.link}
-                class="opacity-60 after:absolute after:top-0 after:left-0 after:h-full after:w-full group-hover:opacity-100"
+                class="text-grey-400 after:absolute after:top-0 after:left-0 after:h-full after:w-full group-hover:text-white"
               >
                 {page.text}
                 {page.children && (
@@ -116,7 +112,7 @@ const pages = [
                   <ul>
                     {page.children.map((section, i) => (
                       <a key={i} href={section.link} class="block">
-                        <li class="whitespace-nowrap py-2 px-4 opacity-60 hover:bg-grey-750 hover:opacity-100">
+                        <li class="whitespace-nowrap py-2 px-4 text-grey-400 hover:bg-grey-750 hover:text-white">
                           {section.text}
                         </li>
                       </a>
