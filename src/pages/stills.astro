@@ -7,7 +7,7 @@ import data from "../data/stills";
 
 <Page
   title="Benjamin Bellette | Stills"
-  description="Melbourne and Sydney-based cinematographer."
+  description="Photography portfolio including behind the scenes images and photography work."
 >
   <Slider client:idle title="Stills" pics={data.hero} />
   <section id="bts">
@@ -15,7 +15,7 @@ import data from "../data/stills";
     <div class="w-main mx-auto my-16">
       <div class="aspect-video">
         <Tile
-          client:load
+          client:visible
           title="Behind the scenes"
           subtitle="Stills"
           img="https://i.imgur.com/22bOxRj.jpg"
@@ -36,7 +36,7 @@ import data from "../data/stills";
     <h2 class="subtitle">Photography</h2>
     <div class="w-main mx-auto my-12 aspect-video">
       <Tile
-        client:load
+        client:visible
         title="Photography"
         subtitle="Stills"
         img="https://i.imgur.com/bYNd8Q7.jpg"
