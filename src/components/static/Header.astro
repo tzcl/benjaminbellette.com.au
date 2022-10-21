@@ -1,6 +1,7 @@
 ---
 import Icon from "../dynamic/Icon.svelte";
 import logo from "../../assets/logo-dark.png";
+import { Image } from "@astrojs/image/components";
 
 const path = Astro.url.pathname;
 function active(item: string): string {
@@ -44,21 +45,58 @@ const pages = [
     <div class="flex justify-between items-center">
       <a href="/">
         <div id="logo" class="m-4 transition-all scrolled:my-2">
-          <img
+          <Image
             src={logo}
             alt="Logo - Benjamin Bellette"
             class="transition-all w-[236px] h-[54px] scrolled:w-[177px] scrolled:h-[40.5px]"
+            format="webp"
           />
         </div>
       </a>
 
-      <img
-        src="./assets/menu.svg"
-        width="32px"
-        height="32px"
+      <div
+        id="mobile-menu"
         class="m-4 hover:cursor-pointer can-hover:md:hidden"
-        id="hamburger"
-      />
+      >
+        <svg
+          id="hamburger"
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="feather feather-menu"
+          ><line x1="3" y1="12" x2="21" y2="12"></line><line
+            x1="3"
+            y1="6"
+            x2="21"
+            y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+
+        <svg
+          id="x"
+          class="hidden"
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="feather feather-x"
+          ><line x1="18" y1="6" x2="6" y2="18"></line><line
+            x1="6"
+            y1="6"
+            x2="18"
+            y2="18"></line>
+        </svg>
+      </div>
     </div>
 
     <!-- Mobile navbar -->
@@ -130,29 +168,25 @@ const pages = [
 
 <script>
   // Implement hamburger menu
-  const hamburger = document.getElementById("hamburger") as HTMLImageElement;
+  const menu = document.getElementById("mobile-menu");
+  const hamburger = document.getElementById("hamburger");
+  const x = document.getElementById("x");
+
   const nav = document.getElementById("nav");
 
-  hamburger.addEventListener("click", () => {
+  menu.addEventListener("click", () => {
     const visible = nav.getAttribute("data-visible");
 
     if (visible === "false") {
-      // prevent scrolling
-      document.body.style.overflow = "hidden";
-
       // open menu
       nav.setAttribute("data-visible", "true");
-      hamburger.classList.add("open");
-      hamburger.src = "./assets/x.svg";
+      hamburger.classList.add("hidden");
+      x.classList.remove("hidden");
     } else {
-      // enable scrolling
-      document.body.style.overflow = "";
-      document.body.style.paddingRight = "";
-
       // start hiding menu
       nav.setAttribute("data-visible", "hiding");
-      hamburger.classList.remove("open");
-      hamburger.src = "./assets/menu.svg";
+      hamburger.classList.remove("hidden");
+      x.classList.add("hidden");
 
       // close the menu after 250ms
       setTimeout(() => nav.setAttribute("data-visible", "false"), 250);
