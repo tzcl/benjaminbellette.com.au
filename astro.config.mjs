@@ -12,7 +12,10 @@ export default defineConfig({
   integrations: [
     react(),
     svelte(),
-    image(),
+    image({
+      // Use sharp instead of squoosh
+      serviceEntryPoint: "@astrojs/image/sharp",
+    }),
     tailwind({
       // Disable injecting a basic `base.css` on every page
       config: {
