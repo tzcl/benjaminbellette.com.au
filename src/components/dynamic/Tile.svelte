@@ -86,14 +86,25 @@
     }}
   >
     <div class="w-dialog mx-auto mt-12">
-      <img
-        src="./assets/x.svg"
-        alt=""
-        width="32px"
-        height="32px"
-        class="ml-auto pb-2 hover:cursor-pointer"
+      <svg
+        class="feather feather-x ml-auto pb-2 hover:cursor-pointer"
         on:click={() => exitModal()}
-      />
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="white"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        ><title>Close modal</title><line x1="18" y1="6" x2="6" y2="18" /><line
+          x1="6"
+          y1="6"
+          x2="18"
+          y2="18"
+        />
+      </svg>
       {#each items as item}
         {#if item.type === "iframe"}
           <iframe
