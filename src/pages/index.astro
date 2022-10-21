@@ -1,6 +1,5 @@
 ---
 import BackgroundVideo from "../components/dynamic/BackgroundVideo.svelte";
-import LogoSpinner from "../components/static/LogoSpinner.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -10,7 +9,33 @@ import Layout from "../layouts/Layout.astro";
 >
   <BackgroundVideo client:idle />
   <section class="relative grid place-content-center h-screen">
-    <LogoSpinner link="/motion" />
+    <a class="mx-auto" href="/motion">
+      <div
+        class="flex rounded-[50%] w-[252px] h-[252px] rotate-0 select-none hover:rotate-90 transition-transform duration-700"
+      >
+        <svg
+          class="mt-[52px]"
+          width="252"
+          height="148"
+          viewBox="0 0 252 148"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>Logo - Benjamin Bellette</title>
+          <ellipse
+            style="fill: none; stroke-width: 8px; stroke: rgb(255, 255, 255);"
+            cx="126"
+            cy="74"
+            rx="70"
+            ry="70"></ellipse>
+          <line
+            style="fill: rgb(255, 255, 255); stroke: rgb(255, 255, 255); stroke-width: 8px;"
+            x1="0"
+            y1="74"
+            x2="252"
+            y2="74"></line>
+        </svg>
+      </div>
+    </a>
     <h1>Benjamin Bellette</h1>
     <h2 class="text-sm mt-3 selection:bg-pink">Director of Photography</h2>
   </section>
