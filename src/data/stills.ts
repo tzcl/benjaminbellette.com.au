@@ -1,9 +1,9 @@
 import type { Item } from "../components/dynamic/Tile.svelte";
 
 export const hero = [
-  "https://i.imgur.com/VmNhVhL.jpg",
-  "https://i.imgur.com/0bVicqt.jpg",
-  "https://i.imgur.com/vFJOq8s.jpg",
+  "/assets/stills/slider-1.webp",
+  "/assets/stills/slider-2.webp",
+  "/assets/stills/slider-3.webp",
 ];
 
 export const bts: Item[] = [
