@@ -31,7 +31,7 @@
     {#each pics as pic}
       <SwiperSlide
         ><div
-          class={`h-[250px] bg-cover bg-center opacity-50`}
+          class={`h-[150px] bg-cover bg-center opacity-50 md:h-[200px] lg:h-[250px]`}
           style="background-image: url('{pic}')"
         /></SwiperSlide
       >
