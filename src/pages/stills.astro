@@ -1,0 +1,67 @@
+---
+import Slider from "../components/dynamic/Slider.svelte";
+import Tile from "../components/dynamic/Tile.svelte";
+import data from "../data/stills";
+import Page from "../layouts/Page.astro";
+---
+
+<Page
+  title="Benjamin Bellette | Stills"
+  description="Photography portfolio including behind the scenes images and photography work."
+>
+  <Slider client:idle title="Stills" pics={data.pics} />
+  <section id="bts">
+    <h2 class="subtitle">Behind the scenes</h2>
+    <div class="w-main mx-auto my-16">
+      <div class="aspect-video">
+        <Tile
+          client:visible
+          title="Behind the scenes"
+          subtitle="Stills"
+          img="/assets/stills/bts/1.webp"
+          items={data.bts}
+        />
+      </div>
+      <p class="text-center my-12">
+        <a
+          class="hover:text-grey-400 group"
+          href="https://photos.app.goo.gl/cHsbhvC1iu7HWO253"
+        >
+          View portfolio <span
+            class="inline-block group-hover:translate-x-1 transition-transform ease-linear"
+            >»</span
+          >
+        </a>
+      </p>
+    </div>
+  </section>
+  <section id="photography">
+    <h2 class="subtitle">Photography</h2>
+    <div class="w-main mx-auto my-12 aspect-video">
+      <Tile
+        client:visible
+        title="Photography"
+        subtitle="Stills"
+        img="/assets/stills/photography/1.webp"
+        items={data.photography}
+      />
+      <p class="text-center my-12">
+        <a
+          class="hover:text-grey-400 group"
+          href="https://photos.app.goo.gl/8Bnz5w4rWyK3dRNe8"
+        >
+          View portfolio <span
+            class="inline-block group-hover:translate-x-1 transition-transform ease-linear"
+            >»</span
+          >
+        </a>
+      </p>
+    </div>
+  </section>
+</Page>
+
+<style>
+  .w-main {
+    width: min(75rem, 90%);
+  }
+</style>

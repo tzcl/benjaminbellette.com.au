@@ -1,33 +1,84 @@
 ---
+import Slider from "../components/dynamic/Slider.svelte";
+import Tile from "../components/dynamic/Tile.svelte";
+import data from "../data/motion";
 import Page from "../layouts/Page.astro";
-import Slice from "../components/Slice";
-
-// TODO: declare slice data here and map through
 ---
 
-<!-- TODO: fix up description... -->
 <Page
-    title="Benjamin Bellette | Motion"
-    description="Melbourne and Sydney-based cinematographer."
+  title="Benjamin Bellette | Motion"
+  description="Video portfolio displaying various works such as short films, documentaries, music videos and commercials."
 >
-    <h1 class="title">Films</h1>
-    <section>
-        <Slice client:visible />
-        <!-- <Slice client:only="react" /> -->
-    </section>
-    <section>
-        <h2 class="subtitle">Short films</h2>
-        <p>Films section here</p>
-    </section>
-    <section>
-        <h2 class="subtitle">Docu&shy;mentaries</h2>
-        <p>Documentaries here</p>
-        <p>Call this section docos instead?</p>
-    </section>
+  <Slider client:idle title="Motion" pics={data.pics} />
+  <section id="reel">
+    <h2 class="subtitle">Reel</h2>
+    <iframe
+      src="https://player.vimeo.com/video/316965018?title=0&byline=0&portrait=0"
+      title="2019 Reel Benjamin Bellette"
+      frameborder="0"
+      width="100%"
+      height="100%"
+      allow="autoplay; fullscreen; picture-in-picture;"
+      allowfullscreen
+      class="w-main mx-auto my-12 aspect-video"
+    >
+    </iframe>
+  </section>
+  <section id={data.mumlifeTrailer.id}>
+    <h2 class="subtitle">{data.mumlifeTrailer.title}</h2>
+    <div class="w-main mx-auto my-16 aspect-video">
+      <Tile
+        client:idle
+        title={data.mumlifeTrailer.tiles[0].title}
+        subtitle={data.mumlifeTrailer.tiles[0].subtitle}
+        img={data.mumlifeTrailer.tiles[0].img}
+        items={data.mumlifeTrailer.tiles[0].items}
+      />
+    </div>
+  </section>
+  {
+    data.sections.map((section, i) => {
+      return (
+        <section key={i} id={section.id}>
+          <h2 class="subtitle">{section.title}</h2>
+          <div class="m-8 grid grid-cols-1 justify-center gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {section.tiles.map((tile, i) => {
+              return (
+                <div key={i} class="aspect-video">
+                  <Tile
+                    client:visible
+                    title={tile.title}
+                    subtitle={tile.subtitle}
+                    img={tile.img}
+                    items={tile.items}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      );
+    })
+  }
+  <section>
+    <h2>Interested in seeing more?</h2>
+    <p class="text-center my-12 hover:opacity-60 group transition-opacity">
+      <a href="https://vimeo.com/benbellette">
+        View portfolio <span
+          class="inline-block group-hover:translate-x-1 transition-transform ease-linear"
+          >»</span
+        >
+      </a>
+    </p>
+  </section>
 </Page>
 
 <style>
-    p {
-        text-align: center;
-    }
+  .w-main {
+    width: min(60rem, 90%);
+  }
+
+  .w-item {
+    width: max(20ch, 100%);
+  }
 </style>
