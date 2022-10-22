@@ -13,10 +13,10 @@ interface Section {
   tiles: Tile[];
 }
 
-export const hero = [
-  "https://i.imgur.com/45UrFyT.png",
-  "https://i.imgur.com/wXeiH36.png",
-  "https://i.imgur.com/puavCGo.png",
+export const pics = [
+  "/assets/motion/slider-1.webp",
+  "/assets/motion/slider-2.webp",
+  "/assets/motion/slider-3.webp",
 ];
 
 export const mumlifeTrailer: Section = {
@@ -1085,4 +1085,4 @@ export const sections: Section[] = [
   documentaries,
 ];
 
-export default { hero, mumlifeTrailer, sections };
+export default { pics, mumlifeTrailer, sections };

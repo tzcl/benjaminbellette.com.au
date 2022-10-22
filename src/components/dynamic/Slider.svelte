@@ -1,7 +1,6 @@
 <script lang="ts">
   // import Swiper core and required modules
-  import { Navigation, Pagination, A11y } from "swiper";
-
+  import { A11y, Navigation, Pagination } from "swiper";
   import { Swiper, SwiperSlide } from "swiper/svelte";
 
   // Import Swiper styles

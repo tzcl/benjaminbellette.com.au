@@ -1,15 +1,15 @@
 ---
 import Slider from "../components/dynamic/Slider.svelte";
 import Tile from "../components/dynamic/Tile.svelte";
-import Page from "../layouts/Page.astro";
 import data from "../data/stills";
+import Page from "../layouts/Page.astro";
 ---
 
 <Page
   title="Benjamin Bellette | Stills"
   description="Photography portfolio including behind the scenes images and photography work."
 >
-  <Slider client:idle title="Stills" pics={data.hero} />
+  <Slider client:idle title="Stills" pics={data.pics} />
   <section id="bts">
     <h2 class="subtitle">Behind the scenes</h2>
     <div class="w-main mx-auto my-16">

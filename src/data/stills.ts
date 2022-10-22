@@ -1,6 +1,6 @@
 import type { Item } from "../components/dynamic/Tile.svelte";
 
-export const hero = [
+export const pics = [
   "/assets/stills/slider-1.webp",
   "/assets/stills/slider-2.webp",
   "/assets/stills/slider-3.webp",
@@ -157,4 +157,4 @@ export const photography: Item[] = [
   },
 ];
 
-export default { hero, bts, photography };
+export default { pics, bts, photography };
