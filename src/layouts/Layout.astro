@@ -4,16 +4,17 @@ import "../base.css";
 export interface Props {
   title: string;
   description: string;
+  fullpage?: boolean;
 }
 
-const { title, description } = Astro.props as Props;
+const { title, description, fullpage } = Astro.props as Props;
 
 const canonicalURL = Astro.url.href;
 const coverImg = "https://benjaminbellette.com.au/images/logo.png";
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class:list={[{ "h-full": fullpage }]}>
   <head>
     <title>{title}</title>
     <meta name="description" content={description} />
@@ -122,7 +123,7 @@ const coverImg = "https://benjaminbellette.com.au/images/logo.png";
     </script>
   </head>
 
-  <body>
+  <body class:list={[{ "h-full": fullpage }]}>
     <slot />
   </body>
 </html>

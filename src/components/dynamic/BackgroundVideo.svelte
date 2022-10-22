@@ -3,7 +3,7 @@
 </script>
 
 <div class="absolute h-full w-full">
-  <div class="relative h-screen w-screen overflow-hidden">
+  <div class="relative h-full w-full overflow-hidden">
     <iframe
       src="https://player.vimeo.com/video/316965018?background=1?transparent=1"
       id="video"
