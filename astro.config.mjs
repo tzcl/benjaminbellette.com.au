@@ -22,8 +22,5 @@ export default defineConfig({
         applyBaseStyles: false,
       },
     }),
-    sitemap(),
-    compress(),
-    critters(),
   ],
 });
