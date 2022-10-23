@@ -49,7 +49,7 @@
   h2,
   h3,
   h4 {
-    font-family: "Open Sans", cursive;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
@@ -60,7 +60,7 @@
 
   a,
   p {
-    font-family: "Open Sans", cursive;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
     font-size: 0.75rem;
     font-weight: 400;
     letter-spacing: 2px;
