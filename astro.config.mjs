@@ -4,11 +4,12 @@ import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import critters from "astro-critters";
-import compress from "astro-compress";
 import image from "@astrojs/image";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://www.benjaminbellette.com.au",
+  trailingSlash: "always",
   integrations: [
     react(),
     svelte(),
@@ -22,5 +23,7 @@ export default defineConfig({
         applyBaseStyles: false,
       },
     }),
+    sitemap(),
+    critters(),
   ],
 });

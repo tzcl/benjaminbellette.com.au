@@ -17,7 +17,6 @@
     "@astrojs/tailwind": "^2.0.1",
     "@vimeo/player": "^2.17.1",
     "astro": "^1.2.7",
-    "astro-compress": "^1.0.12",
     "astro-critters": "^1.0.5",
     "autoprefixer": "^10.4.8",
     "feather-icons": "^4.29.0",
