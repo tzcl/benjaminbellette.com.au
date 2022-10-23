@@ -28,7 +28,7 @@ import Page from "../layouts/Page.astro";
     <h2 class="subtitle">{data.mumlifeTrailer.title}</h2>
     <div class="w-main mx-auto my-16 aspect-video">
       <Tile
-        client:idle
+        client:visible
         title={data.mumlifeTrailer.tiles[0].title}
         subtitle={data.mumlifeTrailer.tiles[0].subtitle}
         img={data.mumlifeTrailer.tiles[0].img}

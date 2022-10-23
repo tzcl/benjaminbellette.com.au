@@ -139,6 +139,7 @@
           <img
             src={item.src}
             alt={item.title ? item.title : ""}
+            loading="lazy"
             width="100%"
             height="100%"
             class="mb-12 select-none object-cover"
