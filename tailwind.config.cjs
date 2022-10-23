@@ -1,5 +1,6 @@
 const plugin = require("tailwindcss/plugin");
 const colors = require("tailwindcss/colors");
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -23,6 +24,9 @@ module.exports = {
           750: "#333",
           850: "#1e1e1e",
         },
+      },
+      fontFamily: {
+        sans: ["Open Sans", ...defaultTheme.fontFamily.sans],
       },
       screens: {
         "can-hover": { raw: "(hover: hover) and (pointer: fine)" },

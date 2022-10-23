@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=optional");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -49,7 +49,7 @@
   h2,
   h3,
   h4 {
-    font-family: "Open Sans", serif;
+    font-family: "Open Sans", cursive;
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
@@ -60,7 +60,7 @@
 
   a,
   p {
-    font-family: "Open Sans", serif;
+    font-family: "Open Sans", cursive;
     font-size: 0.75rem;
     font-weight: 400;
     letter-spacing: 2px;
