@@ -488,49 +488,49 @@ export const films: Section = {
     {
       title: "The Swimming Chair",
       subtitle: "Short Film",
-      img: "https://i.imgur.com/aRKPM53.jpg",
+      img: "/assets/motion/films/the-swimming-chair/1.webp",
       items: [
         {
           type: "popup",
         },
         {
-          src: "https://i.imgur.com/tZH72wz.jpg",
+          src: "/assets/motion/films/the-swimming-chair/2.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/x5TtD5u.jpg",
+          src: "/assets/motion/films/the-swimming-chair/3.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/t51ksBR.jpg",
+          src: "/assets/motion/films/the-swimming-chair/4.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/scoByeX.jpg",
+          src: "/assets/motion/films/the-swimming-chair/5.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/3QIMde0.jpg",
+          src: "/assets/motion/films/the-swimming-chair/6.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/BOkIp0T.jpg",
+          src: "/assets/motion/films/the-swimming-chair/7.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/CUNxtuj.jpg",
+          src: "/assets/motion/films/the-swimming-chair/8.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/OsctiMq.jpg",
+          src: "/assets/motion/films/the-swimming-chair/9.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/fuUJbSB.jpg",
+          src: "/assets/motion/films/the-swimming-chair/10.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/gB0KXOL.jpg",
+          src: "/assets/motion/films/the-swimming-chair/11.webp",
           title: "Stills",
         },
       ],
@@ -538,41 +538,41 @@ export const films: Section = {
     {
       title: "Hyde",
       subtitle: "Short Film",
-      img: "https://i.imgur.com/aUG1V8K.jpg",
+      img: "/assets/motion/films/hyde/1.webp",
       items: [
         {
           type: "popup",
         },
         {
-          src: "https://i.imgur.com/hKvdDSc.jpg",
+          src: "/assets/motion/films/hyde/2.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/ZrmdRso.jpg",
+          src: "/assets/motion/films/hyde/3.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/t5Y7LZl.jpg",
+          src: "/assets/motion/films/hyde/4.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/anFg0ZZ.jpg",
+          src: "/assets/motion/films/hyde/5.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/jg1OQ3i.jpg",
+          src: "/assets/motion/films/hyde/6.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/1Zkg3jc.jpg",
+          src: "/assets/motion/films/hyde/7.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/AdgqCAl.jpg",
+          src: "/assets/motion/films/hyde/8.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/YhwCj1V.jpg",
+          src: "/assets/motion/films/hyde/9.webp",
           title: "Stills",
         },
       ],
@@ -580,46 +580,46 @@ export const films: Section = {
     {
       title: "Dating Violet",
       subtitle: "Short Film",
-      img: "https://i.imgur.com/fnR38rg.jpg",
+      img: "/assets/motion/films/dating-violet/1.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/658390978",
           type: "iframe",
         },
         {
-          src: "https://i.imgur.com/47C42gy.png",
+          src: "/assets/motion/films/dating-violet/2.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/DYjGP5g.png",
+          src: "/assets/motion/films/dating-violet/3.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/CW5oRQr.png",
+          src: "/assets/motion/films/dating-violet/4.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/DheoiUB.png",
+          src: "/assets/motion/films/dating-violet/5.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/AIe3pxd.png",
+          src: "/assets/motion/films/dating-violet/6.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/fjlArIK.png",
+          src: "/assets/motion/films/dating-violet/7.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/wJ5XYEx.png",
+          src: "/assets/motion/films/dating-violet/8.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/K7EC5Lr.png",
+          src: "/assets/motion/films/dating-violet/9.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/be2uYM2.png",
+          src: "/assets/motion/films/dating-violet/10.webp",
           title: "Stills",
         },
       ],
@@ -627,30 +627,30 @@ export const films: Section = {
     {
       title: "The Sisterhood of \n Mika and Sophie",
       subtitle: "Short Film",
-      img: "https://i.imgur.com/TYF4Ofy.jpg",
+      img: "/assets/motion/films/sisterhood/1.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/308777134",
           type: "iframe", // this overrides default type
         },
         {
-          src: "https://i.imgur.com/WttVhEe.jpg",
+          src: "/assets/motion/films/sisterhood/2.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/Tb967xN.jpg",
+          src: "/assets/motion/films/sisterhood/3.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/CWRGYNx.jpg",
+          src: "/assets/motion/films/sisterhood/4.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/byBM2Jf.jpg",
+          src: "/assets/motion/films/sisterhood/5.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/QvOW2fw.jpg",
+          src: "/assets/motion/films/sisterhood/6.webp",
           title: "Stills",
         },
       ],
@@ -658,22 +658,22 @@ export const films: Section = {
     {
       title: "Funeral Films",
       subtitle: "Short Film",
-      img: "https://i.imgur.com/0I1yHBR.jpg",
+      img: "/assets/motion/films/funeral-films/1.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/309620529",
           type: "iframe", // this overrides default type
         },
         {
-          src: "https://i.imgur.com/lDCSmQM.jpg",
+          src: "/assets/motion/films/funeral-films/2.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/DpWjKil.jpg",
+          src: "/assets/motion/films/funeral-films/3.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/X0nI4Mv.jpg",
+          src: "/assets/motion/films/funeral-films/4.webp",
           title: "Stills",
         },
       ],
@@ -681,26 +681,26 @@ export const films: Section = {
     {
       title: "The Silent Key",
       subtitle: "Short Film",
-      img: "https://i.imgur.com/tNF27i2.jpg",
+      img: "/assets/motion/films/the-silent-key/1.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/310434277",
           type: "iframe", // this overrides default type
         },
         {
-          src: "https://i.imgur.com/3kfpBYT.jpg",
+          src: "/assets/motion/films/the-silent-key/2.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/Oc13q5J.jpg",
+          src: "/assets/motion/films/the-silent-key/3.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/zJ8AdcZ.jpg",
+          src: "/assets/motion/films/the-silent-key/4.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/fFgTERz.jpg",
+          src: "/assets/motion/films/the-silent-key/5.webp",
           title: "Stills",
         },
       ],
