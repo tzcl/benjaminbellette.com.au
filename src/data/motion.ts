@@ -715,26 +715,26 @@ export const corporates: Section = {
     {
       title: "Kookai",
       subtitle: "Runway Show",
-      img: "https://i.imgur.com/X3WRywn.jpg",
+      img: "/assets/motion/corporates/kookai/1.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/366880189",
           type: "iframe", // this overrides default type
         },
         {
-          src: "https://i.imgur.com/JWKvHsu.jpg",
+          src: "/assets/motion/corporates/kookai/2.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/YZdBWOh.jpg",
+          src: "/assets/motion/corporates/kookai/3.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/t9bD7lw.jpg",
+          src: "/assets/motion/corporates/kookai/4.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/eFOEv3d.jpg",
+          src: "/assets/motion/corporates/kookai/5.webp",
           title: "Stills",
         },
       ],
@@ -742,26 +742,26 @@ export const corporates: Section = {
     {
       title: "Samsaruh",
       subtitle: "Live in Melbourne",
-      img: "https://i.imgur.com/a2UpbRD.jpg",
+      img: "/assets/motion/corporates/samsaruh/1.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/308641336",
           type: "iframe", // this overrides default type
         },
         {
-          src: "https://i.imgur.com/ifPjr2e.jpg",
+          src: "/assets/motion/corporates/samsaruh/2.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/AmIePR4.jpg",
+          src: "/assets/motion/corporates/samsaruh/3.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/7spE9iv.jpg",
+          src: "/assets/motion/corporates/samsaruh/4.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/3W1AAz6.jpg",
+          src: "/assets/motion/corporates/samsaruh/5.webp",
           title: "Stills",
         },
       ],
@@ -769,38 +769,38 @@ export const corporates: Section = {
     {
       title: "Numerik",
       subtitle: "Sales-Tracking App",
-      img: "https://i.imgur.com/juMWp8E.jpg",
+      img: "/assets/motion/corporates/numerik/1.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/539463525",
           type: "iframe", // this overrides default type
         },
         {
-          src: "https://i.imgur.com/RVVd9Xt.png",
+          src: "/assets/motion/corporates/numerik/2.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/f1PrNHf.png",
+          src: "/assets/motion/corporates/numerik/3.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/mXDS3PD.png",
+          src: "/assets/motion/corporates/numerik/4.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/4rnqvv8.png",
+          src: "/assets/motion/corporates/numerik/5.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/PRawiel.png",
+          src: "/assets/motion/corporates/numerik/6.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/aHJ1jn6.png",
+          src: "/assets/motion/corporates/numerik/7.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/fVsnkdx.png",
+          src: "/assets/motion/corporates/numerik/8.webp",
           title: "Stills",
         },
       ],
@@ -808,30 +808,30 @@ export const corporates: Section = {
     {
       title: "Aha!",
       subtitle: "Burger Cook-Off",
-      img: "https://i.imgur.com/F4jSPva.jpg",
+      img: "/assets/motion/corporates/aha/1.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/502777886",
           type: "iframe", // this overrides default type
         },
         {
-          src: "https://i.imgur.com/FXXoOTy.jpg",
+          src: "/assets/motion/corporates/aha/2.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/jNtrAoR.jpg",
+          src: "/assets/motion/corporates/aha/3.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/jTXOgKu.jpg",
+          src: "/assets/motion/corporates/aha/4.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/xB31i5j.jpg",
+          src: "/assets/motion/corporates/aha/5.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/oHRjR39.jpg",
+          src: "/assets/motion/corporates/aha/6.webp",
           title: "Stills",
         },
       ],
@@ -839,34 +839,34 @@ export const corporates: Section = {
     {
       title: "Planet Protector \n Packaging",
       subtitle: "Cicada",
-      img: "https://i.imgur.com/yTh4jON.jpg",
+      img: "/assets/motion/corporates/cicada/1.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/624001918",
           type: "iframe", // this overrides default type
         },
         {
-          src: "https://i.imgur.com/MMQ6ygt.png",
+          src: "/assets/motion/corporates/cicada/2.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/HIJ7Co9.png",
+          src: "/assets/motion/corporates/cicada/3.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/u1OsvUx.png",
+          src: "/assets/motion/corporates/cicada/4.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/ozYD0rW.png",
+          src: "/assets/motion/corporates/cicada/5.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/Wm24Cus.png",
+          src: "/assets/motion/corporates/cicada/6.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/tMiPxrx.png",
+          src: "/assets/motion/corporates/cicada/7.webp",
           title: "Stills",
         },
       ],
@@ -874,34 +874,34 @@ export const corporates: Section = {
     {
       title: "Nicky and Tait",
       subtitle: "Wedding Day",
-      img: "https://i.imgur.com/kS6m8Nj.jpg",
+      img: "/assets/motion/corporates/wedding/kS6m8Nj.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/264354257",
           type: "iframe", // this overrides default type
         },
         {
-          src: "https://i.imgur.com/vHEoLQS.jpg",
+          src: "/assets/motion/corporates/wedding/vHEoLQS.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/CydxE09.jpg",
+          src: "/assets/motion/corporates/wedding/CydxE09.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/FMAiGuC.jpg",
+          src: "/assets/motion/corporates/wedding/FMAiGuC.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/y84gazN.jpg",
+          src: "/assets/motion/corporates/wedding/y84gazN.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/VRXrZXq.jpg",
+          src: "/assets/motion/corporates/wedding/VRXrZXq.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/amo5eY9.jpg",
+          src: "/assets/motion/corporates/wedding/amo5eY9.webp",
           title: "Stills",
         },
       ],
