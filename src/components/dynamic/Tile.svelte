@@ -128,6 +128,12 @@
                 If you would like to watch this, please feel free to contact me
                 directly for a private link.
               </p>
+              <Icon name="facebook" class="mr-2 inline" />
+              <a
+                class="text-black hover:text-grey-400"
+                href="https://www.facebook.com/ben.bellette.DOP/"
+                >ben.bellette.DOP</a
+              ><br />
               <Icon name="mail" class="mr-2 inline" />
               <a
                 class="text-black hover:text-grey-400"
