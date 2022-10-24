@@ -26,7 +26,7 @@ export const mumlifeTrailer: Section = {
     {
       title: "MumLife",
       subtitle: "Short Film",
-      img: "https://i.imgur.com/m9pUpLU.jpg",
+      img: "/assets/motion/mumlife/2.webp",
       items: [
         {
           type: "iframe",
@@ -34,51 +34,51 @@ export const mumlifeTrailer: Section = {
         },
         {
           type: "img",
-          src: "https://i.imgur.com/vByh3Ds.jpg",
+          src: "/assets/motion/mumlife/1.webp",
         },
         {
           type: "img",
-          src: "https://i.imgur.com/m9pUpLU.jpg",
+          src: "/assets/motion/mumlife/2.webp",
         },
         {
           type: "img",
-          src: "https://i.imgur.com/0o06GPO.jpg",
+          src: "/assets/motion/mumlife/3.webp",
         },
         {
           type: "img",
-          src: "https://i.imgur.com/du1xzlu.jpg",
+          src: "/assets/motion/mumlife/4.webp",
         },
         {
           type: "img",
-          src: "https://i.imgur.com/VO43cLW.jpg",
+          src: "/assets/motion/mumlife/5.webp",
         },
         {
           type: "img",
-          src: "https://i.imgur.com/IIM63Df.jpg",
+          src: "/assets/motion/mumlife/6.webp",
         },
         {
           type: "img",
-          src: "https://i.imgur.com/SZH4pKh.jpg",
+          src: "/assets/motion/mumlife/7.webp",
         },
         {
           type: "img",
-          src: "https://i.imgur.com/WpzfttP.jpg",
+          src: "/assets/motion/mumlife/8.webp",
         },
         {
           type: "img",
-          src: "https://i.imgur.com/NirDIiW.jpg",
+          src: "/assets/motion/mumlife/9.webp",
         },
         {
           type: "img",
-          src: "https://i.imgur.com/v72J2Jg.jpg",
+          src: "/assets/motion/mumlife/10.webp",
         },
         {
           type: "img",
-          src: "https://i.imgur.com/6p4g0yO.jpg",
+          src: "/assets/motion/mumlife/11.webp",
         },
         {
           type: "img",
-          src: "https://i.imgur.com/Y9AYfO7.jpg",
+          src: "/assets/motion/mumlife/12.webp",
         },
       ],
     },
