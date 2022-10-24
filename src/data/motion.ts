@@ -795,14 +795,6 @@ export const events: Section = {
           src: "/assets/motion/events/numerik/6.webp",
           title: "Stills",
         },
-        {
-          src: "/assets/motion/events/numerik/7.webp",
-          title: "Stills",
-        },
-        {
-          src: "/assets/motion/events/numerik/8.webp",
-          title: "Stills",
-        },
       ],
     },
     {
@@ -916,70 +908,46 @@ export const documentaries: Section = {
     {
       title: "Sydney Children's Choir",
       subtitle: "Deine Mami – Behind the Scenes",
-      img: "https://i.imgur.com/LW28BKq.jpg",
+      img: "/assets/motion/docos/choir/LW28BKq.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/624045285",
           type: "iframe", // this overrides default type
         },
         {
-          src: "https://i.imgur.com/gbK6dKe.png",
+          src: "/assets/motion/docos/choir/gbK6dKe.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/AfCIsBx.png",
+          src: "/assets/motion/docos/choir/AfCIsBx.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/UkAfRCj.png",
+          src: "/assets/motion/docos/choir/UkAfRCj.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/nyVziL9.png",
+          src: "/assets/motion/docos/choir/nyVziL9.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/7jNaqJj.png",
+          src: "/assets/motion/docos/choir/7jNaqJj.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/8W9BxoB.png",
+          src: "/assets/motion/docos/choir/4HNTTdV.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/4HNTTdV.png",
+          src: "/assets/motion/docos/choir/JWtwq5P.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/JdZ48mH.png",
+          src: "/assets/motion/docos/choir/JqcOTtd.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/JWtwq5P.png",
-          title: "Stills",
-        },
-        {
-          src: "https://i.imgur.com/fA09s22.png",
-          title: "Stills",
-        },
-        {
-          src: "https://i.imgur.com/JqcOTtd.png",
-          title: "Stills",
-        },
-        {
-          src: "https://i.imgur.com/TvFPXO5.png",
-          title: "Stills",
-        },
-        {
-          src: "https://i.imgur.com/4Tu6kQi.png",
-          title: "Stills",
-        },
-        {
-          src: "https://i.imgur.com/4yditnd.png",
-          title: "Stills",
-        },
-        {
-          src: "https://i.imgur.com/UerCrmh.png",
+          src: "/assets/motion/docos/choir/UerCrmh.webp",
           title: "Stills",
         },
       ],
@@ -987,34 +955,34 @@ export const documentaries: Section = {
     {
       title: "Fresenius",
       subtitle: "Care Goes Both Ways",
-      img: "https://i.imgur.com/vWAnOn4.jpg",
+      img: "/assets/motion/docos/fresenius/vWAnOn4.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/654315362",
           type: "iframe", // this overrides default type
         },
         {
-          src: "https://i.imgur.com/CYi5mC3.png",
+          src: "/assets/motion/docos/fresenius/CYi5mC3.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/X78AwpG.png",
+          src: "/assets/motion/docos/fresenius/X78AwpG.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/ZQ5lv1j.png",
+          src: "/assets/motion/docos/fresenius/ZQ5lv1j.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/p6UMxuo.png",
+          src: "/assets/motion/docos/fresenius/p6UMxuo.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/iQ57yQI.png",
+          src: "/assets/motion/docos/fresenius/iQ57yQI.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/ewcJin7.png",
+          src: "/assets/motion/docos/fresenius/ewcJin7.webp",
           title: "Stills",
         },
       ],
@@ -1022,54 +990,54 @@ export const documentaries: Section = {
     {
       title: "The Other ANZAC Clash",
       subtitle: "Ladbrokes",
-      img: "https://i.imgur.com/i83w0jK.jpg",
+      img: "/assets/motion/docos/anzac/i83w0jK.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/707425516",
           type: "iframe", // this overrides default type
         },
         {
-          src: "https://i.imgur.com/vIVEoAQ.jpg",
+          src: "/assets/motion/docos/anzac/vIVEoAQ.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/lrjXt3U.jpg",
+          src: "/assets/motion/docos/anzac/lrjXt3U.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/AjesSfN.jpg",
+          src: "/assets/motion/docos/anzac/AjesSfN.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/ZiDCwdg.jpg",
+          src: "/assets/motion/docos/anzac/ZiDCwdg.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/anx2D23.jpg",
+          src: "/assets/motion/docos/anzac/anx2D23.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/EyuCX0d.jpg",
+          src: "/assets/motion/docos/anzac/EyuCX0d.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/C3MOaRd.jpg",
+          src: "/assets/motion/docos/anzac/C3MOaRd.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/WhSH8uz.jpg",
+          src: "/assets/motion/docos/anzac/WhSH8uz.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/YFGUvsE.jpg",
+          src: "/assets/motion/docos/anzac/YFGUvsE.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/rZn9hUQ.jpg",
+          src: "/assets/motion/docos/anzac/rZn9hUQ.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/1ewjdoI.jpg",
+          src: "/assets/motion/docos/anzac/1ewjdoI.webp",
           title: "Stills",
         },
       ],
