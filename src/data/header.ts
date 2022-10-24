@@ -8,7 +8,7 @@ export const pages = [
       { link: "/motion/#music", text: "Music Videos" },
       { link: "/motion/#commercials", text: "Commercials" },
       { link: "/motion/#films", text: "Films" },
-      { link: "/motion/#corporates", text: "Corporates" },
+      { link: "/motion/#events", text: "Events" },
       { link: "/motion/#documentaries", text: "Documentaries" },
     ],
   },

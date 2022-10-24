@@ -708,33 +708,33 @@ export const films: Section = {
   ],
 };
 
-export const corporates: Section = {
-  id: "corporates",
-  title: "Corporates",
+export const events: Section = {
+  id: "events",
+  title: "Events",
   tiles: [
     {
       title: "Kookai",
       subtitle: "Runway Show",
-      img: "/assets/motion/corporates/kookai/1.webp",
+      img: "/assets/motion/events/kookai/1.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/366880189",
           type: "iframe", // this overrides default type
         },
         {
-          src: "/assets/motion/corporates/kookai/2.webp",
+          src: "/assets/motion/events/kookai/2.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/corporates/kookai/3.webp",
+          src: "/assets/motion/events/kookai/3.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/corporates/kookai/4.webp",
+          src: "/assets/motion/events/kookai/4.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/corporates/kookai/5.webp",
+          src: "/assets/motion/events/kookai/5.webp",
           title: "Stills",
         },
       ],
@@ -742,26 +742,26 @@ export const corporates: Section = {
     {
       title: "Samsaruh",
       subtitle: "Live in Melbourne",
-      img: "/assets/motion/corporates/samsaruh/1.webp",
+      img: "/assets/motion/events/samsaruh/1.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/308641336",
           type: "iframe", // this overrides default type
         },
         {
-          src: "/assets/motion/corporates/samsaruh/2.webp",
+          src: "/assets/motion/events/samsaruh/2.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/corporates/samsaruh/3.webp",
+          src: "/assets/motion/events/samsaruh/3.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/corporates/samsaruh/4.webp",
+          src: "/assets/motion/events/samsaruh/4.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/corporates/samsaruh/5.webp",
+          src: "/assets/motion/events/samsaruh/5.webp",
           title: "Stills",
         },
       ],
@@ -769,38 +769,38 @@ export const corporates: Section = {
     {
       title: "Numerik",
       subtitle: "Sales-Tracking App",
-      img: "/assets/motion/corporates/numerik/1.webp",
+      img: "/assets/motion/events/numerik/1.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/539463525",
           type: "iframe", // this overrides default type
         },
         {
-          src: "/assets/motion/corporates/numerik/2.webp",
+          src: "/assets/motion/events/numerik/2.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/corporates/numerik/3.webp",
+          src: "/assets/motion/events/numerik/3.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/corporates/numerik/4.webp",
+          src: "/assets/motion/events/numerik/4.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/corporates/numerik/5.webp",
+          src: "/assets/motion/events/numerik/5.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/corporates/numerik/6.webp",
+          src: "/assets/motion/events/numerik/6.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/corporates/numerik/7.webp",
+          src: "/assets/motion/events/numerik/7.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/corporates/numerik/8.webp",
+          src: "/assets/motion/events/numerik/8.webp",
           title: "Stills",
         },
       ],
@@ -808,30 +808,30 @@ export const corporates: Section = {
     {
       title: "Aha!",
       subtitle: "Burger Cook-Off",
-      img: "/assets/motion/corporates/aha/1.webp",
+      img: "/assets/motion/events/aha/1.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/502777886",
           type: "iframe", // this overrides default type
         },
         {
-          src: "/assets/motion/corporates/aha/2.webp",
+          src: "/assets/motion/events/aha/2.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/corporates/aha/3.webp",
+          src: "/assets/motion/events/aha/3.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/corporates/aha/4.webp",
+          src: "/assets/motion/events/aha/4.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/corporates/aha/5.webp",
+          src: "/assets/motion/events/aha/5.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/corporates/aha/6.webp",
+          src: "/assets/motion/events/aha/6.webp",
           title: "Stills",
         },
       ],
@@ -839,34 +839,34 @@ export const corporates: Section = {
     {
       title: "Planet Protector \n Packaging",
       subtitle: "Cicada",
-      img: "/assets/motion/corporates/cicada/1.webp",
+      img: "/assets/motion/events/cicada/1.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/624001918",
           type: "iframe", // this overrides default type
         },
         {
-          src: "/assets/motion/corporates/cicada/2.webp",
+          src: "/assets/motion/events/cicada/2.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/corporates/cicada/3.webp",
+          src: "/assets/motion/events/cicada/3.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/corporates/cicada/4.webp",
+          src: "/assets/motion/events/cicada/4.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/corporates/cicada/5.webp",
+          src: "/assets/motion/events/cicada/5.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/corporates/cicada/6.webp",
+          src: "/assets/motion/events/cicada/6.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/corporates/cicada/7.webp",
+          src: "/assets/motion/events/cicada/7.webp",
           title: "Stills",
         },
       ],
@@ -874,34 +874,34 @@ export const corporates: Section = {
     {
       title: "Nicky and Tait",
       subtitle: "Wedding Day",
-      img: "/assets/motion/corporates/wedding/kS6m8Nj.webp",
+      img: "/assets/motion/events/wedding/kS6m8Nj.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/264354257",
           type: "iframe", // this overrides default type
         },
         {
-          src: "/assets/motion/corporates/wedding/vHEoLQS.webp",
+          src: "/assets/motion/events/wedding/vHEoLQS.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/corporates/wedding/CydxE09.webp",
+          src: "/assets/motion/events/wedding/CydxE09.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/corporates/wedding/FMAiGuC.webp",
+          src: "/assets/motion/events/wedding/FMAiGuC.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/corporates/wedding/y84gazN.webp",
+          src: "/assets/motion/events/wedding/y84gazN.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/corporates/wedding/VRXrZXq.webp",
+          src: "/assets/motion/events/wedding/VRXrZXq.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/corporates/wedding/amo5eY9.webp",
+          src: "/assets/motion/events/wedding/amo5eY9.webp",
           title: "Stills",
         },
       ],
@@ -1081,7 +1081,7 @@ export const sections: Section[] = [
   musicVideos,
   commercials,
   films,
-  corporates,
+  events,
   documentaries,
 ];
 
