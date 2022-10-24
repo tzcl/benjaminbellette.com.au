@@ -92,7 +92,7 @@ export const musicVideos: Section = {
     {
       title: "Sydney Children's Choir",
       subtitle: "Deine Mami",
-      img: "https://i.imgur.com/Giu7jh2.jpg",
+      img: "/assets/motion/music/choir/1.webp",
       items: [
         {
           type: "iframe",
@@ -100,43 +100,43 @@ export const musicVideos: Section = {
         },
         {
           type: "img",
-          src: "https://i.imgur.com/XZgN9qu.png",
+          src: "/assets/motion/music/choir/2.webp",
         },
         {
           type: "img",
-          src: "https://i.imgur.com/9BFc5zO.png",
+          src: "/assets/motion/music/choir/3.webp",
         },
         {
           type: "img",
-          src: "https://i.imgur.com/7BoZovz.png",
+          src: "/assets/motion/music/choir/4.webp",
         },
         {
           type: "img",
-          src: "https://i.imgur.com/IUIovsJ.png",
+          src: "/assets/motion/music/choir/5.webp",
         },
         {
           type: "img",
-          src: "https://i.imgur.com/cvgnjgJ.png",
+          src: "/assets/motion/music/choir/6.webp",
         },
         {
           type: "img",
-          src: "https://i.imgur.com/9earLV7.png",
+          src: "/assets/motion/music/choir/7.webp",
         },
         {
           type: "img",
-          src: "https://i.imgur.com/gnStBtN.png",
+          src: "/assets/motion/music/choir/8.webp",
         },
         {
           type: "img",
-          src: "https://i.imgur.com/fwqEOk4.png",
+          src: "/assets/motion/music/choir/9.webp",
         },
         {
           type: "img",
-          src: "https://i.imgur.com/ZQtklyP.png",
+          src: "/assets/motion/music/choir/10.webp",
         },
         {
           type: "img",
-          src: "https://i.imgur.com/jg9u5VR.png",
+          src: "/assets/motion/music/choir/11.webp",
         },
       ],
     },
@@ -144,54 +144,54 @@ export const musicVideos: Section = {
     {
       title: "Twin Filament",
       subtitle: "Visual Poem",
-      img: "https://i.imgur.com/ySzi6a2.jpg",
+      img: "/assets/motion/music/twin-filament/1.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/709304147",
           type: "iframe", // this overrides default type
         },
         {
-          src: "https://i.imgur.com/kMK93Wh.jpg",
+          src: "/assets/motion/music/twin-filament/2.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/YkDdtEy.jpg",
+          src: "/assets/motion/music/twin-filament/3.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/mhHXB44.jpg",
+          src: "/assets/motion/music/twin-filament/4.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/9OiDfGI.jpg",
+          src: "/assets/motion/music/twin-filament/5.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/HtihOW3.jpg",
+          src: "/assets/motion/music/twin-filament/6.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/Lfri6za.jpg",
+          src: "/assets/motion/music/twin-filament/7.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/4YcBOzh.jpg",
+          src: "/assets/motion/music/twin-filament/8.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/VTvpcuY.jpg",
+          src: "/assets/motion/music/twin-filament/9.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/5HBBgia.jpg",
+          src: "/assets/motion/music/twin-filament/10.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/wl4jPRc.jpg",
+          src: "/assets/motion/music/twin-filament/11.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/QQ9rPGP.jpg",
+          src: "/assets/motion/music/twin-filament/12.webp",
           title: "Stills",
         },
       ],
@@ -199,22 +199,22 @@ export const musicVideos: Section = {
     {
       title: "Maddy Jane",
       subtitle: "Thank You and Sorry",
-      img: "https://i.imgur.com/BQ9hVDC.jpg",
+      img: "/assets/motion/music/maddy-jane/1.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/263997170",
           type: "iframe", // this overrides default type
         },
         {
-          src: "https://i.imgur.com/IHdRti0.jpg",
+          src: "/assets/motion/music/maddy-jane/2.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/JI4DQOr.jpg",
+          src: "/assets/motion/music/maddy-jane/3.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/X4IIXwD.jpg",
+          src: "/assets/motion/music/maddy-jane/4.webp",
           title: "Stills",
         },
       ],
@@ -223,26 +223,26 @@ export const musicVideos: Section = {
     {
       title: "Sahara Beck",
       subtitle: "Here We Go Again",
-      img: "https://i.imgur.com/KEZb0ZO.jpg",
+      img: "/assets/motion/music/sahara-beck/1.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/308638511",
           type: "iframe", // this overrides default type
         },
         {
-          src: "https://i.imgur.com/ZELNKY9.jpg",
+          src: "/assets/motion/music/sahara-beck/2.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/nQed9YC.jpg",
+          src: "/assets/motion/music/sahara-beck/3.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/NEkHxja.jpg",
+          src: "/assets/motion/music/sahara-beck/4.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/0i2nFtF.jpg",
+          src: "/assets/motion/music/sahara-beck/5.webp",
           title: "Stills",
         },
       ],
@@ -251,26 +251,26 @@ export const musicVideos: Section = {
     {
       title: "Samsaruh",
       subtitle: "Speaking Fire",
-      img: "https://i.imgur.com/9f1oxw9.jpg",
+      img: "/assets/motion/music/samsaruh/1.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/308644304",
           type: "iframe", // this overrides default type
         },
         {
-          src: "https://i.imgur.com/bmfNuws.jpg",
+          src: "/assets/motion/music/samsaruh/2.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/eblzJAJ.jpg",
+          src: "/assets/motion/music/samsaruh/3.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/iUs2w0A.jpg",
+          src: "/assets/motion/music/samsaruh/4.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/oZP4HPy.jpg",
+          src: "/assets/motion/music/samsaruh/5.webp",
           title: "Stills",
         },
       ],
@@ -279,7 +279,7 @@ export const musicVideos: Section = {
     {
       title: "Wolf and Willow",
       subtitle: "Falling",
-      img: "https://i.imgur.com/MhKXVAG.jpg",
+      img: "/assets/motion/music/falling/1.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/308646260",
@@ -287,15 +287,15 @@ export const musicVideos: Section = {
           aspectRatio: "aspect-cinema",
         },
         {
-          src: "https://i.imgur.com/q5w91Rp.jpg",
+          src: "/assets/motion/music/falling/2.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/KLeCXZC.jpg",
+          src: "/assets/motion/music/falling/3.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/2v9eSU0.jpg",
+          src: "/assets/motion/music/falling/4.webp",
           title: "Stills",
         },
       ],
