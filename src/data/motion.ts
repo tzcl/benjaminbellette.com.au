@@ -310,7 +310,7 @@ export const commercials: Section = {
     {
       title: "Bentley",
       subtitle: "Continental GT",
-      img: "https://i.imgur.com/Xfu5Ukc.jpg",
+      img: "/assets/motion/commercials/bentley/1.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/366223461",
@@ -318,19 +318,19 @@ export const commercials: Section = {
           aspectRatio: "aspect-cinema",
         },
         {
-          src: "https://i.imgur.com/4Xh70ge.jpg",
+          src: "/assets/motion/commercials/bentley/2.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/BMAQ8EW.jpg",
+          src: "/assets/motion/commercials/bentley/3.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/BWsxRaF.jpg",
+          src: "/assets/motion/commercials/bentley/4.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/KY1GqZD.jpg",
+          src: "/assets/motion/commercials/bentley/5.webp",
           title: "Stills",
         },
       ],
@@ -338,26 +338,26 @@ export const commercials: Section = {
     {
       title: "Merry People",
       subtitle: "2019",
-      img: "https://i.imgur.com/7sOpGLI.jpg",
+      img: "/assets/motion/commercials/merry-people/1.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/364672261",
           type: "iframe",
         },
         {
-          src: "https://i.imgur.com/UPu99eK.jpg",
+          src: "/assets/motion/commercials/merry-people/2.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/dUxjSVL.jpg",
+          src: "/assets/motion/commercials/merry-people/3.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/Ehq2n5L.jpg",
+          src: "/assets/motion/commercials/merry-people/4.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/NxiRMI5.jpg",
+          src: "/assets/motion/commercials/merry-people/5.webp",
           title: "Stills",
         },
       ],
@@ -365,22 +365,22 @@ export const commercials: Section = {
     {
       title: "WAG",
       subtitle: "More Than a WAG",
-      img: "https://i.imgur.com/CbYh9YN.png",
+      img: "/assets/motion/commercials/wag/1.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/331202034",
           type: "iframe", // this overrides default type
         },
         {
-          src: "https://i.imgur.com/gRtaqVL.jpg",
+          src: "/assets/motion/commercials/wag/2.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/Cx67Tzh.png",
+          src: "/assets/motion/commercials/wag/3.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/gJJX5h8.jpg",
+          src: "/assets/motion/commercials/wag/4.webp",
           title: "Stills",
         },
       ],
@@ -388,26 +388,26 @@ export const commercials: Section = {
     {
       title: "AMSA",
       subtitle: "Melbourne",
-      img: "https://i.imgur.com/8Dt3ylP.jpg",
+      img: "/assets/motion/commercials/amsa/1.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/348956656",
           type: "iframe",
         },
         {
-          src: "https://i.imgur.com/5NxSYnO.jpg",
+          src: "/assets/motion/commercials/amsa/2.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/TGPVc1T.jpg",
+          src: "/assets/motion/commercials/amsa/3.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/eNzjSQ1.jpg",
+          src: "/assets/motion/commercials/amsa/4.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/MXO2G7p.jpg",
+          src: "/assets/motion/commercials/amsa/5.webp",
           title: "Stills",
         },
       ],
@@ -415,22 +415,22 @@ export const commercials: Section = {
     {
       title: "Leneeva Homes",
       subtitle: "The Monterey – TVC",
-      img: "https://i.imgur.com/8TLw0iB.jpg",
+      img: "/assets/motion/commercials/leneeva/1.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/308638818",
           type: "iframe",
         },
         {
-          src: "https://i.imgur.com/yu5MMbc.jpg",
+          src: "/assets/motion/commercials/leneeva/2.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/z5bOPj3.jpg",
+          src: "/assets/motion/commercials/leneeva/3.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/QYJOsja.jpg",
+          src: "/assets/motion/commercials/leneeva/4.webp",
           title: "Stills",
         },
       ],
@@ -438,42 +438,42 @@ export const commercials: Section = {
     {
       title: "Home",
       subtitle: "With Deborah Hutton",
-      img: "https://i.imgur.com/tbf3X5P.jpg",
+      img: "/assets/motion/commercials/home/1.webp",
       items: [
         {
           src: "https://player.vimeo.com/video/568746490",
           type: "iframe",
         },
         {
-          src: "https://i.imgur.com/3SZNbZG.png",
+          src: "/assets/motion/commercials/home/2.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/hP8XesE.png",
+          src: "/assets/motion/commercials/home/3.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/uDx5e7C.png",
+          src: "/assets/motion/commercials/home/4.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/YBdPUIi.png",
+          src: "/assets/motion/commercials/home/5.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/zwYBVFc.png",
+          src: "/assets/motion/commercials/home/6.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/HCZdGDS.png",
+          src: "/assets/motion/commercials/home/7.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/jLVR5TM.png",
+          src: "/assets/motion/commercials/home/8.webp",
           title: "Stills",
         },
         {
-          src: "https://i.imgur.com/0uX919s.png",
+          src: "/assets/motion/commercials/home/9.webp",
           title: "Stills",
         },
       ],
