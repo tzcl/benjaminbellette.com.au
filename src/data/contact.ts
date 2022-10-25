@@ -13,7 +13,7 @@ export const contact = [
   },
   {
     title: "Location",
-    content: "Melbourne & Sydney",
+    content: "Melbourne & Sydney, Australia",
     icon: "map-pin",
   },
   {
