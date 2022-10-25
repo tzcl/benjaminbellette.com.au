@@ -146,11 +146,11 @@
   }
 
   /* Mobile menu height */
-  .max-h-menu-lg {
-    max-height: calc(100vh - 86px);
+  .max-h-menu-sm {
+    max-height: 200px;
   }
 
-  .max-h-menu-sm {
-    max-height: calc(100vh - 56.5px);
+  .max-h-menu-lg {
+    max-height: 500px;
   }
 }
