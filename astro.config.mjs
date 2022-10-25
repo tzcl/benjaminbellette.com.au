@@ -4,7 +4,6 @@ import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import critters from "astro-critters";
-import image from "@astrojs/image";
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,10 +15,6 @@ export default defineConfig({
   integrations: [
     react(),
     svelte(),
-    image({
-      // Use sharp instead of squoosh
-      serviceEntryPoint: "@astrojs/image/sharp",
-    }),
     tailwind({
       // Disable injecting a basic `base.css` on every page
       config: {

@@ -1,5 +1,4 @@
 ---
-import { Image } from "@astrojs/image/components";
 import logo from "../../assets/logo-dark.png";
 import pages from "../../data/header";
 import Icon from "../dynamic/Icon.svelte";
@@ -20,7 +19,7 @@ function active(item: string): string {
     <div class="flex justify-between items-center">
       <a href="/">
         <div id="logo" class="m-4 transition-all scrolled:my-2">
-          <Image
+          <img
             src={logo}
             alt="Logo - Benjamin Bellette"
             class="transition-all w-[236px] h-[54px] scrolled:w-[177px] scrolled:h-[40.5px]"
