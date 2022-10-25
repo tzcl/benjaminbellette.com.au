@@ -6,7 +6,7 @@ import Icon from "../dynamic/Icon.svelte";
 
 const path = Astro.url.pathname;
 function active(item: string): string {
-  if (item + "/" === path) return "active";
+  if (item === path) return "active";
   return "";
 }
 ---
@@ -73,7 +73,7 @@ function active(item: string): string {
     <!-- Mobile navbar -->
     <nav id="nav" data-visible="false" class="mx-4 md:mx-8">
       <ul
-        class="hidden can-hover:md:shown:hidden can-hover:md:hiding:hidden shown:block shown:animate-slide-in hiding:block hiding:animate-slide-out py-4"
+        class="hidden can-hover:md:shown:hidden can-hover:md:hiding:hidden shown:block shown:animate-slide-in hiding:block hiding:animate-slide-out py-4 overflow-y-scroll max-h-menu-lg scrolled:max-h-menu-sm"
       >
         {
           pages.map((page, i) => (
@@ -149,11 +149,18 @@ function active(item: string): string {
     const visible = nav.getAttribute("data-visible");
 
     if (visible === "false") {
+      const padding = window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.overflow = "hidden";
+      document.body.style.paddingRight = `${padding}px`;
+
       // open menu
       nav.setAttribute("data-visible", "true");
       hamburger.classList.add("hidden");
       x.classList.remove("hidden");
     } else {
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
+
       // start hiding menu
       nav.setAttribute("data-visible", "hiding");
       hamburger.classList.remove("hidden");
