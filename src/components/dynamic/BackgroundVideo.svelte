@@ -5,14 +5,13 @@
 <div class="absolute h-full w-full">
   <div class="relative h-full w-full overflow-hidden">
     <iframe
-      src="https://player.vimeo.com/video/316965018?background=1?transparent=1"
+      src="https://player.vimeo.com/video/801033173?h=c1906e83d1&background=1"
       id="video"
       title="2019 Reel Benjamin Bellette"
       frameborder="0"
       width="100%"
       height="100%"
       allow="autoplay; fullscreen; picture-in-picture;"
-      allowfullscreen
       class:loaded
       on:load={() => (loaded = true)}
     />
