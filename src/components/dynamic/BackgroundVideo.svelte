@@ -1,5 +1,6 @@
 <script lang="ts">
   let loaded = false;
+  setTimeout(() => (loaded = true), 1000);
 </script>
 
 <div class="absolute h-full w-full">

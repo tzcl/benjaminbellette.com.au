@@ -12,7 +12,8 @@ import Layout from "../layouts/Layout.astro";
   <section class="relative grid place-content-center h-full">
     <a class="mx-auto" href="/motion/">
       <div
-        class="flex rounded-[50%] w-[252px] h-[252px] rotate-0 select-none active:rotate-90 hover:rotate-90 transition-transform duration-700"
+        id="logo"
+        class="flex rounded-[50%] w-[252px] h-[252px] rotate-0 select-none hover:rotate-90 transition-transform duration-700"
       >
         <svg
           class="mt-[52px]"
@@ -41,3 +42,10 @@ import Layout from "../layouts/Layout.astro";
     <h2 class="text-sm mt-3 selection:bg-pink">Director of Photography</h2>
   </section>
 </Layout>
+
+<script>
+  let logo = document.getElementById("logo");
+  logo.addEventListener("click", () => {
+    logo.classList.add("rotate-90");
+  });
+</script>
