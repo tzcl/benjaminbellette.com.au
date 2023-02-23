@@ -491,7 +491,8 @@ export const films: Section = {
       img: "/assets/motion/films/the-swimming-chair/1.webp",
       items: [
         {
-          type: "popup",
+          src: "https://player.vimeo.com/video/497906055",
+          type: "iframe",
         },
         {
           src: "/assets/motion/films/the-swimming-chair/2.webp",
@@ -541,7 +542,8 @@ export const films: Section = {
       img: "/assets/motion/films/hyde/1.webp",
       items: [
         {
-          type: "popup",
+          src: "https://player.vimeo.com/video/499929996",
+          type: "iframe",
         },
         {
           src: "/assets/motion/films/hyde/2.webp",
@@ -583,7 +585,7 @@ export const films: Section = {
       img: "/assets/motion/films/dating-violet/1.webp",
       items: [
         {
-          src: "https://player.vimeo.com/video/658390978",
+          src: "https://player.vimeo.com/video/627056728",
           type: "iframe",
         },
         {
@@ -708,9 +710,9 @@ export const films: Section = {
   ],
 };
 
-export const events: Section = {
-  id: "events",
-  title: "Events",
+export const corporates: Section = {
+  id: "corporates",
+  title: "corporates",
   tiles: [
     {
       title: "Kookai",
@@ -1049,7 +1051,7 @@ export const sections: Section[] = [
   musicVideos,
   commercials,
   films,
-  events,
+  corporates,
   documentaries,
 ];
 
