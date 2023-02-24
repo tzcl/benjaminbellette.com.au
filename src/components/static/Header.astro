@@ -1,0 +1,203 @@
+---
+import logo from "../../assets/logo.png";
+import pages from "../../data/header";
+import Icon from "../dynamic/Icon.svelte";
+
+const path = Astro.url.pathname;
+function active(item: string): string {
+  if (item === path) return "active";
+  return "";
+}
+---
+
+<!-- Need this div to reserve space for the header to shrink -->
+<div class="sticky top-0 h-[86px] bg-black scrolled:bg-transparent z-20">
+  <header
+    class="can-hover:md:flex can-hover:md:justify-between bg-black sticky top-0"
+  >
+    <!-- Logo and hamburger menu -->
+    <div class="flex justify-between items-center">
+      <a href="/">
+        <div id="logo" class="m-4 transition-all scrolled:my-2">
+          <img
+            src={logo}
+            alt="Logo - Benjamin Bellette"
+            class="transition-all w-[236px] h-[54px] scrolled:w-[177px] scrolled:h-[40.5px]"
+          />
+        </div>
+      </a>
+
+      <div
+        id="mobile-menu"
+        class="m-4 hover:cursor-pointer can-hover:md:hidden"
+      >
+        <svg
+          id="hamburger"
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="feather feather-menu"
+          ><title>Open menu</title><line x1="3" y1="12" x2="21" y2="12"
+          ></line><line x1="3" y1="6" x2="21" y2="6"></line><line
+            x1="3"
+            y1="18"
+            x2="21"
+            y2="18"></line>
+        </svg>
+        <svg
+          id="x"
+          class="hidden"
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="feather feather-x"
+          ><title>Close menu</title><line x1="18" y1="6" x2="6" y2="18"
+          ></line><line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Mobile navbar -->
+    <nav id="nav" data-visible="false" class="mx-4 md:mx-8">
+      <ul
+        class="hidden can-hover:md:shown:hidden can-hover:md:hiding:hidden shown:block shown:animate-slide-in hiding:block hiding:animate-slide-out py-4 overflow-y-scroll max-h-menu-lg landscape:max-h-menu-sm"
+      >
+        {
+          pages.map((page, i) => (
+            <>
+              <a href={page.link} key={i} class={active(page.link)}>
+                <li class="group border-t py-2">
+                  <span class="opacity-60 group-hover:text-grey-400 [.active_&]:opacity-100">
+                    {page.text}
+                  </span>
+                </li>
+              </a>
+              {page.children &&
+                page.children.map((section, i) => (
+                  <a href={section.link} key={i} class={active(page.link)}>
+                    <li class="group border-t py-2 pl-6">
+                      <span class="opacity-60 group-hover:text-grey-400 [.active_&]:opacity-100">
+                        {section.text}
+                      </span>
+                    </li>
+                  </a>
+                ))}
+            </>
+          ))
+        }
+      </ul>
+
+      <!-- Desktop navbar -->
+      <div
+        class="hidden can-hover:md:flex can-hover:md:gap-8 can-hover:md:items-stretch h-full w-full mr-[21px]"
+      >
+        {
+          pages.map((page, i) => (
+            <div key={i} class="group relative flex items-center">
+              <a
+                href={page.link}
+                class="text-grey-400 after:absolute after:top-0 after:left-0 after:h-full after:w-full group-hover:text-white"
+              >
+                {page.text}
+                {page.children && (
+                  <Icon name="chevron-down" class="-ml-1 inline" />
+                )}
+              </a>
+              {page.children && (
+                <div class="invisible absolute top-full left-0 z-20 bg-grey-850 p-4 group-hover:visible group-hover:animate-slide-in">
+                  <ul>
+                    {page.children.map((section, i) => (
+                      <a key={i} href={section.link} class="block">
+                        <li class="whitespace-nowrap py-2 px-4 text-grey-400 hover:bg-grey-750 hover:text-white">
+                          {section.text}
+                        </li>
+                      </a>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          ))
+        }
+      </div>
+    </nav>
+  </header>
+</div>
+
+<script>
+  // Implement hamburger menu
+  const menu = document.getElementById("mobile-menu");
+  const hamburger = document.getElementById("hamburger");
+  const x = document.getElementById("x");
+
+  const nav = document.getElementById("nav");
+
+  menu.addEventListener("click", () => {
+    const visible = nav.getAttribute("data-visible");
+
+    if (visible === "false") {
+      const padding = window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.overflow = "hidden";
+      document.body.style.paddingRight = `${padding}px`;
+
+      // open menu
+      nav.setAttribute("data-visible", "true");
+      hamburger.classList.add("hidden");
+      x.classList.remove("hidden");
+    } else {
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
+
+      // start hiding menu
+      nav.setAttribute("data-visible", "hiding");
+      hamburger.classList.remove("hidden");
+      x.classList.add("hidden");
+
+      // close the menu after 250ms
+      setTimeout(() => nav.setAttribute("data-visible", "false"), 250);
+    }
+  });
+
+  const activeItems = document.querySelectorAll(".active > a");
+  for (const item of activeItems) {
+    item.addEventListener("click", () => {
+      hamburger.click();
+    });
+  }
+
+  // Implement scroll listener
+  const storeScroll = () => {
+    document.documentElement.dataset.scroll = String(window.scrollY > 0);
+  };
+
+  const debounce = (fn) => {
+    let frame;
+    return (...params) => {
+      // If the frame var has been defined, clear it and queue for the next frame
+      if (frame) cancelAnimationFrame(frame);
+
+      // Queue our function call for the next frame
+      frame = requestAnimationFrame(() => {
+        fn(...params);
+      });
+    };
+  };
+
+  document.addEventListener("scroll", debounce(storeScroll), {
+    passive: true,
+  });
+
+  storeScroll();
+</script>

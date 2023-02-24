@@ -1,0 +1,46 @@
+---
+import Icon from "../components/dynamic/Icon.svelte";
+import Slider from "../components/dynamic/Slider.svelte";
+import { contact, pics } from "../data/contact";
+import Page from "../layouts/Page.astro";
+---
+
+<Page
+  title="Benjamin Bellette | Contact"
+  description="Melbourne and Sydney-based cinematographer."
+>
+  <Slider client:idle title="Contact" pics={pics} />
+  <section class="my-20 md:my-32">
+    <h2>Want to get in touch?</h2>
+    <div
+      class="flex flex-col md:flex-row md:justify-between w-fit md:w-contact mx-auto mt-12 md:mt-24"
+    >
+      {
+        contact.map((item) => (
+          <div class="relative ml-4 pl-12 pb-6 text-base md:pb-0">
+            <div class="absolute top-3 left-0 h-7 w-7 rotate-45 bg-grey-800 text-center">
+              <Icon
+                name={item.icon}
+                class="absolute left-[6px] top-[6px]"
+                direction="nw"
+              />
+            </div>
+            <p class="tracking-[0.3em] text-grey-300">{item.title}</p>
+            {item.href ? (
+              <a
+                class="text-base normal-case tracking-normal hover:text-grey-400"
+                href={item.href}
+              >
+                {item.content}
+              </a>
+            ) : (
+              <p class="text-base normal-case tracking-normal">
+                {item.content}
+              </p>
+            )}
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</Page>
