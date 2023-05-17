@@ -85,6 +85,49 @@ export const mumlifeTrailer: Section = {
   ],
 };
 
+export const nextTrailer: Section = {
+  id: "next",
+  title: "Next Trailer",
+  tiles: [
+    {
+      title: "Next",
+      subtitle: "Instagram/Tiktok series",
+      img: "/assets/motion/next/cover.webp",
+      items: [
+        {
+          type: "iframe",
+          src: "https://player.vimeo.com/video/822597202",
+          aspectRatio: "aspect-[9/16]",
+        },
+        {
+          type: "img",
+          src: "/assets/motion/next/1.webp",
+        },
+        {
+          type: "img",
+          src: "/assets/motion/next/2.webp",
+        },
+        {
+          type: "img",
+          src: "/assets/motion/next/3.webp",
+        },
+        {
+          type: "img",
+          src: "/assets/motion/next/4.webp",
+        },
+        {
+          type: "img",
+          src: "/assets/motion/next/5.webp",
+        },
+        {
+          type: "img",
+          src: "/assets/motion/next/6.webp",
+        },
+      ],
+    },
+  ],
+};
+
 export const musicVideos: Section = {
   id: "music",
   title: "Music Videos",
@@ -1055,4 +1098,4 @@ export const sections: Section[] = [
   documentaries,
 ];
 
-export default { pics, mumlifeTrailer, sections };
+export default { pics, mumlifeTrailer, nextTrailer, sections };

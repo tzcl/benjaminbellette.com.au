@@ -55,8 +55,8 @@
 
 <div class="relative h-full w-full">
   <div
-    class="group h-full w-full"
-    style={`background: url('${img}') center center / cover #111`}
+    class="group h-full w-full bg-cover bg-center"
+    style={`background-image: url('${img}')`}
   >
     <div
       class="absolute inset-0 flex cursor-pointer select-none flex-col justify-center bg-white/80 text-center text-black opacity-0 transition-all duration-300 ease-in-out group-hover:visible group-hover:opacity-100"
@@ -121,7 +121,7 @@
             bind:this={iframe}
           />
         {:else if item.type === "popup"}
-          <div class="mb-12 h-fit bg-white pt-6 pb-16">
+          <div class="mb-12 h-fit bg-white pb-16 pt-6">
             <div class="w-popup mx-auto text-center">
               <h3 class="my-8 text-black">Hi!</h3>
               <p class="text-wr my-4 text-black">
