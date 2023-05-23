@@ -30,6 +30,8 @@ module.exports = {
       },
       screens: {
         "can-hover": { raw: "(hover: hover) and (pointer: fine)" },
+        "vertical": { raw: "(max-aspect-ratio: 1)"},
+        "horizontal": { raw: "(min-aspect-ratio: 1)"}
       },
       aspectRatio: {
         cinema: "2.39/1",

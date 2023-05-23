@@ -19,7 +19,7 @@
   let iframe: HTMLIFrameElement; // assume there is at most one video per tile
   let player;
 
-  let video = items.some((item) => item.type !== null);
+  let video = items.some((item) => item.type !== "img");
 
   onMount(async () => {
     const Player = (await import("@vimeo/player")).default;
@@ -107,19 +107,23 @@
       </svg>
       {#each items as item}
         {#if item.type === "iframe"}
-          <iframe
-            src={item.src}
-            title={item.title ? item.title : ""}
-            frameborder="0"
-            width="100%"
-            height="100%"
-            allow="autoplay; fullscreen; picture-in-picture;"
-            allowfullscreen
-            class={`mb-12 object-cover ${
-              item.aspectRatio ? item.aspectRatio : "aspect-video"
-            }`}
-            bind:this={iframe}
-          />
+          <div class="shadow-lg">
+            <div class="bg-black">
+              <iframe
+                src={item.src}
+                title={item.title ? item.title : ""}
+                frameborder="0"
+                width="100%"
+                height="100%"
+                allow="autoplay; fullscreen; picture-in-picture;"
+                allowfullscreen
+                class={`mb-12 object-cover ${
+                  item.aspectRatio ? item.aspectRatio : "aspect-video"
+                }`}
+                bind:this={iframe}
+              />
+            </div>
+          </div>
         {:else if item.type === "popup"}
           <div class="mb-12 h-fit bg-white pb-16 pt-6">
             <div class="w-popup mx-auto text-center">
@@ -142,14 +146,16 @@
             </div>
           </div>
         {:else}
-          <img
-            src={item.src}
-            alt={item.title ? item.title : ""}
-            loading="lazy"
-            width="100%"
-            height="100%"
-            class="mb-12 select-none object-cover"
-          />
+          <div class="mb-12 bg-black">
+            <img
+              src={item.src}
+              alt={item.title ? item.title : ""}
+              loading="lazy"
+              width="100%"
+              height="100%"
+              class="select-none object-contain horizontal:aspect-video"
+            />
+          </div>
         {/if}
       {/each}
     </div>

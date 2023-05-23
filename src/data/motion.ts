@@ -97,7 +97,7 @@ export const nextTrailer: Section = {
         {
           type: "iframe",
           src: "https://player.vimeo.com/video/822597202",
-          aspectRatio: "aspect-[9/16]",
+          aspectRatio: "portrait:aspect-[9/16] landscape:aspect-video",
         },
         {
           type: "img",
