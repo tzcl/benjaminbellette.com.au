@@ -19,7 +19,7 @@
   let iframe: HTMLIFrameElement; // assume there is at most one video per tile
   let player;
 
-  let video = items.some((item) => item.type !== null);
+  let video = items.some((item) => item.type !== "img");
 
   onMount(async () => {
     const Player = (await import("@vimeo/player")).default;
@@ -55,8 +55,8 @@
 
 <div class="relative h-full w-full">
   <div
-    class="group h-full w-full"
-    style={`background: url('${img}') center center / cover #111`}
+    class="group h-full w-full bg-cover bg-center"
+    style={`background-image: url('${img}')`}
   >
     <div
       class="absolute inset-0 flex cursor-pointer select-none flex-col justify-center bg-white/80 text-center text-black opacity-0 transition-all duration-300 ease-in-out group-hover:visible group-hover:opacity-100"
@@ -107,21 +107,25 @@
       </svg>
       {#each items as item}
         {#if item.type === "iframe"}
-          <iframe
-            src={item.src}
-            title={item.title ? item.title : ""}
-            frameborder="0"
-            width="100%"
-            height="100%"
-            allow="autoplay; fullscreen; picture-in-picture;"
-            allowfullscreen
-            class={`mb-12 object-cover ${
-              item.aspectRatio ? item.aspectRatio : "aspect-video"
-            }`}
-            bind:this={iframe}
-          />
+          <div class="shadow-lg">
+            <div class="bg-black">
+              <iframe
+                src={item.src}
+                title={item.title ? item.title : ""}
+                frameborder="0"
+                width="100%"
+                height="100%"
+                allow="autoplay; fullscreen; picture-in-picture;"
+                allowfullscreen
+                class={`mb-12 object-cover ${
+                  item.aspectRatio ? item.aspectRatio : "aspect-video"
+                }`}
+                bind:this={iframe}
+              />
+            </div>
+          </div>
         {:else if item.type === "popup"}
-          <div class="mb-12 h-fit bg-white pt-6 pb-16">
+          <div class="mb-12 h-fit bg-white pb-16 pt-6">
             <div class="w-popup mx-auto text-center">
               <h3 class="my-8 text-black">Hi!</h3>
               <p class="text-wr my-4 text-black">
@@ -142,14 +146,16 @@
             </div>
           </div>
         {:else}
-          <img
-            src={item.src}
-            alt={item.title ? item.title : ""}
-            loading="lazy"
-            width="100%"
-            height="100%"
-            class="mb-12 select-none object-cover"
-          />
+          <div class="mb-12 bg-black">
+            <img
+              src={item.src}
+              alt={item.title ? item.title : ""}
+              loading="lazy"
+              width="100%"
+              height="100%"
+              class="select-none object-contain horizontal:aspect-video"
+            />
+          </div>
         {/if}
       {/each}
     </div>

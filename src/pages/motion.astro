@@ -3,6 +3,8 @@ import Slider from "../components/dynamic/Slider.svelte";
 import Tile from "../components/dynamic/Tile.svelte";
 import data from "../data/motion";
 import Page from "../layouts/Page.astro";
+
+import { FaTiktok, FaInstagram } from "react-icons/fa/index.js";
 ---
 
 <Page
@@ -34,49 +36,79 @@ import Page from "../layouts/Page.astro";
       />
     </div>
   </section>
-  {
-    data.sections.map((section, i) => {
-      return (
-        <section key={i} id={section.id}>
-          <h2 class="subtitle">{section.title}</h2>
-          <div class="m-8 grid grid-cols-1 justify-center gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {section.tiles.map((tile, i) => {
-              return (
-                <div key={i} class="aspect-video">
-                  <Tile
-                    client:visible
-                    title={tile.title}
-                    subtitle={tile.subtitle}
-                    img={tile.img}
-                    items={tile.items}
-                  />
-                </div>
-              );
-            })}
-          </div>
-        </section>
-      );
-    })
-  }
-  <section>
-    <h2 class="p-4">Interested in seeing more?</h2>
-    <p class="text-center my-12">
-      <a href="https://vimeo.com/benbellette" class="group hover:text-grey-400">
-        View portfolio <span
-          class="inline-block group-hover:translate-x-1 transition-transform ease-linear"
-          >»</span
-        >
+  <section id={data.nextTrailer.id}>
+    <h2 class="subtitle">{data.nextTrailer.title}</h2>
+    <div class="w-main mx-auto my-16 aspect-video">
+      <Tile
+        client:visible
+        title={data.nextTrailer.tiles[0].title}
+        subtitle={data.nextTrailer.tiles[0].subtitle}
+        img={data.nextTrailer.tiles[0].img}
+        items={data.nextTrailer.tiles[0].items}
+      />
+    </div>
+    <h2 class="m-8">Watch now</h2>
+    <div class="flex flex-wrap justify-center gap-12 px-8 mb-16">
+      <a
+        class="hover:text-grey-400"
+        href="https://www.instagram.com/nexttheseries"
+      >
+        <FaInstagram size="4.5em" title="Watch on Instagram" />
       </a>
-    </p>
+      <a
+        class="hover:text-grey-400"
+        href="https://www.tiktok.com/@nexttheseries"
+      >
+        <FaTiktok size="4em" title="Watch on Tiktok" />
+      </a>
+    </div>
+    {
+      data.sections.map((section, i) => {
+        return (
+          <section key={i} id={section.id}>
+            <h2 class="subtitle">{section.title}</h2>
+            <div class="m-8 grid grid-cols-1 justify-center gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {section.tiles.map((tile, i) => {
+                return (
+                  <div key={i} class="aspect-video">
+                    <Tile
+                      client:visible
+                      title={tile.title}
+                      subtitle={tile.subtitle}
+                      img={tile.img}
+                      items={tile.items}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        );
+      })
+    }
+    <section>
+      <h2 class="p-4">Interested in seeing more?</h2>
+      <p class="text-center my-12">
+        <a
+          href="https://vimeo.com/benbellette"
+          class="group hover:text-grey-400"
+        >
+          View portfolio <span
+            class="inline-block group-hover:translate-x-1 transition-transform ease-linear"
+            >»</span
+          >
+        </a>
+      </p>
+    </section>
   </section>
+
+  <style>
+    .w-main {
+      width: min(60rem, 90%);
+    }
+
+    .w-item {
+      width: max(20ch, 100%);
+    }
+  </style>
 </Page>
-
-<style>
-  .w-main {
-    width: min(60rem, 90%);
-  }
-
-  .w-item {
-    width: max(20ch, 100%);
-  }
-</style>
