@@ -16,3 +16,8 @@ const { title, description } = Astro.props as Props;
   <slot />
   <Footer />
 </Layout>
+
+<script>
+  import { register } from "swiper/element/bundle";
+  register();
+</script>
