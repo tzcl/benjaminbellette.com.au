@@ -4,6 +4,8 @@ export const pages = [
     text: "Motion",
     children: [
       { link: "/motion/#reel", text: "Reel" },
+      { link: "/motion/#pasifika", text: "Pasifika Drift" },
+      { link: "/motion/#peter-and-pollock", text: "Peter and Pollock" },
       { link: "/motion/#mumlife", text: "MumLife Trailer" },
       { link: "/motion/#next", text: "Next Trailer" },
       { link: "/motion/#music", text: "Music Videos" },

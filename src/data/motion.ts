@@ -19,6 +19,111 @@ export const pics = [
   "/assets/motion/slider-3.webp",
 ];
 
+export const pasifikaDrift: Section = {
+  id: "pasifika",
+  title: "Pasifika Drift Trailer",
+  tiles: [
+    {
+      title: "Pasifika Drift",
+      subtitle: "Short Film",
+      img: "/assets/motion/pasifika/cover.webp",
+      items: [
+        {
+          type: "iframe",
+          src: "https://player.vimeo.com/video/861482690",
+        },
+        {
+          type: "img",
+          src: "/assets/motion/pasifika/1.webp",
+        },
+        {
+          type: "img",
+          src: "/assets/motion/pasifika/2.webp",
+        },
+        {
+          type: "img",
+          src: "/assets/motion/pasifika/3.webp",
+        },
+        {
+          type: "img",
+          src: "/assets/motion/pasifika/4.webp",
+        },
+        {
+          type: "img",
+          src: "/assets/motion/pasifika/5.webp",
+        },
+        {
+          type: "img",
+          src: "/assets/motion/pasifika/6.webp",
+        },
+        {
+          type: "img",
+          src: "/assets/motion/pasifika/7.webp",
+        },
+        {
+          type: "img",
+          src: "/assets/motion/pasifika/8.webp",
+        },
+        {
+          type: "img",
+          src: "/assets/motion/pasifika/9.webp",
+        },
+        {
+          type: "img",
+          src: "/assets/motion/pasifika/10.webp",
+        },
+        {
+          type: "img",
+          src: "/assets/motion/pasifika/11.webp",
+        },
+        {
+          type: "img",
+          src: "/assets/motion/pasifika/12.webp",
+        },
+      ],
+    },
+  ],
+};
+
+export const peterAndPollock: Section = {
+  id: "peter-and-pollock",
+  title: "Hot Bread – Peter and Pollock Trailer",
+  tiles: [
+    {
+      title: "Peter and Pollock",
+      subtitle: "Instagram/Tiktok series",
+      img: "/assets/motion/peter-and-pollock/cover.webp",
+      items: [
+        {
+          type: "iframe",
+          src: "https://player.vimeo.com/video/861496468",
+          aspectRatio: "portrait:aspect-[9/16] landscape:aspect-video",
+        },
+        {
+          type: "img",
+          src: "/assets/motion/peter-and-pollock/1.webp",
+        },
+        {
+          type: "img",
+          src: "/assets/motion/peter-and-pollock/2.webp",
+        },
+        {
+          type: "img",
+          src: "/assets/motion/peter-and-pollock/3.webp",
+        },
+        {
+          type: "img",
+          src: "/assets/motion/peter-and-pollock/4.webp",
+        },
+        {
+          type: "img",
+          src: "/assets/motion/peter-and-pollock/5.webp",
+        },
+      ],
+    },
+  ],
+};
+
 export const mumlifeTrailer: Section = {
   id: "mumlife",
   title: "MumLife Trailer",
@@ -1098,4 +1203,4 @@ export const sections: Section[] = [
   documentaries,
 ];
 
-export default { pics, mumlifeTrailer, nextTrailer, sections };
+export default { pics, pasifikaDrift, peterAndPollock, mumlifeTrailer, nextTrailer, sections };
