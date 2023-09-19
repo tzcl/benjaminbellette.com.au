@@ -86,7 +86,7 @@ export const pasifikaDrift: Section = {
 };
 
 export const peterAndPollock: Section = {
-  id: "peter-and-pollick",
+  id: "peter-and-pollock",
   title: "Hot Bread – Peter and Pollock Trailer",
   tiles: [
     {
