@@ -21,8 +21,8 @@ dependencies:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
   vite:
-    specifier: ^4.5.2
-    version: 4.5.2
+    specifier: ^4.5.3
+    version: 4.5.3
 
 devDependencies:
   '@astrojs/react':
@@ -33,7 +33,7 @@ devDependencies:
     version: 1.4.0
   '@astrojs/svelte':
     specifier: ^3.1.1
-    version: 3.1.1(astro@2.10.12)(svelte@3.59.2)(typescript@5.1.6)(vite@4.5.2)
+    version: 3.1.1(astro@2.10.12)(svelte@3.59.2)(typescript@5.1.6)(vite@4.5.3)
   '@astrojs/tailwind':
     specifier: ^3.1.3
     version: 3.1.3(astro@2.10.12)(tailwindcss@3.3.3)
@@ -175,14 +175,14 @@ packages:
       zod: 3.22.2
     dev: true
 
-  /@astrojs/svelte@3.1.1(astro@2.10.12)(svelte@3.59.2)(typescript@5.1.6)(vite@4.5.2):
+  /@astrojs/svelte@3.1.1(astro@2.10.12)(svelte@3.59.2)(typescript@5.1.6)(vite@4.5.3):
     resolution: {integrity: sha512-sPTe43zqFVvZq7qjCgT6vkOpMyKI0uEpqm/X3zSRse0Sn1ZyMEipes2KLmJQvPOZw3Zxy4+PX3E3Ns59hwRX1Q==}
     engines: {node: '>=16.12.0'}
     peerDependencies:
       astro: ^2.10.10
       svelte: ^3.55.0 || ^4.0.0
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 2.4.5(svelte@3.59.2)(vite@4.5.2)
+      '@sveltejs/vite-plugin-svelte': 2.4.5(svelte@3.59.2)(vite@4.5.3)
       astro: 2.10.12
       svelte: 3.59.2
       svelte2tsx: 0.6.20(svelte@3.59.2)(typescript@5.1.6)
@@ -990,7 +990,7 @@ packages:
       escalade: 3.1.1
     dev: true
 
-  /@sveltejs/vite-plugin-svelte-inspector@1.0.3(@sveltejs/vite-plugin-svelte@2.4.5)(svelte@3.59.2)(vite@4.5.2):
+  /@sveltejs/vite-plugin-svelte-inspector@1.0.3(@sveltejs/vite-plugin-svelte@2.4.5)(svelte@3.59.2)(vite@4.5.3):
     resolution: {integrity: sha512-Khdl5jmmPN6SUsVuqSXatKpQTMIifoQPDanaxC84m9JxIibWvSABJyHpyys0Z+1yYrxY5TTEQm+6elh0XCMaOA==}
     engines: {node: ^14.18.0 || >= 16}
     peerDependencies:
@@ -998,30 +998,30 @@ packages:
       svelte: ^3.54.0 || ^4.0.0
       vite: ^4.0.0
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 2.4.5(svelte@3.59.2)(vite@4.5.2)
+      '@sveltejs/vite-plugin-svelte': 2.4.5(svelte@3.59.2)(vite@4.5.3)
       debug: 4.3.4
       svelte: 3.59.2
-      vite: 4.5.2
+      vite: 4.5.3
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@sveltejs/vite-plugin-svelte@2.4.5(svelte@3.59.2)(vite@4.5.2):
+  /@sveltejs/vite-plugin-svelte@2.4.5(svelte@3.59.2)(vite@4.5.3):
     resolution: {integrity: sha512-UJKsFNwhzCVuiZd06jM/psscyNJNDwjQC+qIeb7GBJK9iWeQCcIyfcPWDvbCudfcJggY9jtxJeeaZH7uny93FQ==}
     engines: {node: ^14.18.0 || >= 16}
     peerDependencies:
       svelte: ^3.54.0 || ^4.0.0
       vite: ^4.0.0
     dependencies:
-      '@sveltejs/vite-plugin-svelte-inspector': 1.0.3(@sveltejs/vite-plugin-svelte@2.4.5)(svelte@3.59.2)(vite@4.5.2)
+      '@sveltejs/vite-plugin-svelte-inspector': 1.0.3(@sveltejs/vite-plugin-svelte@2.4.5)(svelte@3.59.2)(vite@4.5.3)
       debug: 4.3.4
       deepmerge: 4.3.1
       kleur: 4.1.5
       magic-string: 0.30.2
       svelte: 3.59.2
       svelte-hmr: 0.15.3(svelte@3.59.2)
-      vite: 4.5.2
-      vitefu: 0.2.4(vite@4.5.2)
+      vite: 4.5.3
+      vitefu: 0.2.4(vite@4.5.3)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1305,8 +1305,8 @@ packages:
       typescript: 5.1.6
       unist-util-visit: 4.1.2
       vfile: 5.3.7
-      vite: 4.5.2
-      vitefu: 0.2.4(vite@4.5.2)
+      vite: 4.5.3
+      vitefu: 0.2.4(vite@4.5.3)
       which-pm: 2.0.0
       yargs-parser: 21.1.1
       zod: 3.22.2
@@ -4003,8 +4003,8 @@ packages:
       vfile-message: 3.1.4
     dev: true
 
-  /vite@4.5.2:
-    resolution: {integrity: sha512-tBCZBNSBbHQkaGyhGCDUGqeo2ph8Fstyp6FMSvTtsXeZSPpSMGlviAOav2hxVTqFcx8Hj/twtWKsMJXNY0xI8w==}
+  /vite@4.5.3:
+    resolution: {integrity: sha512-kQL23kMeX92v3ph7IauVkXkikdDRsYMGTVl5KY2E9OY4ONLvkHf04MDTbnfo6NKxZiDLWzVpP5oTa8hQD8U3dg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -4037,7 +4037,7 @@ packages:
     optionalDependencies:
       fsevents: 2.3.3
 
-  /vitefu@0.2.4(vite@4.5.2):
+  /vitefu@0.2.4(vite@4.5.3):
     resolution: {integrity: sha512-fanAXjSaf9xXtOOeno8wZXIhgia+CZury481LsDaV++lSvcU2R9Ch2bPh3PYFyoHW+w9LqAeYRISVQjUIew14g==}
     peerDependencies:
       vite: ^3.0.0 || ^4.0.0
@@ -4045,7 +4045,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.5.2
+      vite: 4.5.3
     dev: true
 
   /vscode-css-languageservice@6.2.6:
