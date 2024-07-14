@@ -484,28 +484,37 @@ export const commercials: Section = {
       ],
     },
     {
-      title: "Merry People",
-      subtitle: "2019",
-      img: "/assets/motion/commercials/merry-people/1.webp",
+      title: "Flickerfest 2024",
+      subtitle: "Muriel's Wedding",
+      img: "/assets/motion/commercials/flickerfest/1.webp",
       items: [
         {
-          src: "https://player.vimeo.com/video/364672261",
+          src: "https://player.vimeo.com/video/980309461",
           type: "iframe",
+          aspectRatio: "aspect-cinema",
         },
         {
-          src: "/assets/motion/commercials/merry-people/2.webp",
+          src: "/assets/motion/commercials/flickerfest/2.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/commercials/merry-people/3.webp",
+          src: "/assets/motion/commercials/flickerfest/3.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/commercials/merry-people/4.webp",
+          src: "/assets/motion/commercials/flickerfest/4.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/commercials/merry-people/5.webp",
+          src: "/assets/motion/commercials/flickerfest/5.webp",
+          title: "Stills",
+        },
+        {
+          src: "/assets/motion/commercials/flickerfest/6.webp",
+          title: "Stills",
+        },
+        {
+          src: "/assets/motion/commercials/flickerfest/7.webp",
           title: "Stills",
         },
       ],
@@ -582,28 +591,28 @@ export const commercials: Section = {
       ],
     },
     {
-      title: "AMSA",
-      subtitle: "Melbourne",
-      img: "/assets/motion/commercials/amsa/1.webp",
+      title: "Merry People",
+      subtitle: "2019",
+      img: "/assets/motion/commercials/merry-people/1.webp",
       items: [
         {
-          src: "https://player.vimeo.com/video/348956656",
+          src: "https://player.vimeo.com/video/364672261",
           type: "iframe",
         },
         {
-          src: "/assets/motion/commercials/amsa/2.webp",
+          src: "/assets/motion/commercials/merry-people/2.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/commercials/amsa/3.webp",
+          src: "/assets/motion/commercials/merry-people/3.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/commercials/amsa/4.webp",
+          src: "/assets/motion/commercials/merry-people/4.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/commercials/amsa/5.webp",
+          src: "/assets/motion/commercials/merry-people/5.webp",
           title: "Stills",
         },
       ],
