@@ -34,6 +34,14 @@ export const pasifikaDrift: Section = {
         },
         {
           type: "img",
+          src: "/assets/motion/awards/2024-merit.webp",
+        },
+        {
+          type: "img",
+          src: "/assets/motion/awards/2023-gold.webp",
+        },
+        {
+          type: "img",
           src: "/assets/motion/pasifika/1.webp",
         },
         {
@@ -136,6 +144,10 @@ export const mumlifeTrailer: Section = {
         {
           type: "iframe",
           src: "https://player.vimeo.com/video/707425833",
+        },
+        {
+          type: "img",
+          src: "/assets/motion/awards/2022-gold.webp",
         },
         {
           type: "img",
@@ -701,6 +713,10 @@ export const films: Section = {
         },
         {
           type: "img",
+          src: "/assets/motion/awards/2022-gold.webp",
+        },
+        {
+          type: "img",
           src: "/assets/motion/films/mumlife/1.webp",
         },
         {
@@ -799,6 +815,10 @@ export const films: Section = {
         {
           src: "https://player.vimeo.com/video/497906055",
           type: "iframe",
+        },
+        {
+          type: "img",
+          src: "/assets/motion/awards/2022-gold.webp",
         },
         {
           src: "/assets/motion/films/the-swimming-chair/2.webp",
