@@ -511,24 +511,72 @@ export const commercials: Section = {
       ],
     },
     {
-      title: "WAG",
-      subtitle: "More Than a WAG",
-      img: "/assets/motion/commercials/wag/1.webp",
+      title: "Melbourne Theatre Company",
+      subtitle: "2024 Campaign",
+      img: "/assets/motion/commercials/melbourne-theatre-company/1.webp",
       items: [
         {
-          src: "https://player.vimeo.com/video/331202034",
+          src: "https://player.vimeo.com/video/980298444",
           type: "iframe", // this overrides default type
         },
         {
-          src: "/assets/motion/commercials/wag/2.webp",
+          src: "/assets/motion/commercials/melbourne-theatre-company/2.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/commercials/wag/3.webp",
+          src: "/assets/motion/commercials/melbourne-theatre-company/3.webp",
           title: "Stills",
         },
         {
-          src: "/assets/motion/commercials/wag/4.webp",
+          src: "/assets/motion/commercials/melbourne-theatre-company/4.webp",
+          title: "Stills",
+        },
+        {
+          src: "/assets/motion/commercials/melbourne-theatre-company/5.webp",
+          title: "Stills",
+        },
+        {
+          src: "/assets/motion/commercials/melbourne-theatre-company/6.webp",
+          title: "Stills",
+        },
+        {
+          src: "/assets/motion/commercials/melbourne-theatre-company/7.webp",
+          title: "Stills",
+        },
+        {
+          src: "/assets/motion/commercials/melbourne-theatre-company/8.webp",
+          title: "Stills",
+        },
+        {
+          src: "/assets/motion/commercials/melbourne-theatre-company/9.webp",
+          title: "Stills",
+        },
+        {
+          src: "/assets/motion/commercials/melbourne-theatre-company/10.webp",
+          title: "Stills",
+        },
+        {
+          src: "/assets/motion/commercials/melbourne-theatre-company/11.webp",
+          title: "Stills",
+        },
+        {
+          src: "/assets/motion/commercials/melbourne-theatre-company/12.webp",
+          title: "Stills",
+        },
+        {
+          src: "/assets/motion/commercials/melbourne-theatre-company/13.webp",
+          title: "Stills",
+        },
+        {
+          src: "/assets/motion/commercials/melbourne-theatre-company/14.webp",
+          title: "Stills",
+        },
+        {
+          src: "/assets/motion/commercials/melbourne-theatre-company/15.webp",
+          title: "Stills",
+        },
+        {
+          src: "/assets/motion/commercials/melbourne-theatre-company/16.webp",
           title: "Stills",
         },
       ],
