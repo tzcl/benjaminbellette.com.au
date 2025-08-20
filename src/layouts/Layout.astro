@@ -13,7 +13,7 @@ const canonicalURL = Astro.url.href;
 const coverImg = "https://benjaminbellette.com.au/images/logo.png";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class:list={[{ "h-full": fullpage }]}>
   <head>
     <title>{title}</title>
@@ -107,12 +107,13 @@ const coverImg = "https://benjaminbellette.com.au/images/logo.png";
     <meta property="og:image" content={coverImg} />
     {description && <meta property="og:description" content={description} />}
 
-    <!-- TODO: run this in a worker thread -->
-    <!-- See partytown -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Q0VNLGQTF"
-    ></script>
-    <script is:inline>
+    <script
+      async
+      is:inline
+      type="text/partytown"
+      src="https://www.googletagmanager.com/gtag/js?id=G-6Q0VNLGQTF"></script>
+    <script is:inline type="text/partytown">
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
