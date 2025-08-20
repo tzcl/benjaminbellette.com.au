@@ -20,7 +20,7 @@ function active(item: string): string {
       <a href="/">
         <div id="logo" class="m-4 transition-all scrolled:my-2">
           <img
-            src={logo}
+            src={logo.src}
             alt="Logo - Benjamin Bellette"
             class="transition-all w-[236px] h-[54px] scrolled:w-[177px] scrolled:h-[40.5px]"
           />
@@ -75,9 +75,9 @@ function active(item: string): string {
         class="hidden can-hover:md:shown:hidden can-hover:md:hiding:hidden shown:block shown:animate-slide-in hiding:block hiding:animate-slide-out py-4 overflow-y-scroll max-h-menu-lg landscape:max-h-menu-sm"
       >
         {
-          pages.map((page, i) => (
+          pages.map((page) => (
             <>
-              <a href={page.link} key={i} class={active(page.link)}>
+              <a href={page.link} class={active(page.link)}>
                 <li class="group border-t py-2">
                   <span class="opacity-60 group-hover:text-grey-400 [.active_&]:opacity-100">
                     {page.text}
@@ -86,7 +86,7 @@ function active(item: string): string {
               </a>
               {page.children &&
                 page.children.map((section, i) => (
-                  <a href={section.link} key={i} class={active(page.link)}>
+                  <a href={section.link} class={active(page.link)}>
                     <li class="group border-t py-2 pl-6">
                       <span class="opacity-60 group-hover:text-grey-400 [.active_&]:opacity-100">
                         {section.text}
@@ -105,7 +105,7 @@ function active(item: string): string {
       >
         {
           pages.map((page, i) => (
-            <div key={i} class="group relative flex items-center">
+            <div class="group relative flex items-center">
               <a
                 href={page.link}
                 class="text-grey-400 after:absolute after:top-0 after:left-0 after:h-full after:w-full group-hover:text-white"
@@ -119,7 +119,7 @@ function active(item: string): string {
                 <div class="invisible absolute top-full left-0 z-20 bg-grey-850 p-4 group-hover:visible group-hover:animate-slide-in">
                   <ul>
                     {page.children.map((section, i) => (
-                      <a key={i} href={section.link} class="block">
+                      <a href={section.link} class="block">
                         <li class="whitespace-nowrap py-2 px-4 text-grey-400 hover:bg-grey-750 hover:text-white">
                           {section.text}
                         </li>
