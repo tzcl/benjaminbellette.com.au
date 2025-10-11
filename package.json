@@ -16,7 +16,7 @@
     "@astrojs/svelte": "^7.1.0",
     "@astrojs/tailwind": "^6.0.2",
     "@vimeo/player": "^2.29.3",
-    "astro": "^5.13.2",
+    "astro": "^5.14.3",
     "autoprefixer": "^10.4.21",
     "feather-icons": "^4.29.2",
     "postcss": "^8.5.6",
