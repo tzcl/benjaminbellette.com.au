@@ -19,7 +19,7 @@
     "astro": "^5.15.9",
     "autoprefixer": "^10.4.21",
     "feather-icons": "^4.29.2",
-    "postcss": "^8.5.6",
+    "postcss": "^8.5.10",
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.13.0",
     "prettier-plugin-tailwindcss": "^0.5.14",
