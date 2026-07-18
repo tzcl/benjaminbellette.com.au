@@ -1,7 +1,6 @@
 import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
 import svelte from "@astrojs/svelte";
-import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 
 import partytown from "@astrojs/partytown";
@@ -16,15 +15,9 @@ export default defineConfig({
   integrations: [
     react(),
     svelte(),
-    tailwind({
-      // Disable injecting a basic `base.css` on every page
-      config: {
-        applyBaseStyles: false,
-      },
-    }),
     sitemap(),
     partytown({
-      forward: ["dataLayer.push"]
+      forward: ["dataLayer.push"],
     }),
   ],
 });
