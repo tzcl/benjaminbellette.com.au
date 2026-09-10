@@ -19,7 +19,7 @@
     "@astrojs/sitemap": "^3.7.3",
     "@astrojs/svelte": "^9.0.1",
     "@vimeo/player": "^2.29.3",
-    "astro": "^7.1.0",
+    "astro": "^7.2.8",
     "autoprefixer": "^10.4.21",
     "feather-icons": "^4.29.2",
     "postcss": "^8.5.23",
