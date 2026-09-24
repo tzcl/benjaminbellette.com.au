@@ -1,153 +1,72 @@
 ---
 import Slider from "../components/dynamic/Slider.svelte";
-import Tile from "../components/dynamic/Tile.svelte";
+import ProjectCard from "../components/static/ProjectCard.astro";
 import data from "../data/motion";
+import { reel } from "../data/reel";
 import Page from "../layouts/Page.astro";
-
-import { FaTiktok, FaInstagram } from "react-icons/fa/index.js";
 ---
 
 <Page
   title="Benjamin Bellette | Motion"
-  description="Video portfolio displaying various works such as short films, documentaries, music videos and commercials."
+  description="Cinematography portfolio featuring films, web series, music videos, commercials, documentaries and live broadcasts."
 >
   <Slider client:idle title="Motion" pics={data.pics} />
   <section id="reel">
     <h2 class="subtitle">Reel</h2>
     <iframe
-      src="https://player.vimeo.com/video/801033173?h=c1906e83d1?title=0&byline=0&portrait=0"
-      title="2019 Reel Benjamin Bellette"
+      src={reel.src + "&title=0&byline=0&portrait=0"}
+      title={reel.title}
       width="100%"
       height="100%"
       allow="autoplay; fullscreen; picture-in-picture;"
-      class="w-main mx-auto my-12 aspect-video"
-    >
-    </iframe>
+      allowfullscreen
+      class="w-main mx-auto my-12 aspect-video border-0"></iframe>
   </section>
-  <section id={data.pasifikaDrift.id}>
-    <h2 class="subtitle">{data.pasifikaDrift.title}</h2>
-    <div class="w-main mx-auto my-16 aspect-video">
-      <Tile
-        client:visible
-        title={data.pasifikaDrift.tiles[0].title}
-        subtitle={data.pasifikaDrift.tiles[0].subtitle}
-        img={data.pasifikaDrift.tiles[0].img}
-        items={data.pasifikaDrift.tiles[0].items}
-      />
-    </div>
-  </section>
-  <section id={data.peterAndPollock.id}>
-    <h2 class="subtitle">{data.peterAndPollock.title}</h2>
-    <div class="w-main mx-auto my-16 aspect-video">
-      <Tile
-        client:visible
-        title={data.peterAndPollock.tiles[0].title}
-        subtitle={data.peterAndPollock.tiles[0].subtitle}
-        img={data.peterAndPollock.tiles[0].img}
-        items={data.peterAndPollock.tiles[0].items}
-      />
-    <h2 class="m-8">Watch now</h2>
-    <div class="flex flex-wrap justify-center gap-12 px-8 mb-16">
-      <a
-        class="hover:text-grey-400"
-        href="https://www.instagram.com/hotbreadseries"
-      >
-        <FaInstagram size="4.5em" title="Watch on Instagram" />
-      </a>
-      <a
-        class="hover:text-grey-400"
-        href="https://www.tiktok.com/@hotbreadseries"
-      >
-        <FaTiktok size="4em" title="Watch on Tiktok" />
-      </a>
-    </div>
-    </div>
-  </section>
-  <section id={data.mumlifeTrailer.id}>
-    <h2 class="subtitle">{data.mumlifeTrailer.title}</h2>
-    <div class="w-main mx-auto my-16 aspect-video">
-      <Tile
-        client:visible
-        title={data.mumlifeTrailer.tiles[0].title}
-        subtitle={data.mumlifeTrailer.tiles[0].subtitle}
-        img={data.mumlifeTrailer.tiles[0].img}
-        items={data.mumlifeTrailer.tiles[0].items}
-      />
-    </div>
-  </section>
-  <section id={data.nextTrailer.id}>
-    <h2 class="subtitle">{data.nextTrailer.title}</h2>
-    <div class="w-main mx-auto my-16 aspect-video">
-      <Tile
-        client:visible
-        title={data.nextTrailer.tiles[0].title}
-        subtitle={data.nextTrailer.tiles[0].subtitle}
-        img={data.nextTrailer.tiles[0].img}
-        items={data.nextTrailer.tiles[0].items}
-      />
-    </div>
-    <h2 class="m-8">Watch now</h2>
-    <div class="flex flex-wrap justify-center gap-12 px-8 mb-16">
-      <a
-        class="hover:text-grey-400"
-        href="https://www.instagram.com/nexttheseries"
-      >
-        <FaInstagram size="4.5em" title="Watch on Instagram" />
-      </a>
-      <a
-        class="hover:text-grey-400"
-        href="https://www.tiktok.com/@nexttheseries"
-      >
-        <FaTiktok size="4em" title="Watch on Tiktok" />
-      </a>
-    </div>
-    {
-      data.sections.map((section, i) => {
-        return (
-          <section id={section.id}>
-            <h2 class="subtitle">{section.title}</h2>
-            <div class="m-8 grid grid-cols-1 justify-center gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {section.tiles.map((tile, i) => {
-                return (
-                  <div class="aspect-video">
-                    <Tile
-                      client:visible
-                      title={tile.title}
-                      subtitle={tile.subtitle}
-                      img={tile.img}
-                      items={tile.items}
-                    />
-                  </div>
-                );
-              })}
+  {
+    data.trailers.map((section) => (
+      <section id={section.id}>
+        <h2 class="subtitle">{section.title}</h2>
+        <div class="w-main mx-auto my-16">
+          <ProjectCard project={section.tiles[0]} />
+        </div>
+      </section>
+    ))
+  }
+  {
+    data.sections.map((section) => (
+      <section id={section.id}>
+        <h2 class="subtitle">{section.title}</h2>
+        <div class="m-8 grid grid-cols-1 justify-center gap-8 md:grid-cols-2 lg:grid-cols-6">
+          {section.tiles.map((project, index) => (
+            <div
+              class:list={[
+                section.featuredCount && index < section.featuredCount
+                  ? "lg:col-span-3"
+                  : "lg:col-span-2",
+              ]}
+            >
+              <ProjectCard project={project} />
             </div>
-          </section>
-        );
-      })
-    }
-    <section>
-      <h2 class="p-4">Interested in seeing more?</h2>
-      <p class="text-center my-12">
-        <a
-          href="https://vimeo.com/benbellette"
-          class="group hover:text-grey-400"
+          ))}
+        </div>
+      </section>
+    ))
+  }
+  <section>
+    <h2 class="p-4">Interested in seeing more?</h2>
+    <p class="my-12 text-center">
+      <a href="https://vimeo.com/benbellette" class="group hover:text-grey-400">
+        View portfolio <span
+          class="inline-block transition-transform ease-linear group-hover:translate-x-1"
+          >»</span
         >
-          View portfolio <span
-            class="inline-block group-hover:translate-x-1 transition-transform ease-linear"
-            >»</span
-          >
-        </a>
-      </p>
-    </section>
+      </a>
+    </p>
   </section>
-
-  <style>
-    .w-main {
-      width: min(60rem, 90%);
-    }
-
-    .w-item {
-      width: max(20ch, 100%);
-    }
-  </style>
 </Page>
+
+<style>
+  .w-main {
+    width: min(60rem, 90%);
+  }
+</style>

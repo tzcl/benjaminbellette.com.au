@@ -1,0 +1,76 @@
+---
+import Tile from "../dynamic/Tile.svelte";
+import type { Tile as Project } from "../../data/motion";
+import { FaTiktok, FaInstagram } from "react-icons/fa/index.js";
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+const primaryLink = project.watchLinks?.[0];
+---
+
+<article>
+  <div class="aspect-video">
+    {
+      project.items.length ? (
+        <Tile
+          client:visible={{ rootMargin: "300px" }}
+          title={project.title}
+          subtitle={project.subtitle}
+          img={project.img}
+          items={project.items}
+        />
+      ) : primaryLink ? (
+        <a
+          href={primaryLink.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex h-full flex-col items-center justify-center bg-grey-850 p-6 text-center transition-colors hover:bg-grey-750 focus-visible:outline focus-visible:outline-2 focus-visible:outline-pink"
+          aria-label={
+            project.title +
+            " — " +
+            primaryLink.label +
+            " (opens in a new tab)"
+          }
+        >
+          <h3>{project.title}</h3>
+          <p class="mt-2">{project.subtitle}</p>
+          <span class="mt-4" aria-hidden="true">
+            ↗
+          </span>
+        </a>
+      ) : (
+        <div class="flex h-full flex-col items-center justify-center bg-grey-850 p-6 text-center">
+          <h3>{project.title}</h3>
+          {project.subtitle && <p class="mt-2">{project.subtitle}</p>}
+          <p class="mt-4 text-grey-400">Coming soon</p>
+        </div>
+      )
+    }
+  </div>
+  {
+    project.watchLinks?.length && (
+      <div class="flex flex-wrap items-center justify-center gap-6 py-5">
+        {project.watchLinks.map((link) => (
+          <a
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-center hover:text-grey-400"
+            aria-label={link.label + " (opens in a new tab)"}
+          >
+            {link.icon === "instagram" ? (
+              <FaInstagram size="2em" />
+            ) : link.icon === "tiktok" ? (
+              <FaTiktok size="2em" />
+            ) : (
+              link.label
+            )}
+          </a>
+        ))}
+      </div>
+    )
+  }
+</article>

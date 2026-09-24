@@ -1,9 +1,6 @@
 <script lang="ts" context="module">
-  import { onMount } from "svelte";
-  import Icon from "./Icon.svelte";
-
   export interface Item {
-    type?: string;
+    type?: "img" | "iframe" | "popup";
     src?: string;
     title?: string;
     aspectRatio?: string;
@@ -11,153 +8,142 @@
 </script>
 
 <script lang="ts">
-  export let title: String;
-  export let subtitle: String;
-  export let img: String;
-  export let items: Item[];
+  import { onDestroy, tick } from "svelte";
+  import Icon from "./Icon.svelte";
 
-  let iframe: HTMLIFrameElement; // assume there is at most one video per tile
-  let player;
-
-  let video = items.some((item) => item.type !== "img");
-
-  onMount(async () => {
-    const Player = (await import("@vimeo/player")).default;
-    if (iframe) player = new Player(iframe);
-  });
+  export let title: string;
+  export let subtitle: string;
+  export let img: string | undefined = undefined;
+  export let items: Item[] = [];
 
   let modal: HTMLDialogElement;
+  let isOpen = false;
+  let previousOverflow = "";
+  let previousPadding = "";
+  $: video = items.some((item) => item.type === "iframe" || item.type === "popup");
 
-  function showModal() {
+  async function showModal() {
+    if (isOpen) return;
+    previousOverflow = document.body.style.overflow;
+    previousPadding = document.body.style.paddingRight;
     const padding = window.innerWidth - document.documentElement.clientWidth;
     document.body.style.overflow = "hidden";
-    document.body.style.paddingRight = `${padding}px`;
-
+    if (padding) document.body.style.paddingRight = padding + "px";
+    isOpen = true;
+    await tick();
     modal.showModal();
   }
 
-  function exitModal() {
-    modal.addEventListener("animationend", closeModal);
-    modal.setAttribute("data-exiting", "");
+  function restorePage() {
+    if (!isOpen) return;
+    isOpen = false;
+    document.body.style.overflow = previousOverflow;
+    document.body.style.paddingRight = previousPadding;
   }
 
   function closeModal() {
-    document.body.style.overflow = "";
-    document.body.style.paddingRight = "";
-
-    modal.removeAttribute("data-exiting");
-    modal.removeEventListener("animationend", closeModal);
     modal.close();
-
-    if (player) player.pause();
+    restorePage();
   }
+
+  onDestroy(restorePage);
 </script>
 
 <div class="relative h-full w-full">
-  <div
-    class="group h-full w-full bg-cover bg-center"
-    style={`background-image: url('${img}')`}
+  <button
+    type="button"
+    class="group relative h-full w-full bg-grey-850 bg-cover bg-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+    style:background-image={img ? "url('" + img + "')" : undefined}
+    aria-label={"View " + title + (subtitle ? " — " + subtitle : "")}
+    aria-haspopup="dialog"
+    on:click={showModal}
   >
-    <div
-      class="absolute inset-0 flex cursor-pointer select-none flex-col justify-center bg-white/80 text-center text-black opacity-0 transition-all duration-300 ease-in-out group-hover:visible group-hover:opacity-100"
-      on:click={showModal}
+    <span
+      class={"absolute inset-0 flex select-none flex-col justify-center p-4 text-center transition-all duration-300 ease-in-out " +
+        (img
+          ? "bg-white/80 text-black opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100"
+          : "bg-grey-850 text-white group-hover:bg-grey-750")}
     >
-      <Icon
-        name={video ? "video" : "camera"}
-        width="20px"
-        height="20px"
-        class="pointer-events-none mx-auto"
-      />
-      <h3 class="whitespace-pre-line text-black">{title}</h3>
-      <p class="text-black">{subtitle}</p>
-    </div>
-  </div>
+      <Icon name={video ? "video" : "camera"} width="20px" height="20px" class="pointer-events-none mx-auto mb-2" />
+      <span class="tile-title">{title}</span>
+      <span class="tile-subtitle">{subtitle}</span>
+    </span>
+  </button>
 
   <dialog
-    class="max-h-full w-full max-w-full overscroll-contain border-0 bg-transparent p-0 backdrop:bg-black/75 open:animate-slide-in open:backdrop:animate-fade-in [&[data-exiting]]:animate-slide-out [&[data-exiting]]:backdrop:animate-fade-out"
+    class="max-h-full w-full max-w-full overscroll-contain border-0 bg-transparent p-0 text-white backdrop:bg-black/75 open:animate-slide-in"
     bind:this={modal}
-    on:click={(e) => {
-      // @ts-ignore
-      if (e.target.tagName == "DIALOG") exitModal();
-    }}
-    on:cancel={(e) => {
-      e.preventDefault();
-      exitModal();
-    }}
+    aria-label={title}
+    on:click={(event) => { if (event.target === modal) closeModal(); }}
+    on:cancel={(event) => { event.preventDefault(); closeModal(); }}
+    on:close={restorePage}
   >
-    <div class="w-dialog mx-auto mt-12">
-      <svg
-        class="feather feather-x ml-auto pb-2 hover:cursor-pointer"
-        on:click={() => exitModal()}
-        xmlns="http://www.w3.org/2000/svg"
-        width="32"
-        height="32"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="white"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        ><title>Close modal</title><line x1="18" y1="6" x2="6" y2="18" /><line
-          x1="6"
-          y1="6"
-          x2="18"
-          y2="18"
-        />
-      </svg>
-      {#each items as item}
-        {#if item.type === "iframe"}
-          <div class="shadow-lg">
-            <div class="bg-black">
+    {#if isOpen}
+      <div class="w-dialog mx-auto my-8">
+        <button
+          type="button"
+          class="ml-auto mb-4 block rounded p-2 hover:bg-grey-750 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
+          aria-label="Close gallery"
+          autofocus
+          on:click={closeModal}
+        >
+          <Icon name="x" width="32px" height="32px" />
+        </button>
+        <h2 class="mb-6">{title}</h2>
+        {#each items as item}
+          {#if item.type === "iframe"}
+            <div class="mb-12 bg-black shadow-lg">
               <iframe
                 src={item.src}
-                title={item.title ? item.title : ""}
-                frameborder="0"
+                title={item.title || title}
                 width="100%"
                 height="100%"
-                allow="autoplay; fullscreen; picture-in-picture;"
+                allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
                 allowfullscreen
-                class={`mb-12 object-cover ${
-                  item.aspectRatio ? item.aspectRatio : "aspect-video"
-                }`}
-                bind:this={iframe}
+                class={"border-0 " + (item.aspectRatio || "aspect-video")}
               />
             </div>
-          </div>
-        {:else if item.type === "popup"}
-          <div class="mb-12 h-fit bg-white pb-16 pt-6">
-            <div class="w-popup mx-auto text-center">
-              <h3 class="my-8 text-black">Hi!</h3>
-              <p class="text-wr my-4 text-black">
-                If you would like to watch this, please feel free to contact me
-                directly for a private link.
-              </p>
-              <Icon name="facebook" class="mr-2 inline" />
-              <a
-                class="text-black hover:text-grey-400"
-                href="https://www.facebook.com/ben.bellette.DOP/"
-                >ben.bellette.DOP</a
-              ><br />
-              <Icon name="mail" class="mr-2 inline" />
-              <a
-                class="text-black hover:text-grey-400"
-                href="mailto:ben.bellette@gmail.com">ben.bellette@gmail.com</a
-              >
+          {:else if item.type === "popup"}
+            <div class="mb-12 bg-white pb-16 pt-6 text-black">
+              <div class="w-popup mx-auto text-center">
+                <h3 class="my-8 text-black">Hi!</h3>
+                <p class="my-4 text-black">If you would like to watch this, please feel free to contact me directly for a private link.</p>
+                <Icon name="facebook" class="mr-2 inline" />
+                <a class="text-black hover:text-grey-400" href="https://www.facebook.com/ben.bellette.DOP/">ben.bellette.DOP</a><br />
+                <Icon name="mail" class="mr-2 inline" />
+                <a class="text-black hover:text-grey-400" href="mailto:ben.bellette@gmail.com">ben.bellette@gmail.com</a>
+              </div>
             </div>
-          </div>
-        {:else}
-          <div class="mb-12 bg-black">
-            <img
-              src={item.src}
-              alt={item.title ? item.title : ""}
-              loading="lazy"
-              width="100%"
-              height="100%"
-              class="select-none object-contain horizontal:aspect-video"
-            />
-          </div>
-        {/if}
-      {/each}
-    </div>
+          {:else}
+            <div class="mb-12 bg-black">
+              <img
+                src={item.src}
+                alt={item.title && item.title !== "Stills" ? item.title : title + " — Still"}
+                loading="lazy"
+                class="mx-auto h-auto max-h-[90vh] w-auto max-w-full select-none object-contain"
+              />
+            </div>
+          {/if}
+        {/each}
+      </div>
+    {/if}
   </dialog>
 </div>
+
+<style>
+  .tile-title {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    white-space: pre-line;
+  }
+  .tile-subtitle {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+</style>
