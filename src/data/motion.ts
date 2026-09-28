@@ -20,9 +20,7 @@ export interface Section {
 }
 
 // Content gaps and source folders are tracked in docs/2026-content-todos.md.
-// TODO: Confirm Bali's subtitle/video; the supplied YouTube URL is Lewis Garnham.
 // TODO: Add Lizzy Hoo's media when supplied.
-// TODO: Correct Cat Scratch Fever's video and An Afternoon Together's stills.
 // TODO: Add Storm Bird's Stan/Nine watch links once supplied (expected November).
 
 export const pics = [
@@ -335,7 +333,14 @@ export const sections: Section[] = [
       {
         title: "Meerestille",
         subtitle: "Feature Film",
-        items: [],
+        items: [
+          {
+            type: "img",
+            src: "/assets/motion/meerestille/cover.webp",
+            title: "Meerestille — Still 1",
+          },
+        ],
+        img: "/assets/motion/meerestille/cover.webp",
       },
     ],
   },
@@ -398,7 +403,49 @@ export const sections: Section[] = [
       {
         title: "Cat Scratch Fever",
         subtitle: "Short Film",
-        items: [],
+        items: [
+          {
+            type: "iframe",
+            src: "https://player.vimeo.com/video/1202385158?h=f3c5b2c0f5",
+            title: "Cat Scratch Fever — Short Film",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/cat-scratch-fever/01.webp",
+            title: "Cat Scratch Fever — Still 1",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/cat-scratch-fever/02.webp",
+            title: "Cat Scratch Fever — Still 2",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/cat-scratch-fever/03.webp",
+            title: "Cat Scratch Fever — Still 3",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/cat-scratch-fever/04.webp",
+            title: "Cat Scratch Fever — Still 4",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/cat-scratch-fever/05.webp",
+            title: "Cat Scratch Fever — Still 5",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/cat-scratch-fever/06.webp",
+            title: "Cat Scratch Fever — Still 6",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/cat-scratch-fever/07.webp",
+            title: "Cat Scratch Fever — Still 7",
+          },
+        ],
+        img: "/assets/motion/cat-scratch-fever/cover.webp",
       },
       {
         title: "Violet & Sparkles",
@@ -442,6 +489,41 @@ export const sections: Section[] = [
             type: "iframe",
             src: "https://player.vimeo.com/video/1228363452?h=ceb072456c",
             title: "An Afternoon Together — Short Film",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/an-afternoon-together/01.webp",
+            title: "An Afternoon Together — Still 1",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/an-afternoon-together/02.webp",
+            title: "An Afternoon Together — Still 2",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/an-afternoon-together/03.webp",
+            title: "An Afternoon Together — Still 3",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/an-afternoon-together/06.webp",
+            title: "An Afternoon Together — Still 4",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/an-afternoon-together/07.webp",
+            title: "An Afternoon Together — Still 5",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/an-afternoon-together/08.webp",
+            title: "An Afternoon Together — Still 6",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/an-afternoon-together/09.webp",
+            title: "An Afternoon Together — Still 7",
           },
         ],
         img: "/assets/motion/an-afternoon-together/cover.webp",
@@ -501,12 +583,12 @@ export const sections: Section[] = [
       },
       {
         title: "The Last Custodians",
-        subtitle: "Short Film",
+        subtitle: "Pilot Episode",
         items: [
           {
             type: "iframe",
             src: "https://player.vimeo.com/video/1188271931?h=eca826dda2",
-            title: "The Last Custodians — Short Film",
+            title: "The Last Custodians — Pilot Episode",
           },
           {
             type: "img",
@@ -604,8 +686,33 @@ export const sections: Section[] = [
             src: "https://player.vimeo.com/video/1186053973",
             title: "Fatai — Shuga Luga Buga",
           },
+          {
+            type: "img",
+            src: "/assets/motion/fatai/img_2607.webp",
+            title: "Fatai — Still 1",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/fatai/img_2608.webp",
+            title: "Fatai — Still 2",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/fatai/img_2609.webp",
+            title: "Fatai — Still 3",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/fatai/img_2610.webp",
+            title: "Fatai — Still 4",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/fatai/img_2611.webp",
+            title: "Fatai — Still 5",
+          },
         ],
-        img: "/assets/motion/fatai/cover.webp",
+        img: "/assets/motion/fatai/img_2607.webp",
       },
       {
         title: "Kino Mortar",
@@ -616,8 +723,48 @@ export const sections: Section[] = [
             src: "https://player.vimeo.com/video/1186054204",
             title: "Kino Mortar — Boogie Man",
           },
+          {
+            type: "img",
+            src: "/assets/motion/kino-mortar/img_2613.webp",
+            title: "Kino Mortar — Still 1",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/kino-mortar/img_2614.webp",
+            title: "Kino Mortar — Still 2",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/kino-mortar/img_2615.webp",
+            title: "Kino Mortar — Still 3",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/kino-mortar/img_2617.webp",
+            title: "Kino Mortar — Still 4",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/kino-mortar/img_2618.webp",
+            title: "Kino Mortar — Still 5",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/kino-mortar/img_2619.webp",
+            title: "Kino Mortar — Still 6",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/kino-mortar/img_2620.webp",
+            title: "Kino Mortar — Still 7",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/kino-mortar/img_2621.webp",
+            title: "Kino Mortar — Still 8",
+          },
         ],
-        img: "/assets/motion/kino-mortar/cover.webp",
+        img: "/assets/motion/kino-mortar/img_2614.webp",
       },
       {
         title: "Caddy Calaghan",
@@ -628,8 +775,48 @@ export const sections: Section[] = [
             src: "https://player.vimeo.com/video/1225843584?h=1573fe26a5",
             title: "Caddy Calaghan — Solo Roam",
           },
+          {
+            type: "img",
+            src: "/assets/motion/caddy-calaghan/img_2622.webp",
+            title: "Caddy Calaghan — Still 1",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/caddy-calaghan/img_2623.webp",
+            title: "Caddy Calaghan — Still 2",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/caddy-calaghan/img_2624.webp",
+            title: "Caddy Calaghan — Still 3",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/caddy-calaghan/img_2625.webp",
+            title: "Caddy Calaghan — Still 4",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/caddy-calaghan/img_2626.webp",
+            title: "Caddy Calaghan — Still 5",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/caddy-calaghan/img_2627.webp",
+            title: "Caddy Calaghan — Still 6",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/caddy-calaghan/img_2628.webp",
+            title: "Caddy Calaghan — Still 7",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/caddy-calaghan/img_2629.webp",
+            title: "Caddy Calaghan — Still 8",
+          },
         ],
-        img: "/assets/motion/caddy-calaghan/cover.webp",
+        img: "/assets/motion/caddy-calaghan/img_2624.webp",
       },
       {
         title: "Sahara Beck",
@@ -694,8 +881,48 @@ export const sections: Section[] = [
             src: "https://player.vimeo.com/video/1025687695",
             title: "Forner — Power!",
           },
+          {
+            type: "img",
+            src: "/assets/motion/forner/img_2630.webp",
+            title: "Forner — Still 1",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/forner/img_2631.webp",
+            title: "Forner — Still 2",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/forner/img_2632.webp",
+            title: "Forner — Still 3",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/forner/img_2633.webp",
+            title: "Forner — Still 4",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/forner/img_2634.webp",
+            title: "Forner — Still 5",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/forner/img_2635.webp",
+            title: "Forner — Still 6",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/forner/img_2636.webp",
+            title: "Forner — Still 7",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/forner/img_2637.webp",
+            title: "Forner — Still 8",
+          },
         ],
-        img: "/assets/motion/forner/cover.webp",
+        img: "/assets/motion/forner/img_2637.webp",
       },
     ],
   },
@@ -874,8 +1101,38 @@ export const sections: Section[] = [
             src: "https://player.vimeo.com/video/1227759818",
             title: "Mirvac — Smiths Lane",
           },
+          {
+            type: "img",
+            src: "/assets/motion/mirvac/img_2638.webp",
+            title: "Mirvac — Still 1",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/mirvac/img_2639.webp",
+            title: "Mirvac — Still 2",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/mirvac/img_2640.webp",
+            title: "Mirvac — Still 3",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/mirvac/img_2641.webp",
+            title: "Mirvac — Still 4",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/mirvac/img_2642.webp",
+            title: "Mirvac — Still 5",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/mirvac/img_2643.webp",
+            title: "Mirvac — Still 6",
+          },
         ],
-        img: "/assets/motion/mirvac/cover.webp",
+        img: "/assets/motion/mirvac/img_2641.webp",
       },
       {
         title: "Carolina Herrera",
@@ -886,8 +1143,53 @@ export const sections: Section[] = [
             src: "https://player.vimeo.com/video/1227757604",
             title: "Carolina Herrera — Maria Thattil",
           },
+          {
+            type: "img",
+            src: "/assets/motion/carolina-herrera/img_2644.webp",
+            title: "Carolina Herrera — Still 1",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/carolina-herrera/img_2645.webp",
+            title: "Carolina Herrera — Still 2",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/carolina-herrera/img_2646.webp",
+            title: "Carolina Herrera — Still 3",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/carolina-herrera/img_2647.webp",
+            title: "Carolina Herrera — Still 4",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/carolina-herrera/img_2648.webp",
+            title: "Carolina Herrera — Still 5",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/carolina-herrera/img_2649.webp",
+            title: "Carolina Herrera — Still 6",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/carolina-herrera/img_2650.webp",
+            title: "Carolina Herrera — Still 7",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/carolina-herrera/img_2651.webp",
+            title: "Carolina Herrera — Still 8",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/carolina-herrera/img_2652.webp",
+            title: "Carolina Herrera — Still 9",
+          },
         ],
-        img: "/assets/motion/carolina-herrera/cover.webp",
+        img: "/assets/motion/carolina-herrera/img_2644.webp",
       },
     ],
   },
@@ -904,8 +1206,43 @@ export const sections: Section[] = [
             src: "https://player.vimeo.com/video/1227758218",
             title: "Scrum Poetry — The Gruen Transfer",
           },
+          {
+            type: "img",
+            src: "/assets/motion/scrum-poetry/img_2675.webp",
+            title: "Scrum Poetry — Still 1",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/scrum-poetry/img_2676.webp",
+            title: "Scrum Poetry — Still 2",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/scrum-poetry/img_2677.webp",
+            title: "Scrum Poetry — Still 3",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/scrum-poetry/img_2678.webp",
+            title: "Scrum Poetry — Still 4",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/scrum-poetry/img_2679.webp",
+            title: "Scrum Poetry — Still 5",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/scrum-poetry/img_2680.webp",
+            title: "Scrum Poetry — Still 6",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/scrum-poetry/img_2681.webp",
+            title: "Scrum Poetry — Still 7",
+          },
         ],
-        img: "/assets/motion/scrum-poetry/cover.webp",
+        img: "/assets/motion/scrum-poetry/img_2680.webp",
       },
       {
         title: "Riverworks",
@@ -916,8 +1253,73 @@ export const sections: Section[] = [
             src: "https://player.vimeo.com/video/1227759559",
             title: "Riverworks — Victoria Gardens",
           },
+          {
+            type: "img",
+            src: "/assets/motion/riverworks/img_2661.webp",
+            title: "Riverworks — Still 1",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/riverworks/img_2662.webp",
+            title: "Riverworks — Still 2",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/riverworks/img_2663.webp",
+            title: "Riverworks — Still 3",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/riverworks/img_2664.webp",
+            title: "Riverworks — Still 4",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/riverworks/img_2665.webp",
+            title: "Riverworks — Still 5",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/riverworks/img_2666.webp",
+            title: "Riverworks — Still 6",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/riverworks/img_2667.webp",
+            title: "Riverworks — Still 7",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/riverworks/img_2668.webp",
+            title: "Riverworks — Still 8",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/riverworks/img_2670.webp",
+            title: "Riverworks — Still 9",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/riverworks/img_2671.webp",
+            title: "Riverworks — Still 10",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/riverworks/img_2672.webp",
+            title: "Riverworks — Still 11",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/riverworks/img_2673.webp",
+            title: "Riverworks — Still 12",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/riverworks/img_2674.webp",
+            title: "Riverworks — Still 13",
+          },
         ],
-        img: "/assets/motion/riverworks/cover.webp",
+        img: "/assets/motion/riverworks/img_2661.webp",
       },
       {
         title: "Olivine",
@@ -928,8 +1330,48 @@ export const sections: Section[] = [
             src: "https://player.vimeo.com/video/1227759557",
             title: "Olivine — Cricket Victoria and Renegades",
           },
+          {
+            type: "img",
+            src: "/assets/motion/olivine/img_2653.webp",
+            title: "Olivine — Still 1",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/olivine/img_2654.webp",
+            title: "Olivine — Still 2",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/olivine/img_2655.webp",
+            title: "Olivine — Still 3",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/olivine/img_2656.webp",
+            title: "Olivine — Still 4",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/olivine/img_2657.webp",
+            title: "Olivine — Still 5",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/olivine/img_2658.webp",
+            title: "Olivine — Still 6",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/olivine/img_2659.webp",
+            title: "Olivine — Still 7",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/olivine/img_2660.webp",
+            title: "Olivine — Still 8",
+          },
         ],
-        img: "/assets/motion/olivine/cover.webp",
+        img: "/assets/motion/olivine/img_2656.webp",
       },
       {
         title: "The Big Design Market",
@@ -1047,13 +1489,90 @@ export const sections: Section[] = [
             src: "https://player.vimeo.com/video/1204057353",
             title: "Saigon — The Wild Life",
           },
+          {
+            type: "img",
+            src: "/assets/motion/saigon/sgn.webp",
+            title: "Saigon — Still 1",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/saigon/sgn1.webp",
+            title: "Saigon — Still 2",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/saigon/sgn2.webp",
+            title: "Saigon — Still 3",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/saigon/sgn3.webp",
+            title: "Saigon — Still 4",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/saigon/sgn4.webp",
+            title: "Saigon — Still 5",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/saigon/sgn5.webp",
+            title: "Saigon — Still 6",
+          },
         ],
-        img: "/assets/motion/saigon/cover.webp",
+        img: "/assets/motion/saigon/sgn.webp",
       },
       {
         title: "Bali",
-        subtitle: "",
-        items: [],
+        subtitle: "The Wild Life",
+        items: [
+          {
+            type: "iframe",
+            src: "https://player.vimeo.com/video/1204230027",
+            title: "Bali — The Wild Life",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/bali/01.webp",
+            title: "Bali — Still 1",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/bali/02.webp",
+            title: "Bali — Still 2",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/bali/03.webp",
+            title: "Bali — Still 3",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/bali/04.webp",
+            title: "Bali — Still 4",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/bali/05.webp",
+            title: "Bali — Still 5",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/bali/06.webp",
+            title: "Bali — Still 6",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/bali/07.webp",
+            title: "Bali — Still 7",
+          },
+          {
+            type: "img",
+            src: "/assets/motion/bali/08.webp",
+            title: "Bali — Still 8",
+          },
+        ],
+        img: "/assets/motion/bali/cover.webp",
       },
       {
         title: "Sydney Children's Choir",
@@ -1200,11 +1719,6 @@ export const sections: Section[] = [
     title: "Broadcasts",
     tiles: [
       {
-        title: "Lizzy Hoo",
-        subtitle: "",
-        items: [],
-      },
-      {
         title: "Lewis Garnham",
         subtitle: "Comedy Special",
         items: [
@@ -1219,7 +1733,14 @@ export const sections: Section[] = [
       {
         title: "Nath Valvo",
         subtitle: "Comedy Special",
-        items: [],
+        img: "/assets/motion/nath-valvo/cover.webp",
+        items: [
+          {
+            type: "iframe",
+            src: "https://www.youtube-nocookie.com/embed/AJYlbzkBUos",
+            title: "Nath Valvo — Comedy Special",
+          },
+        ],
         watchLinks: [
           {
             label: "Watch on ABC iview",
@@ -1230,7 +1751,14 @@ export const sections: Section[] = [
       {
         title: "Australian Open",
         subtitle: "Live Sports Director",
-        items: [],
+        img: "/assets/motion/australian-open/cover.webp",
+        items: [
+          {
+            type: "iframe",
+            src: "https://www.youtube-nocookie.com/embed/5m_ZDcGigjI",
+            title: "Australian Open — Live Sports Director",
+          },
+        ],
         watchLinks: [
           {
             label: "Watch on Australian Open",
@@ -1241,7 +1769,14 @@ export const sections: Section[] = [
       {
         title: "Hockey One",
         subtitle: "Live Sports Director",
-        items: [],
+        img: "/assets/motion/hockey-one/cover.webp",
+        items: [
+          {
+            type: "iframe",
+            src: "https://www.youtube-nocookie.com/embed/68sBn4U1iG4",
+            title: "Hockey One — Live Sports Director",
+          },
+        ],
         watchLinks: [
           {
             label: "Watch on 7plus",
@@ -1252,7 +1787,14 @@ export const sections: Section[] = [
       {
         title: "WNBL",
         subtitle: "Live Sports Director",
-        items: [],
+        img: "/assets/motion/wnbl/cover.webp",
+        items: [
+          {
+            type: "iframe",
+            src: "https://www.youtube-nocookie.com/embed/lakWxcdlHho",
+            title: "WNBL — Live Sports Director",
+          },
+        ],
         watchLinks: [
           {
             label: "Watch on 9Now",
