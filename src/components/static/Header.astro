@@ -116,7 +116,7 @@ function active(item: string): string {
                 )}
               </a>
               {page.children && (
-                <div class="invisible absolute top-full left-0 z-20 bg-grey-850 p-4 group-hover:visible group-hover:animate-slide-in">
+                <div class="invisible absolute top-full left-0 z-20 max-h-[calc(100dvh-86px)] overflow-y-auto bg-grey-850 p-4 group-hover:visible group-hover:animate-slide-in">
                   <ul>
                     {page.children.map((section, i) => (
                       <a href={section.link} class="block">
@@ -170,10 +170,10 @@ function active(item: string): string {
     }
   });
 
-  const activeItems = document.querySelectorAll(".active > a");
+  const activeItems = nav.querySelectorAll("a");
   for (const item of activeItems) {
     item.addEventListener("click", () => {
-      hamburger.click();
+      if (nav.getAttribute("data-visible") === "true") menu.click();
     });
   }
 

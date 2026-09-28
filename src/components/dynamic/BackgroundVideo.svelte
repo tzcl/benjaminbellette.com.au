@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { reel } from "../../data/reel";
   let loaded = false;
   setTimeout(() => (loaded = true), 1000);
 </script>
@@ -6,9 +7,9 @@
 <div class="absolute h-full w-full">
   <div class="relative h-full w-full overflow-hidden">
     <iframe
-      src="https://player.vimeo.com/video/1227777746?h=1a86eb3b0a&background=1"
+      src={reel.src + "&background=1"}
       id="video"
-      title="2026 Showreel Benjamin Bellette"
+      title={reel.title}
       frameborder="0"
       width="100%"
       height="100%"
