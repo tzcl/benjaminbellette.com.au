@@ -18,10 +18,16 @@ Implemented against the supplied email brief and **Ben Website Layout Plan 2026.
 - Web Series: You Can Smoke Anything, The Last Custodians (Pilot Episode), NEXT. NEXT retains its Instagram and TikTok links.
 - Corporates: Scrum Poetry, Riverworks, Olivine / The Big Design Market, Kookai, Numerik.
 - Documentaries: Saigon and Bali above Sydney Children's Choir, The Other ANZAC Clash and Fresenius.
-- Broadcasts: Lewis Garnham, Nath Valvo, Australian Open, Hockey One and WNBL. Lizzy Hoo is hidden. The duplicate Nath Valvo email entry is included once.
+- Broadcasts: Lewis Garnham and Nath Valvo above Australian Open, Hockey One and WNBL, preserving the PDF's comedy/sports row grouping while Lizzy Hoo is hidden. The duplicate Nath Valvo email entry is included once.
 - All five broadcasts open YouTube players on the site. ABC iview, Australian Open, 7plus and 9Now remain separate outbound watch links.
 - Bali is titled “Bali” / “The Wild Life” and uses Vimeo `1204230027`. Cat Scratch Fever uses Vimeo `1202385158` with its unlisted hash `f3c5b2c0f5`. Both now include the supplied stills.
 - Site typography, other pages and the existing cover proportions are retained. The PDF's future trailer substitutions remain future work.
+
+## Email audit — 29 September 2026
+
+Re-read all ten emails found from Benjamin Bellette (25 June–26 September), including the showreel thread, and visually checked both pages of the attached layout plan. The 25 September corrections supersede the original Bali and Cat Scratch Fever links, An Afternoon Together image folder, Pilot label and Lizzy Hoo listing. The 26 September YouTube links supplement the four retained broadcaster watch links.
+
+The audit confirmed the reel, navigation, project titles/subtitles, video IDs and unlisted hashes, project replacements, image galleries and later corrections. One layout adjustment keeps the remaining two comedy broadcasts above the three sports broadcasts after Lizzy Hoo's removal. The outstanding supplied-content items remain those listed above; production release remains separate from the review preview.
 
 ## Image sources
 

@@ -1717,6 +1717,7 @@ export const sections: Section[] = [
   {
     id: "broadcasts",
     title: "Broadcasts",
+    featuredCount: 2,
     tiles: [
       {
         title: "Lewis Garnham",
