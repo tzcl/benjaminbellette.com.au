@@ -132,7 +132,7 @@
 
 <style>
   .tile-title {
-    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-family: "Montserrat", "Segoe UI", Arial, Helvetica, sans-serif;
     font-size: 1.1em;
     font-weight: 700;
     line-height: 1.5;
@@ -141,7 +141,7 @@
     white-space: pre-line;
   }
   .tile-subtitle {
-    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-family: "Montserrat", "Segoe UI", Arial, Helvetica, sans-serif;
     font-size: 0.75rem;
     letter-spacing: 2px;
     text-transform: uppercase;

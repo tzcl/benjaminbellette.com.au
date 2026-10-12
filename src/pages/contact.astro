@@ -10,6 +10,26 @@ import Page from "../layouts/Page.astro";
   description="Melbourne and Sydney-based cinematographer."
 >
   <Slider client:idle title="Contact" pics={pics} />
+
+  <section class="contact-hero my-16 md:my-24">
+    <div class="camera-scene" aria-label="3D camera illustration">
+      <div class="camera-body">
+        <div class="camera-top"></div>
+        <div class="camera-viewfinder"></div>
+        <div class="camera-lens">
+          <div class="lens-ring lens-ring-outer"></div>
+          <div class="lens-ring lens-ring-inner"></div>
+        </div>
+        <div class="camera-controls">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="camera-side"></div>
+      </div>
+    </div>
+  </section>
+
   <section class="my-20 md:my-32">
     <h2>Want to get in touch?</h2>
     <div
@@ -44,3 +64,175 @@ import Page from "../layouts/Page.astro";
     </div>
   </section>
 </Page>
+
+<style>
+  .contact-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0 0;
+  }
+
+  .camera-scene {
+    position: relative;
+    width: min(70vw, 22rem);
+    height: min(52vw, 18rem);
+    display: grid;
+    place-items: center;
+    perspective: 1200px;
+    filter: drop-shadow(0 32px 40px rgba(0, 0, 0, 0.45));
+  }
+
+  .camera-body {
+    position: relative;
+    width: 18rem;
+    height: 11.5rem;
+    border-radius: 1.5rem 1.5rem 1.2rem 1.2rem;
+    background: linear-gradient(145deg, #1d1d1f 0%, #09090a 40%, #2c2c2d 100%);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transform-style: preserve-3d;
+    transform: rotateX(18deg) rotateY(-28deg) rotateZ(-10deg);
+    animation: floatCamera 7s ease-in-out infinite;
+    transition: transform 180ms ease-out;
+  }
+
+  .camera-body::before {
+    content: "";
+    position: absolute;
+    inset: 1.05rem 1.3rem 1.15rem 1.3rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.02));
+    border-radius: 1rem;
+    transform: translateZ(18px);
+  }
+
+  .camera-top {
+    position: absolute;
+    top: -0.9rem;
+    left: 2.8rem;
+    width: 7.4rem;
+    height: 1.8rem;
+    border-radius: 0.8rem 0.8rem 0.5rem 0.5rem;
+    background: linear-gradient(135deg, #3c3c3e, #1a1a1b);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transform: translateZ(16px);
+  }
+
+  .camera-viewfinder {
+    position: absolute;
+    right: 2.15rem;
+    top: 1.2rem;
+    width: 3.3rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    background: linear-gradient(135deg, rgba(36, 36, 36), rgba(12, 12, 12));
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transform: translateZ(18px);
+  }
+
+  .camera-lens {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 8.6rem;
+    height: 8.6rem;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #4b4d50, #111214 38%, #040506 64%, #000 100%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%) translateZ(28px);
+    display: grid;
+    place-items: center;
+    box-shadow: inset 0 0 22px rgba(0, 0, 0, 0.8), 0 0 0 10px rgba(255, 255, 255, 0.04);
+  }
+
+  .lens-ring {
+    position: absolute;
+    border-radius: 50%;
+  }
+
+  .lens-ring-outer {
+    width: 6.8rem;
+    height: 6.8rem;
+    border: 0.5rem solid rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.08);
+  }
+
+  .lens-ring-inner {
+    width: 4.4rem;
+    height: 4.4rem;
+    border: 0.4rem solid rgba(100, 110, 126, 0.9);
+    box-shadow: inset 0 0 18px rgba(33, 40, 50, 0.9), 0 0 18px rgba(90, 100, 115, 0.4);
+  }
+
+  .camera-controls {
+    position: absolute;
+    left: 1.8rem;
+    bottom: 1.3rem;
+    display: flex;
+    gap: 0.5rem;
+    transform: translateZ(22px);
+  }
+
+  .camera-controls span {
+    display: block;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #d3d8dc, #727985);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.08);
+  }
+
+  .camera-side {
+    position: absolute;
+    right: -1rem;
+    top: 1.2rem;
+    width: 1.4rem;
+    height: 7.6rem;
+    border-radius: 0.8rem;
+    background: linear-gradient(180deg, #161718, #2e2f31);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transform: translateZ(-8px) rotateY(90deg);
+  }
+
+  @keyframes floatCamera {
+    0%,
+    100% {
+      transform: rotateX(18deg) rotateY(-28deg) rotateZ(-10deg) translateY(0);
+    }
+    50% {
+      transform: rotateX(24deg) rotateY(-18deg) rotateZ(-9deg) translateY(-10px);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .contact-hero {
+      padding-top: 2rem;
+    }
+
+    .camera-scene {
+      width: 26rem;
+      height: 18rem;
+    }
+  }
+</style>
+
+<script>
+  const cameraScene = document.querySelector('.camera-scene');
+  const cameraBody = document.querySelector('.camera-body');
+
+  if (cameraScene && cameraBody) {
+    const updateTilt = (event) => {
+      const rect = cameraScene.getBoundingClientRect();
+      const px = (event.clientX - rect.left) / rect.width;
+      const py = (event.clientY - rect.top) / rect.height;
+
+      const rotateY = -28 + (px - 0.5) * 30;
+      const rotateX = 18 - (py - 0.5) * 24;
+      cameraBody.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(-10deg)`;
+    };
+
+    cameraScene.addEventListener('pointermove', updateTilt);
+    cameraScene.addEventListener('pointerleave', () => {
+      cameraBody.style.transform = 'rotateX(18deg) rotateY(-28deg) rotateZ(-10deg)';
+    });
+  }
+</script>
